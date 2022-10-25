@@ -2543,7 +2543,7 @@ textarea.form-control-lg {
 @media (prefers-reduced-motion: reduce) {
   .form-switch .form-check-input {
     transition: none;
-  }
+  } 
 }
 .form-switch .form-check-input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffe480'/%3e%3c/svg%3e");
@@ -11410,7 +11410,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/cine.jpg");
+  background-image: url("../img/cine.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11422,7 +11422,7 @@ header.masthead_1 {
   padding-bottom: 0.5rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/cine.jpg");
+  background-image: url("../img/cine.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
