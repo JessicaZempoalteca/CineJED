@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -44,6 +44,142 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
+
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h1 class="h3 d-flex align-items-center sc-iyvyFf fPOSuk">
+                Estrenos 
+                <span class="sc-kfGgVZ dPGWdA">🍿</span> 
+            </h1>
+        </div>
+        <!-- Carousel wrapper -->
+        <div
+            id="carouselMultiItemExample"
+            class="carousel slide carousel-dark text-center"
+            data-mdb-ride="carousel">
+
+            <!-- Inner -->
+            <div class="carousel-inner py-9">
+            <!-- Single item -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <img
+                                    src="./portal/img/estrenos/alien.jpg"
+                                    width= "412px"
+                                    height= "700px"
+                                    alt="Waterfall"/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img
+                                        src="./portal/img/estrenos/anfry birds.jpg"
+                                        width= "412px"
+                                        height= "700px"
+                                        alt="Sunset Over the Sea"/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img
+                                        src="./portal/img/estrenos/aquaman.jpg"
+                                        width= "412px"
+                                        height= "700px"
+                                        alt="Sunset over the Sea"/>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img
+                                        src="./portal/img/estrenos/avatar.jpg"
+                                        class="card-img-top"
+                                        alt="Sunset over the Sea"/>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img
+                                        src="./portal/img/estrenos/back widow.jpg"
+                                        class="card-img-top"
+                                        alt="Sunset over the Sea"/>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <div class="card">
+                                    <img
+                                        src="./portal/img/estrenos/buz.png"
+                                        class="card-img-top"
+                                        alt="Sunset over the Sea"/>
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">
+                                            Some quick example text to build on the card title and make up the bulk
+                                            of the card's content.
+                                        </p>
+                                        <a href="#!" class="btn btn-primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Services-->
         <section class="page-section" id="services">
