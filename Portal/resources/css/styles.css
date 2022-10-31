@@ -11543,6 +11543,21 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
+#portfolio .portfolio-item .portfolio-link .imagenPelicula{
+  display: flex;
+  align-items: center;
+}
+
+#imagenP1{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/blac.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;
@@ -11553,6 +11568,7 @@ header.masthead .masthead-heading {
   display: block;
   margin: 0 auto;
 }
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
   position: absolute;

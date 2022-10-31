@@ -66,15 +66,15 @@
                     </h1>
                 </div>
                 <div class="row">
-
                     <div class="col-lg-3 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
-                            <div class="set-bg" data-setbg="<?php echo path_image('', 'blac.jpg')?>"></div>
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i>
-                                </div>  
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP1" class="imagenPelicula" data-setbg="<?php echo path_image('','blac.jpg')?>"></div>
                                 </div>
                             </a>
                             <div class="portfolio-caption">
