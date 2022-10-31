@@ -21,6 +21,8 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="./Portal/resources/css/styles.css" rel="stylesheet" />
         <link href="./Portal/resources/css/estilos.css" rel="estilos"/>
+        <!--Logo de pagina-->
+        <link rel="shortcut icon" href="./Portal/img/boletosLogo.png">
     </head>
 
     <body id="page-top">
@@ -47,6 +49,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
+                <div data-setbg="<?php echo path_image('','cine.jpg')?>"></div>
                 <div class="masthead-subheading">Welcome To Our Cinema!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>

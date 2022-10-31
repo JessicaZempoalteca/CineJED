@@ -31,7 +31,7 @@
         $menu['categorias'] = $menu_item;
 
         $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../index.php' : './index.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../estrenos.php' : './estrenos.php' ;
         $menu_item['text'] = 'Estrenos';
         $menu_item['submenu'] = array();
         $menu['estrenos'] = $menu_item;
