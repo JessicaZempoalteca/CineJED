@@ -19,31 +19,43 @@
             //Submenu
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
-            $sub_menu_item['href'] = ($folder != '') ? './masVistas.php' : './portal/pages/masVistas.php';
-            $sub_menu_item['text'] = 'Las mas vistas';
-            $menu_item['submenu']['masVistas'] = $sub_menu_item;
+            $sub_menu_item['href'] = ($folder != '') ? './terror.php' : './portal/pages/terror.php';
+            $sub_menu_item['text'] = 'Terror/Suspenso';
+            $menu_item['submenu']['terror'] = $sub_menu_item;
             //
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
             $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './portal/pages/familiares.php';
             $sub_menu_item['text'] = 'Familiares';
-            $menu_item['submenu']['preventa'] = $sub_menu_item;
+            $menu_item['submenu']['familiares'] = $sub_menu_item;
+            //
+            $sub_menu_item = array();
+            $sub_menu_item['is_active'] = FALSE;
+            $sub_menu_item['href'] = ($folder != '') ? './comedia.php' : './portal/pages/comedia.php';
+            $sub_menu_item['text'] = 'Comedia';
+            $menu_item['submenu']['comedia'] = $sub_menu_item;
+            //
+            $sub_menu_item = array();
+            $sub_menu_item['is_active'] = FALSE;
+            $sub_menu_item['href'] = ($folder != '') ? './accion.php' : './portal/pages/accion.php';
+            $sub_menu_item['text'] = 'Acción';
+            $menu_item['submenu']['accion'] = $sub_menu_item;
         $menu['categorias'] = $menu_item;
 
         $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../estrenos.php' : './estrenos.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../estrenos.php' : './portal/pages/estrenos.php' ;
         $menu_item['text'] = 'Estrenos';
         $menu_item['submenu'] = array();
         $menu['estrenos'] = $menu_item;
 
         $menu_item['is_active'] = ($pagina == "preventa") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../preventa.php' : './preventa.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../preventa.php' : './portal/pages/preventa.php' ;
         $menu_item['text'] = 'Preventa';
         $menu_item['submenu'] = array();
         $menu['preventa'] = $menu_item;
 
         $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../login.php' : './login.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../login.php' : './portal/pages/login.php' ;
         $menu_item['text'] = 'Ingresar';
         $menu_item['submenu'] = array();
         $menu['login'] = $menu_item;
