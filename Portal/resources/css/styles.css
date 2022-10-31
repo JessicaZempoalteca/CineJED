@@ -11558,6 +11558,69 @@ header.masthead .masthead-heading {
   background-position: center center;
 }
 
+#imagenP2{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/amenaza.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP3{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/bros.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP4{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/wakanda.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP5{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/red.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP6{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/observada.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP7{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/avatar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#imagenP8{
+  width: 280px;
+  height: 410px;
+  background-image: url(../../img/bros.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;

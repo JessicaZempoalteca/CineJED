@@ -64,6 +64,7 @@
                         Estrenos 
                         <span class="sc-kfGgVZ dPGWdA">🍿</span> 
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-6 mb-4">
@@ -78,6 +79,7 @@
                                 </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Black Adam</div>
                             </div>
                         </div>
@@ -90,11 +92,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img data-setbg="<?php echo path_image('','amenaza.jpg')?>" alt="..."
-                                width= "280px"
-                                height= "410px" />
+                                <div class="imagenPelicula">
+                                    <div id="imagenP2" class="imagenPelicula" data-setbg="<?php echo path_image('','amenaza.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Amenaza Explosiva</div>
                             </div>
                         </div>
@@ -107,11 +110,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img data-setbg="<?php echo path_image('','bros.jpg')?>" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP3" class="imagenPelicula" data-setbg="<?php echo path_image('','bros.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Bros: Más Que Amigos</div>
                             </div>
                         </div>
@@ -124,11 +128,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img data-setbg="<?php echo path_image('','lilo.jpg')?>" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP4" class="imagenPelicula" data-setbg="<?php echo path_image('','lilo.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Lilo, Lilo, Cocodrilo</div>
                             </div>
                         </div>
@@ -148,7 +153,7 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
+                                    <h2 class="text-uppercase">Black Adam</h2>
                                     <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                     <img class="img-fluid d-block mx-auto" src="../assets/img/portfolio/1.jpg" alt="..." />
                                     <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
@@ -287,6 +292,7 @@
                         Preventa 
                         <span class="sc-kfGgVZ dPGWdA">🎟</span>
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
 
@@ -297,11 +303,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img  src="./portal/img/estrenos/wakanda.jpg" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP4" class="imagenPelicula" data-setbg="<?php echo path_image('','wakanda.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Wakanda Por Siempre</div>
                             </div>
                         </div>
@@ -314,11 +321,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/red.jpg" alt="..."
-                                width= "280px"
-                                height= "410px" />
+                                <div class="imagenPelicula">
+                                    <div id="imagenP5" class="imagenPelicula" data-setbg="<?php echo path_image('','red.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">One Piece Film: Red</div>
                             </div>
                         </div>
@@ -331,11 +339,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/observada.jpg" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP6" class="imagenPelicula" data-setbg="<?php echo path_image('','observada.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading"> Observada</div>
                             </div>
                         </div>
@@ -348,11 +357,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/avatar.jpg" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
+                                <div class="imagenPelicula">
+                                    <div id="imagenP7" class="imagenPelicula" data-setbg="<?php echo path_image('','avatar.jpg')?>"></div>
+                                </div>
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Avatar: El Camino Del Agua</div>
                             </div>
                         </div>
