@@ -27,7 +27,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="./portal/img/logo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="./portal/img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -46,11 +46,10 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container set-bg" data-setbg="<?php echo path_image('','cine.jpg')?>">
+            
                 <div class="masthead-subheading">Welcome To Our Cinema!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
-            </div>
         </header>
 
         <!-- Estrenos-->
