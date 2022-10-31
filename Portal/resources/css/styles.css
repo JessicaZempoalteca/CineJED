@@ -11490,7 +11490,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: white;
-  background-image: url(".Portal/img/cine.jpg");
+  background-image: url("./Portal/img/cine.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11502,7 +11502,7 @@ header.masthead_1 {
   padding-bottom: 0.5rem;
   text-align: center;
   color: white;
-  background-image: url(".Portal/img/cine.jpg");
+  background-image: url("./Portal/img/cine.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
