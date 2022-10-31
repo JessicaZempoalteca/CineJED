@@ -1,3 +1,8 @@
+<?php
+    require('./helpers/funciones_generales.php');
+    require('./helpers/menu_portal.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,8 +19,8 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="./Portal/css/styles.css" rel="stylesheet" />
-        <link href="./Portal/css/estilos.css" rel="estilos"/>
+        <link href="./Portal/resources/css/styles.css" rel="stylesheet" />
+        <link href="./Portal/resources/css/estilos.css" rel="estilos"/>
     </head>
 
     <body id="page-top">
@@ -28,19 +33,20 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <!--<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="./portal/pages/peliculas.html">Películas</a></li>
                         <li class="nav-item"><a class="nav-link" href="./portal/pages/about.html">Próximos estrenos</a></li>
                         <li class="nav-item"><a class="nav-link" href="./portal/pages/team.html">Promociones</a></li>
                         <li class="nav-item"><a class="nav-link" href="./portal/pages/contact.html">Contactanos</a></li>
-                    </ul>
+                    </ul>-->
+                    <?php echo crear_menu('','index');?>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container">
+            <div class="container set-bg" data-setbg="<?php echo path_image('','cine.jpg')?>">
                 <div class="masthead-subheading">Welcome To Our Cinema!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
@@ -61,13 +67,12 @@
                     <div class="col-lg-3 col-sm-6 mb-4">
                         <!-- Portfolio item 1-->
                         <div class="portfolio-item">
+                            <div class="set-bg" data-setbg="<?php echo path_image('', 'blac.jpg')?>"></div>
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i>
+                                </div>  
                                 </div>
-                                <img  src="./portal/img/estrenos/blac.jpg" alt="..." 
-                                width= "280px"
-                                height= "410px"/>
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Black Adam</div>
@@ -82,7 +87,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/amenaza.jpg" alt="..."
+                                <img data-setbg="<?php echo path_image('','amenaza.jpg')?>" alt="..."
                                 width= "280px"
                                 height= "410px" />
                             </a>
@@ -99,7 +104,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/bros.jpg" alt="..." 
+                                <img data-setbg="<?php echo path_image('','bros.jpg')?>" alt="..." 
                                 width= "280px"
                                 height= "410px"/>
                             </a>
@@ -116,7 +121,7 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img src="./portal/img/estrenos/lilo.jpg" alt="..." 
+                                <img data-setbg="<?php echo path_image('','lilo.jpg')?>" alt="..." 
                                 width= "280px"
                                 height= "410px"/>
                             </a>
@@ -134,7 +139,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -571,11 +576,13 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="./Portal/resources/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
 </html>
