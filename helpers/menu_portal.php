@@ -69,7 +69,7 @@ function crear_menu($folder = '', $pagina = ''){
         $html .= '<ul>';
         foreach($menu as $item){
             if($item['href'] != '#'){
-                $html.= '<li class="'.($item["is_active"] ? 'active' : '').'"><a href="'.$item["href"].'">'.$item["text"].'</a></li>'; 
+                $html.='<li class="'.($item["is_active"] ? 'active' : '').'"><a href="'.$item["href"].'">'.$item["text"].'</a></li>'; 
             }
             else{
                 $html.='<li class="'.($item["is_active"] ? 'active' : '').'"><a href="#">'.$item["text"].' <i class="bi bi-caret-down"></i></a>
@@ -86,4 +86,3 @@ function crear_menu($folder = '', $pagina = ''){
                   $html.='</ul>';
                   return $html;
                 }
-?>

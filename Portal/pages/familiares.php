@@ -34,7 +34,7 @@ require('../../helpers/funciones_generales.php');
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <?php echo crear_menu('','index');?>
+                    <?php echo crear_menu('pages','peliculas');?>
                 </div>
             </div>
         </nav>
