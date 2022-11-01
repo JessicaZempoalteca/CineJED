@@ -1,6 +1,4 @@
-<?php
-    require('../.././helpers/funciones_generales.php');
-?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +12,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="<?php echo $root_specific_user.'css/style.css';?>">
+    <link href="../resources/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="shortcut icon" href="../img/boletosLogo.png">
 
 </head>
 
