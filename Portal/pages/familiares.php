@@ -21,13 +21,14 @@ require('../../helpers/funciones_generales.php');
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="shortcut icon" href="../img/boletosLogo.png">
     </head>
     <body id="page-top">
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="./portal/img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -53,6 +54,7 @@ require('../../helpers/funciones_generales.php');
                         Películas Familiares
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
@@ -62,9 +64,10 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../Portal/img/Familiares/angry2.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Familiares/angry2.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Angry Birds 2 </div>
                                 <div class="portfolio-caption-subheading text-muted">2019</div>
                             </div>
@@ -81,6 +84,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/baby.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Un jefe en pañales 2</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -97,6 +101,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/brujas.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El retorno de las brujas 2</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -113,6 +118,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/buz.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>    
                                 <div class="portfolio-caption-heading">Lightyear</div>
                                 <div class="portfolio-caption-subheading text-muted">22</div>
                             </div>
@@ -129,6 +135,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/dc.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Liga de supermascotas</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -145,6 +152,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/era.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Ice Age: Las aventuras de Buck</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -381,6 +389,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/red.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Red</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -397,6 +406,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/groot.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Yo soy Groot</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -413,6 +423,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/hotel.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Hotel Transilvania</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -429,6 +440,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/minions.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Minions: El origen de Gru</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -445,6 +457,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/peter.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Peter Rabbit</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -461,6 +474,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Familiares/pinocho.jpg " alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Pinocho</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
