@@ -37,27 +37,27 @@
             $menu['categorias'] = $menu_item;
 
             $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
-            $menu_item['href'] = ($folder != '') ? '../../estrenos.php' : './portal/pages/estrenos.php' ;
+            $menu_item['href'] = ($folder != '') ? './estrenos.php' : './portal/pages/estrenos.php' ;
             $menu_item['text'] = 'Estrenos';
             $menu_item['submenu'] = array();
             $menu['estrenos'] = $menu_item;
 
             $menu_item['is_active'] = ($pagina == "preventa") ? TRUE : FALSE;
-            $menu_item['href'] = ($folder != '') ? '../../preventa.php' : './portal/pages/preventa.php' ;
+            $menu_item['href'] = ($folder != '') ? './preventa.php' : './portal/pages/preventa.php' ;
             $menu_item['text'] = 'Preventa';
             $menu_item['submenu'] = array();
             $menu['preventa'] = $menu_item;
 
         //
         $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../login.php' : './portal/pages/login.php' ;
+        $menu_item['href'] = ($folder != '') ? './login.php' : './portal/pages/login.php' ;
         $menu_item['text'] = 'Ingresar';
         $menu_item['submenu'] = array();
         $menu['login'] = $menu_item;
 
         //
         $menu_item['is_active'] = ($pagina == "about") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../about.php' : './portal/pages/about.php' ;
+        $menu_item['href'] = ($folder != '') ? './about.php' : './portal/pages/about.php' ;
         $menu_item['text'] = 'Conócenos';
         $menu_item['submenu'] = array();
         $menu['about'] = $menu_item;

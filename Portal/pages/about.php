@@ -33,7 +33,7 @@ require('../../helper/menu_portal.php');
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <?php echo crear_menu('','index');?>
+                        <?php echo crear_menu('','about');?>
                     </ul>
                 </div>
             </div>
