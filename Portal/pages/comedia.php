@@ -53,6 +53,7 @@ require('../../helpers/funciones_generales.php');
                         Películas de Comedia
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
@@ -65,6 +66,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/adios.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Adiós, idiotas</div>
                                 <div class="portfolio-caption-subheading text-muted">2019</div>
                             </div>
@@ -81,6 +83,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/chav.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Chavalas</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -97,6 +100,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/cover.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El cover</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -113,8 +117,9 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/donde.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Donde caben dos</div>
-                                <div class="portfolio-caption-subheading text-muted">22</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
                     </div>
@@ -129,6 +134,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/efecto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Un efecto óptico</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -145,6 +151,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/historia.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Borrar el historial</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -381,6 +388,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/mama.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Mamá o papá</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -397,6 +405,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/palm.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Palm Springs</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -413,6 +422,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/patron.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El buen patrón</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -429,6 +439,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/perfecta.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">La familia perfecta</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -445,6 +456,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/poli.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Poliamor para principiantes</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -461,6 +473,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/round.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Otra ronda</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>

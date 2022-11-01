@@ -19,12 +19,6 @@
             //Submenu
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
-            $sub_menu_item['href'] = ($folder != '') ? './terror.php' : './portal/pages/terror.php';
-            $sub_menu_item['text'] = 'Terror/Suspenso';
-            $menu_item['submenu']['terror'] = $sub_menu_item;
-            //
-            $sub_menu_item = array();
-            $sub_menu_item['is_active'] = FALSE;
             $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './portal/pages/familiares.php';
             $sub_menu_item['text'] = 'Familiares';
             $menu_item['submenu']['familiares'] = $sub_menu_item;

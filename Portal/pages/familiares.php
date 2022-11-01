@@ -120,7 +120,7 @@ require('../../helpers/funciones_generales.php');
                             <div class="portfolio-caption">
                                 <br>    
                                 <div class="portfolio-caption-heading">Lightyear</div>
-                                <div class="portfolio-caption-subheading text-muted">22</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
                     </div>

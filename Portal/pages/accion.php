@@ -50,9 +50,10 @@ require('../../helpers/funciones_generales.php');
             <div class="container">
                 <div class="container">
                     <h1 class="h3 d-flex align-items-center sc-iyvyFf fPOSuk">
-                        Películas de Comedia
+                        Películas de Acción
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
@@ -65,6 +66,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/adam.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Black Adam</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -81,6 +83,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/batman.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">The Batman</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -97,6 +100,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/bullet.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Bullet Train</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -113,6 +117,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/ciudad.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">La ciudad perdida</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -129,6 +134,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/doctor.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Doctor Strange</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -145,6 +151,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/Gun.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Top Gun: Maverick</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -381,6 +388,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/hombre.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El Hombre del Norte</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -397,6 +405,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/proyecto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El proyecto Adam</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -413,6 +422,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/sonic.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Sonic 2</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -429,6 +439,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/thor.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Thor: Love and Thunder</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -445,6 +456,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/toronto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El hombre de Toronto</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -461,6 +473,7 @@ require('../../helpers/funciones_generales.php');
                                 <img class="img-fluid" src="../../Portal/img/Accion/unc.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Uncharted</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
