@@ -19,21 +19,35 @@
 </head>
 
 <body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
+            <div class="container nav">
+                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <?php echo crear_menu('pages','login');?>
+                </div>
+            </div>
+        </nav>
+
     <section class="ftco-section">
         <div class="container">
         <center>
-            <img src="./img/registro.png" alt="logo" style="width:700px;">
+            <img src="../img/registro.png" alt="logo" style="width:700px;">
         </center>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url(<?php echo "./img/CINEJED.png"?>);">
+                        <div class="img" style="background-image: url('../img/CINEJED.png');">
                         </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
                                     <h3 class="mb-4 text-center">INICIAR SESION
-                                    <img src="./img/pelis.png" alt="logo" style="width:70px;"></h3>
+                                    <img src="../img/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
                             <form action="#" class="signin-form">
@@ -53,7 +67,7 @@
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="./img/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="../img/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
