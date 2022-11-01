@@ -44,25 +44,23 @@ require('../../helpers/funciones_generales.php');
         <br>
         <br>
         <br>
-        <br><br>
+        <br><br><br><br><br>
 
         <div class="container">
         <center>
-            <img src="../img/registro.png" alt="logo" style="width:700px;">
+            <img src="../img/registro/registro.png" alt="logo" style="width:700px;">
         </center>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="wrap d-md-flex">
-                        <div class="img" style="background-image: url('../img/CINEJED.png');">
-                        </div>
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
                                     <h3 class="mb-4 text-center">INICIAR SESION
-                                    <img src="../img/pelis.png" alt="logo" style="width:70px;"></h3>
+                                    <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
-                            <form action="#" class="signin-form">
+                            <form action="../../User/index.php" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Usuario</label>
                                     <input type="text" class="form-control" placeholder="Usuario" value="" required>
@@ -79,7 +77,7 @@ require('../../helpers/funciones_generales.php');
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="../img/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="../img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
