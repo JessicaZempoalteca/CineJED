@@ -1,5 +1,5 @@
 <?php
-    require('../.././helpers/funciones_generales.php');
+    require('../helpers/funciones_generales.php');
 ?>
 <!doctype html>
 <html lang="en">
@@ -53,7 +53,7 @@
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="./img/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="./registro/index.php"  href="#signup">Registrase ahora</a><img src="./img/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
