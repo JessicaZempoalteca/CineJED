@@ -49,7 +49,7 @@ require('../../helper/menu_portal.php');
             <div class="container">
                 <div class="container">
                     <h1 class="h3 d-flex align-items-center sc-iyvyFf fPOSuk">
-                        Películas Familiares
+                        Películas de Comedia
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
                 </div>
@@ -61,11 +61,11 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/angry2.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/adam.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Angry Birds 2 </div>
-                                <div class="portfolio-caption-subheading text-muted">2019</div>
+                                <div class="portfolio-caption-heading">Black Adam</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
                     </div>
@@ -77,11 +77,11 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/baby.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/batman.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Un jefe en pañales 2</div>
-                                <div class="portfolio-caption-subheading text-muted">2021</div>
+                                <div class="portfolio-caption-heading">The Batman</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
                     </div>
@@ -93,10 +93,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/brujas.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/bullet.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">El retorno de las brujas 2</div>
+                                <div class="portfolio-caption-heading">Bullet Train</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -109,11 +109,11 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/buz.png" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/ciudad.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lightyear</div>
-                                <div class="portfolio-caption-subheading text-muted">22</div>
+                                <div class="portfolio-caption-heading">La ciudad perdida</div>
+                                <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
                         </div>
                     </div>
@@ -125,10 +125,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/dc.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/doctor.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Liga de supermascotas</div>
+                                <div class="portfolio-caption-heading">Doctor Strange</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -141,10 +141,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/era.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/Gun.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Ice Age: Las aventuras de Buck</div>
+                                <div class="portfolio-caption-heading">Top Gun: Maverick</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -164,9 +164,9 @@ require('../../helper/menu_portal.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Angry Birds 2</h2>
+                                            <h2 class="text-uppercase">Black Adam</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoz7tb4CP7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kOFTZWyaOgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Los enemigos se unen cuando los cerdos le proponen una tregua a las aves para unirse contra un nuevo y terrible rival que los amenaza a todos.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -175,7 +175,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -200,9 +200,9 @@ require('../../helper/menu_portal.php');
                                         <div class="modal-body">
                                             <!-- Project details-->
                                             <h2 class="text-uppercase"></h2>
-                                            <h2 class="text-uppercase">Un jefe en pañales 2</h2>
+                                            <h2 class="text-uppercase">The Batman</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xh1YjppO5ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fWQrd6cwJ0A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Theodore Templeton y su hermano, ahora adultos, toman una pócima mágica que los transforma en bebés durante 48 horas. Juntos, deben evitar que un villano convierta a otros niños pequeños en monstruitos insoportables.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -211,7 +211,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -235,9 +235,9 @@ require('../../helper/menu_portal.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">El retorno de las brujas 2</h2>
+                                            <h2 class="text-uppercase">Bullet Train</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/v5lPpRM5psw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/0IOsk2Vlc4o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Han pasado 29 años desde que alguien encendió la Vela de la Llama Negra y resucitó a las hermanas Sanderson del siglo XVII, y ahora buscan venganza. De tres estudiantes de secundaria depende impedir que las voraces brujas causen un nuevo tipo de estrago en Salem antes del amanecer el día de Halloween.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -246,7 +246,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -270,9 +270,9 @@ require('../../helper/menu_portal.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Lightyear</h2>
+                                            <h2 class="text-uppercase">La ciudad perdida</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WikwAJ3NQew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/cP5tjsc4aqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Atrapado en un planeta hostil a 4,2 millones de años luz de la Tierra junto a su comandante y su tripulación, Buzz Lightyear intenta encontrar la manera de volver a casa a través del espacio y el tiempo. Pero la llegada de Zurg, una presencia imponente con un ejército de robots despiadados y una agenda misteriosa, complica aún más las cosas y pone en peligro la misión.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -281,7 +281,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -305,9 +305,9 @@ require('../../helper/menu_portal.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Liga de supermascotas</h2>
+                                            <h2 class="text-uppercase">Doctor Strange</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DHzpY0UO47w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mCg0V88W0Xw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Krypto el Superperro y Superman son amigos inseparables que comparten los mismos superpoderes y luchan juntos contra el crimen en Metrópolis. Cuando Superman y el resto de la Liga de la Justicia son secuestrados, Krypto debe convencer a un variopinto grupo de un albergue –Ace el sabueso, PB la cerdita barrigona, Merton la tortuga y Chip la ardilla– de dominar sus nuevos poderes y ayudarlo a rescatar a los superhéroes. Animación Acción Familia Comedia Ciencia ficción</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -316,7 +316,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -340,9 +340,9 @@ require('../../helper/menu_portal.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Ice Age: Las aventuras de Buck</h2>
+                                            <h2 class="text-uppercase">Top Gun: Maverick</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ECN-CIBRGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zzBIzYmxatU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Continúa contando las hilarantes aventuras de uno de los mamíferos favoritos de la prehistoria. Tras un distanciamiento con su hermana mayor, Ellie, los hermanos Crash y Eddie parten a la búsqueda de un lugar propio, pero rápidamente acaban atrapados en una caverna subterránea. El aventurero Buck Wild acudirá a su rescate y juntos, tendrán que enfrentarse a los dinosaurios del Mundo Perdido.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -351,7 +351,7 @@ require('../../helper/menu_portal.php');
                                                 </li>
                                                 <li>
                                                     <strong>Categoria:</strong>
-                                                    Familiar
+                                                    Acción
                                                 </li>
                                             </ul>
                                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -377,10 +377,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/red.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/hombre.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Red</div>
+                                <div class="portfolio-caption-heading">El Hombre del Norte</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -393,10 +393,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/groot.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/proyecto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Yo soy Groot</div>
+                                <div class="portfolio-caption-heading">El proyecto Adam</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -409,10 +409,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/hotel.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/sonic.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Hotel Transilvania</div>
+                                <div class="portfolio-caption-heading">Sonic 2</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -425,10 +425,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/minions.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/thor.webp" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Minions: El origen de Gru</div>
+                                <div class="portfolio-caption-heading">Thor: Love and Thunder</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -441,10 +441,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/peter.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/toronto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Peter Rabbit</div>
+                                <div class="portfolio-caption-heading">El hombre de Toronto</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
                         </div>
@@ -457,10 +457,10 @@ require('../../helper/menu_portal.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/pinocho.jpg " alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Accion/unc.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Pinocho</div>
+                                <div class="portfolio-caption-heading">Uncharted</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -481,9 +481,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Red</h2>
+                                    <h2 class="text-uppercase">El Hombre del Norte</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/upGoAejd7LM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7HZ4tBQEiB0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Los enemigos se unen cuando los cerdos le proponen una tregua a las aves para unirse contra un nuevo y terrible rival que los amenaza a todos.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -492,7 +492,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -516,9 +516,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Yo soy Groot</h2>
+                                    <h2 class="text-uppercase">El proyecto Adam</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l-IEfXlZj1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ayGhk_StJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Theodore Templeton y su hermano, ahora adultos, toman una pócima mágica que los transforma en bebés durante 48 horas. Juntos, deben evitar que un villano convierta a otros niños pequeños en monstruitos insoportables.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -527,7 +527,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -551,9 +551,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Hotel Transylvania 4</h2>
+                                    <h2 class="text-uppercase">Sonic 2</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/laTKwRae9-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/G5kzUpWAusI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Han pasado 29 años desde que alguien encendió la Vela de la Llama Negra y resucitó a las hermanas Sanderson del siglo XVII, y ahora buscan venganza. De tres estudiantes de secundaria depende impedir que las voraces brujas causen un nuevo tipo de estrago en Salem antes del amanecer el día de Halloween.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -562,7 +562,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -586,9 +586,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Minions 2</h2>
+                                    <h2 class="text-uppercase">Thor: Love and Thunder</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/klsYgu5Y9Ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Go8nTmfrQd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Atrapado en un planeta hostil a 4,2 millones de años luz de la Tierra junto a su comandante y su tripulación, Buzz Lightyear intenta encontrar la manera de volver a casa a través del espacio y el tiempo. Pero la llegada de Zurg, una presencia imponente con un ejército de robots despiadados y una agenda misteriosa, complica aún más las cosas y pone en peligro la misión.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -597,7 +597,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -621,9 +621,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Peter Rabbit</h2>
+                                    <h2 class="text-uppercase">El hombre de Toronto</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/euGHcnyUo84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5sOezBnK2Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Krypto el Superperro y Superman son amigos inseparables que comparten los mismos superpoderes y luchan juntos contra el crimen en Metrópolis. Cuando Superman y el resto de la Liga de la Justicia son secuestrados, Krypto debe convencer a un variopinto grupo de un albergue –Ace el sabueso, PB la cerdita barrigona, Merton la tortuga y Chip la ardilla– de dominar sus nuevos poderes y ayudarlo a rescatar a los superhéroes. Animación Acción Familia Comedia Ciencia ficción</p>
                                     <ul class="list-inline">
                                         <li>
@@ -632,7 +632,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -656,9 +656,9 @@ require('../../helper/menu_portal.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Pinocho</h2>
+                                    <h2 class="text-uppercase">Uncharted</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TITv1TNi5mI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/kVgsnqAp0Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Continúa contando las hilarantes aventuras de uno de los mamíferos favoritos de la prehistoria. Tras un distanciamiento con su hermana mayor, Ellie, los hermanos Crash y Eddie parten a la búsqueda de un lugar propio, pero rápidamente acaban atrapados en una caverna subterránea. El aventurero Buck Wild acudirá a su rescate y juntos, tendrán que enfrentarse a los dinosaurios del Mundo Perdido.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -667,7 +667,7 @@ require('../../helper/menu_portal.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Acción
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
