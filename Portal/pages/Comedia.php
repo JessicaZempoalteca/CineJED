@@ -1,5 +1,6 @@
 <?php
-require('../../helper/menu_portal.php');
+require('../../helpers/menu_portal.php');
+require('../../helpers/funciones_generales.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ require('../../helper/menu_portal.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Inicio</title>
+        <title>Películas de comedia</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
         <!-- Font Awesome icons (free version)-->
@@ -17,22 +18,22 @@ require('../../helper/menu_portal.php');
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../resources/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="shortcut icon" href="../img/boletosLogo.png">
     </head>
     <body id="page-top">
 
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="../assets/img/navbar-logo.svg" alt="..." /></a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
+            <div class="container nav">
+                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <?php echo crear_menu('','index');?>
-                    </ul>
+                    <?php echo crear_menu('pages','peliculas');?>
                 </div>
             </div>
         </nav>
@@ -52,6 +53,7 @@ require('../../helper/menu_portal.php');
                         Películas de Comedia
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
+                    <br>
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
@@ -64,6 +66,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/adios.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Adiós, idiotas</div>
                                 <div class="portfolio-caption-subheading text-muted">2019</div>
                             </div>
@@ -80,6 +83,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/chav.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Chavalas</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -96,6 +100,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/cover.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El cover</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -112,8 +117,9 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/donde.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Donde caben dos</div>
-                                <div class="portfolio-caption-subheading text-muted">22</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
                     </div>
@@ -128,6 +134,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/efecto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Un efecto óptico</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -144,6 +151,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/historia.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Borrar el historial</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -158,7 +166,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -193,7 +201,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -229,7 +237,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -264,7 +272,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -299,7 +307,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -334,7 +342,7 @@ require('../../helper/menu_portal.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -380,6 +388,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/mama.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Mamá o papá</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -396,6 +405,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/palm.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Palm Springs</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -412,6 +422,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/patron.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">El buen patrón</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -428,6 +439,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/perfecta.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">La familia perfecta</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -444,6 +456,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/poli.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Poliamor para principiantes</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
@@ -460,6 +473,7 @@ require('../../helper/menu_portal.php');
                                 <img class="img-fluid" src="../../Portal/img/Comedia/round.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
+                                <br>
                                 <div class="portfolio-caption-heading">Otra ronda</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
@@ -475,7 +489,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -510,7 +524,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -545,7 +559,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -580,7 +594,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -615,7 +629,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -650,7 +664,7 @@ require('../../helper/menu_portal.php');
         <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -721,14 +735,14 @@ require('../../helper/menu_portal.php');
                         <div class="px-5 py-5 py-lg-0 my-5 my-lg-0 sc-bxivhb hgSmeg">
                             <ul class="font-weight-light small py-2">
                             <li class="nav-item">
-                            <a class="nav-link py-1 text-white" href="/nosotros">Sobre CineJED</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/landing/privacidad-cinefan/privacidad-cinefan">Términos y condiciones Cinefan</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-precios">Política de precios</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-de-reembolsos">Política de reembolsos</a></li>
+                            <a class="nav-link py-1 text-white" href="./about.php">Sobre CineJED</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Términos y condiciones Cinefan</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Política de precios</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Política de reembolsos</a></li>
                             <li class="nav-item"><a class="nav-link py-1 text-white" href="http://cinemex.bumeran.com.mx/" target="_blank" rel="noopener noreferrer">Bolsa de trabajo corporativo</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/terminos">Términos y condiciones</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/privacidadvisitantes">Aviso de Privacidad</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/empleos/formulario">Bolsa de trabajo cines</a></li></ul>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Términos y condiciones</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Aviso de Privacidad</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Bolsa de trabajo cines</a></li></ul>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -753,13 +767,13 @@ require('../../helper/menu_portal.php');
                     </div>
                 </div>
             </div>
-        </footer>  
+        </footer>
 
         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="../resources/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
