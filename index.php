@@ -29,30 +29,27 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="./portal/img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="./Portal/img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <?php echo crear_menu('','index');?>
-                    </ul>
+                    <?php echo crear_menu('','index');?>
                 </div>
             </div>
         </nav>
-        
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
                 <div data-setbg="<?php echo path_image('','cine.jpg')?>"></div>
                 <div class="masthead-subheading">Welcome To Our Cinema!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="./Portal/pages/about.php">Tell Me More</a>
             </div>
         </header>
 
-        <!-- Estrenos-->
+               <!-- Estrenos-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="container">
@@ -143,7 +140,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -186,7 +183,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -229,7 +226,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -274,7 +271,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -316,7 +313,6 @@
                 </div>
             </div>
         </div>
-
         
         <!-- Preventa-->
         <section class="page-section bg-light" id="portfolio">
@@ -404,13 +400,12 @@
                 </div>
             </div>
         </section>
-
         <!-- Modulo de Preventa-->
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -455,7 +450,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -499,7 +494,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -542,7 +537,7 @@
         <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="./Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
@@ -578,7 +573,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Footer-->
         <footer class="py-2 bg-dark text-write">
@@ -619,14 +613,14 @@
                         <div class="px-5 py-5 py-lg-0 my-5 my-lg-0 sc-bxivhb hgSmeg">
                             <ul class="font-weight-light small py-2">
                             <li class="nav-item">
-                            <a class="nav-link py-1 text-white" href="/nosotros">Sobre CineJED</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/landing/privacidad-cinefan/privacidad-cinefan">Términos y condiciones Cinefan</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-precios">Política de precios</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-de-reembolsos">Política de reembolsos</a></li>
+                            <a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Sobre CineJED</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Términos y condiciones Cinefan</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Política de precios</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Política de reembolsos</a></li>
                             <li class="nav-item"><a class="nav-link py-1 text-white" href="http://cinemex.bumeran.com.mx/" target="_blank" rel="noopener noreferrer">Bolsa de trabajo corporativo</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/terminos">Términos y condiciones</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/privacidadvisitantes">Aviso de Privacidad</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/empleos/formulario">Bolsa de trabajo cines</a></li></ul>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Términos y condiciones</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Aviso de Privacidad</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Bolsa de trabajo cines</a></li></ul>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -651,8 +645,8 @@
                     </div>
                 </div>
             </div>
-        </div>  
-
+        </footer>  
+                   
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
