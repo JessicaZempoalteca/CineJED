@@ -9,28 +9,18 @@ require('../../helpers/funciones_generales.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Contacto</title>
+        <title>Inicio</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-      
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../resources/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="../resources/css/estilos.css">
-        <link rel="shortcut icon" href="../img/boletosLogo.png">
+        <link href="../resources/css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top"><br>
-    <br>
-      <br>
-      <br>
-      <br>
-      <br><br><br>
-
+    <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
@@ -40,70 +30,77 @@ require('../../helpers/funciones_generales.php');
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <?php echo crear_menu('pages','contact');?>
+                    <?php echo crear_menu('pages','peliculas');?>
                 </div>
             </div>
         </nav>
 
-         <center><img src="../img/boletosLogo.png" alt="logo" style="width:100px;"><h2>Contactanos</h2></center>
-       <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <div class="row align-items-stretch mb-5">
-
-            <div class="form-group">
-                <label for="first-name">Nombre</label>
-                <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
-                <div class="invalid-feedback" data-sb-feedback="name:required">Nombre es requerido.</div>
-            </div>
-            <div class="form-group">
-                <label for="country">Ciudad</label>
-                <input type="text" class="form-control" placeholder="Ciudad" id="Ciudad">
-            </div>
-            <div class="form-group">
-                <label for="number">Numero Telefonico</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Numero Telefonico" data-sb-validations="required" />
-                <div class="invalid-feedback" data-sb-feedback="phone:required">Numero Telefonico es requerido</div>
-            </div>
-            <div class="form-group">
-                <label for="age">Edad</label>
-                <input type="text" class="form-control" placeholder="Edad" id="Edad">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
-                <div class="invalid-feedback" data-sb-feedback="email:required">Email es reqeurido.</div>
-                <div class="invalid-feedback" data-sb-feedback="email:email">Email no es valido.</div>
-            </div>
-            <div class="form-group">
-                <label for="email">Mensaje</label>
-                    <!-- Message input-->
-                    <textarea class="form-control" id="message" placeholder="Tu Mensaje " data-sb-validations="required"></textarea>
-                    <div class="invalid-feedback" data-sb-feedback="message:required">Mensaje requerido</div>
+        <!-- Masthead-->
+        <header class="masthead_1">
+        </header>
+        
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
+
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
             </div>
-</body>
-</html>
-<div class="d-none" id="submitSuccessMessage">
-    <div class="text-center text-white mb-3">
-        <div class="fw-bolder">Mensaje enviado</div>
-        Gracias por tu opinion
-        <br />
-        <a href="https://ProjectCINEJED.jessicazempoalt.repl.co">Regresar a la pagina principal</a>
-    </div>
-</div>
-<!-- Submit error message-->
-<!---->
-<!-- This is what your users will see when there is-->
-<!-- an error submitting the form-->
-<div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error en tu mensaje!</div></div>
-<!-- Submit Button-->
-<div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar</button></div>
-</form>
-</div>
-</section>
+        </section>
 
-
-                <!-- Footer-->
-        <footer class="py-2 bg-dark text-write">
+       <!-- Footer-->
+       <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
                     <div class="col-12 col-lg-4">
@@ -173,18 +170,16 @@ require('../../helpers/funciones_generales.php');
                     </div>
                 </div>
             </div>
-        </footer> 
-
+        </footer>
+       
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="./Portal/resources/js/scripts.js"></script>
+        <script src="../resources/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     </body>
 </html>
