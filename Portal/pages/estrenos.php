@@ -9,7 +9,7 @@ require('../../helpers/funciones_generales.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Inicio</title>
+        <title>Películas de estreno</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
         <!-- Font Awesome icons (free version)-->
@@ -166,7 +166,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -201,7 +201,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -237,7 +237,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -272,7 +272,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -307,7 +307,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
@@ -342,7 +342,7 @@ require('../../helpers/funciones_generales.php');
                 <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close-icon.svg" alt="Close modal" /></div>
+                            <div class="close-modal" data-bs-dismiss="modal"><img src="../../Portal/img/close.png" alt="Close modal" style="width: 100%;"></div>
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">

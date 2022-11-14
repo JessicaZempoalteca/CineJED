@@ -1,7 +1,6 @@
 <?php
 require('../../helpers/menu_portal.php');
 require('../../helpers/funciones_generales.php');
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +9,7 @@ require('../../helpers/funciones_generales.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Películas familiares</title>
+        <title>Películas de comedia</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
         <!-- Font Awesome icons (free version)-->
@@ -51,7 +50,7 @@ require('../../helpers/funciones_generales.php');
             <div class="container">
                 <div class="container">
                     <h1 class="h3 d-flex align-items-center sc-iyvyFf fPOSuk">
-                        Películas Familiares
+                        Películas de Comedia
                         <span class="sc-kfGgVZ dPGWdA">🎬</span>
                     </h1>
                     <br>
@@ -64,11 +63,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/angry2.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/adios.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Angry Birds 2 </div>
+                                <div class="portfolio-caption-heading">Adiós, idiotas</div>
                                 <div class="portfolio-caption-subheading text-muted">2019</div>
                             </div>
                         </div>
@@ -81,11 +80,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/baby.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/chav.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Un jefe en pañales 2</div>
+                                <div class="portfolio-caption-heading">Chavalas</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
                         </div>
@@ -98,11 +97,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/brujas.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/cover.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">El retorno de las brujas 2</div>
+                                <div class="portfolio-caption-heading">El cover</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -115,11 +114,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/buz.png" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/donde.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <br>    
-                                <div class="portfolio-caption-heading">Lightyear</div>
+                                <br>
+                                <div class="portfolio-caption-heading">Donde caben dos</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -132,11 +131,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/dc.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/efecto.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Liga de supermascotas</div>
+                                <div class="portfolio-caption-heading">Un efecto óptico</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -149,11 +148,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/era.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/historia.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Ice Age: Las aventuras de Buck</div>
+                                <div class="portfolio-caption-heading">Borrar el historial</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -173,9 +172,9 @@ require('../../helpers/funciones_generales.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Angry Birds 2</h2>
+                                            <h2 class="text-uppercase">Adiós, idiotas</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yoz7tb4CP7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/sOZrCSiVjyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Los enemigos se unen cuando los cerdos le proponen una tregua a las aves para unirse contra un nuevo y terrible rival que los amenaza a todos.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -209,9 +208,9 @@ require('../../helpers/funciones_generales.php');
                                         <div class="modal-body">
                                             <!-- Project details-->
                                             <h2 class="text-uppercase"></h2>
-                                            <h2 class="text-uppercase">Un jefe en pañales 2</h2>
+                                            <h2 class="text-uppercase">Chavalas</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Xh1YjppO5ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MN5D_nvbvGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Theodore Templeton y su hermano, ahora adultos, toman una pócima mágica que los transforma en bebés durante 48 horas. Juntos, deben evitar que un villano convierta a otros niños pequeños en monstruitos insoportables.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -244,9 +243,9 @@ require('../../helpers/funciones_generales.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">El retorno de las brujas 2</h2>
+                                            <h2 class="text-uppercase">El cover</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/v5lPpRM5psw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1iPcdvZZ7pY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Han pasado 29 años desde que alguien encendió la Vela de la Llama Negra y resucitó a las hermanas Sanderson del siglo XVII, y ahora buscan venganza. De tres estudiantes de secundaria depende impedir que las voraces brujas causen un nuevo tipo de estrago en Salem antes del amanecer el día de Halloween.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -279,9 +278,9 @@ require('../../helpers/funciones_generales.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Lightyear</h2>
+                                            <h2 class="text-uppercase">Donde caben dos</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WikwAJ3NQew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-bI3l7xN_Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Atrapado en un planeta hostil a 4,2 millones de años luz de la Tierra junto a su comandante y su tripulación, Buzz Lightyear intenta encontrar la manera de volver a casa a través del espacio y el tiempo. Pero la llegada de Zurg, una presencia imponente con un ejército de robots despiadados y una agenda misteriosa, complica aún más las cosas y pone en peligro la misión.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -314,9 +313,9 @@ require('../../helpers/funciones_generales.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Liga de supermascotas</h2>
+                                            <h2 class="text-uppercase">Un efecto óptico</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/DHzpY0UO47w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/itJCUJIeem4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Krypto el Superperro y Superman son amigos inseparables que comparten los mismos superpoderes y luchan juntos contra el crimen en Metrópolis. Cuando Superman y el resto de la Liga de la Justicia son secuestrados, Krypto debe convencer a un variopinto grupo de un albergue –Ace el sabueso, PB la cerdita barrigona, Merton la tortuga y Chip la ardilla– de dominar sus nuevos poderes y ayudarlo a rescatar a los superhéroes. Animación Acción Familia Comedia Ciencia ficción</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -349,9 +348,9 @@ require('../../helpers/funciones_generales.php');
                                     <div class="col-lg-8">
                                         <div class="modal-body">
                                             <!-- Project details-->
-                                            <h2 class="text-uppercase">Ice Age: Las aventuras de Buck</h2>
+                                            <h2 class="text-uppercase">Borrar el historial</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ECN-CIBRGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/iIrYd6fVpL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             <p>Continúa contando las hilarantes aventuras de uno de los mamíferos favoritos de la prehistoria. Tras un distanciamiento con su hermana mayor, Ellie, los hermanos Crash y Eddie parten a la búsqueda de un lugar propio, pero rápidamente acaban atrapados en una caverna subterránea. El aventurero Buck Wild acudirá a su rescate y juntos, tendrán que enfrentarse a los dinosaurios del Mundo Perdido.</p>
                                             <ul class="list-inline">
                                                 <li>
@@ -386,11 +385,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/red.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/mama.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Red</div>
+                                <div class="portfolio-caption-heading">Mamá o papá</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -403,11 +402,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/groot.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/palm.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Yo soy Groot</div>
+                                <div class="portfolio-caption-heading">Palm Springs</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -420,11 +419,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/hotel.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/patron.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Hotel Transilvania</div>
+                                <div class="portfolio-caption-heading">El buen patrón</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -437,11 +436,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/minions.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/perfecta.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Minions: El origen de Gru</div>
+                                <div class="portfolio-caption-heading">La familia perfecta</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -454,11 +453,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/peter.jpg" alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/poli.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Peter Rabbit</div>
+                                <div class="portfolio-caption-heading">Poliamor para principiantes</div>
                                 <div class="portfolio-caption-subheading text-muted">2021</div>
                             </div>
                         </div>
@@ -471,11 +470,11 @@ require('../../helpers/funciones_generales.php');
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Familiares/pinocho.jpg " alt="..." />
+                                <img class="img-fluid" src="../../Portal/img/Comedia/round.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Pinocho</div>
+                                <div class="portfolio-caption-heading">Otra ronda</div>
                                 <div class="portfolio-caption-subheading text-muted">2022</div>
                             </div>
                         </div>
@@ -496,9 +495,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Red</h2>
+                                    <h2 class="text-uppercase">Mamá o papá</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/upGoAejd7LM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/j6l3u0at97o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Los enemigos se unen cuando los cerdos le proponen una tregua a las aves para unirse contra un nuevo y terrible rival que los amenaza a todos.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -507,7 +506,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -531,9 +530,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Yo soy Groot</h2>
+                                    <h2 class="text-uppercase">Palm Springs</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l-IEfXlZj1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CpBLtXduh_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Theodore Templeton y su hermano, ahora adultos, toman una pócima mágica que los transforma en bebés durante 48 horas. Juntos, deben evitar que un villano convierta a otros niños pequeños en monstruitos insoportables.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -542,7 +541,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -566,9 +565,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Hotel Transylvania 4</h2>
+                                    <h2 class="text-uppercase">El buen patrón</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/laTKwRae9-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YVQDyL2p3IU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Han pasado 29 años desde que alguien encendió la Vela de la Llama Negra y resucitó a las hermanas Sanderson del siglo XVII, y ahora buscan venganza. De tres estudiantes de secundaria depende impedir que las voraces brujas causen un nuevo tipo de estrago en Salem antes del amanecer el día de Halloween.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -577,7 +576,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -601,9 +600,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Minions 2</h2>
+                                    <h2 class="text-uppercase">La familia perfecta</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/klsYgu5Y9Ww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3E2fS0wgD4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Atrapado en un planeta hostil a 4,2 millones de años luz de la Tierra junto a su comandante y su tripulación, Buzz Lightyear intenta encontrar la manera de volver a casa a través del espacio y el tiempo. Pero la llegada de Zurg, una presencia imponente con un ejército de robots despiadados y una agenda misteriosa, complica aún más las cosas y pone en peligro la misión.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -612,7 +611,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -636,9 +635,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Peter Rabbit</h2>
+                                    <h2 class="text-uppercase">Poliamor para principiantes</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/euGHcnyUo84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r06WELJBZ3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Krypto el Superperro y Superman son amigos inseparables que comparten los mismos superpoderes y luchan juntos contra el crimen en Metrópolis. Cuando Superman y el resto de la Liga de la Justicia son secuestrados, Krypto debe convencer a un variopinto grupo de un albergue –Ace el sabueso, PB la cerdita barrigona, Merton la tortuga y Chip la ardilla– de dominar sus nuevos poderes y ayudarlo a rescatar a los superhéroes. Animación Acción Familia Comedia Ciencia ficción</p>
                                     <ul class="list-inline">
                                         <li>
@@ -647,7 +646,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -671,9 +670,9 @@ require('../../helpers/funciones_generales.php');
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Pinocho</h2>
+                                    <h2 class="text-uppercase">Otra ronda</h2>
                                     <br>
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TITv1TNi5mI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5pLZ_DB1RPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     <p>Continúa contando las hilarantes aventuras de uno de los mamíferos favoritos de la prehistoria. Tras un distanciamiento con su hermana mayor, Ellie, los hermanos Crash y Eddie parten a la búsqueda de un lugar propio, pero rápidamente acaban atrapados en una caverna subterránea. El aventurero Buck Wild acudirá a su rescate y juntos, tendrán que enfrentarse a los dinosaurios del Mundo Perdido.</p>
                                     <ul class="list-inline">
                                         <li>
@@ -682,7 +681,7 @@ require('../../helpers/funciones_generales.php');
                                         </li>
                                         <li>
                                             <strong>Categoria:</strong>
-                                            Familiar
+                                            Comedia
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -736,14 +735,14 @@ require('../../helpers/funciones_generales.php');
                         <div class="px-5 py-5 py-lg-0 my-5 my-lg-0 sc-bxivhb hgSmeg">
                             <ul class="font-weight-light small py-2">
                             <li class="nav-item">
-                            <a class="nav-link py-1 text-white" href="/nosotros">Sobre CineJED</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/landing/privacidad-cinefan/privacidad-cinefan">Términos y condiciones Cinefan</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-precios">Política de precios</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-de-reembolsos">Política de reembolsos</a></li>
+                            <a class="nav-link py-1 text-white" href="./about.php">Sobre CineJED</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Términos y condiciones Cinefan</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Política de precios</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Política de reembolsos</a></li>
                             <li class="nav-item"><a class="nav-link py-1 text-white" href="http://cinemex.bumeran.com.mx/" target="_blank" rel="noopener noreferrer">Bolsa de trabajo corporativo</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/terminos">Términos y condiciones</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/privacidadvisitantes">Aviso de Privacidad</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/empleos/formulario">Bolsa de trabajo cines</a></li></ul>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Términos y condiciones</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Aviso de Privacidad</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./about.php">Bolsa de trabajo cines</a></li></ul>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
@@ -768,7 +767,7 @@ require('../../helpers/funciones_generales.php');
                     </div>
                 </div>
             </div>
-        </footer>  
+        </footer>
 
         
         <!-- Bootstrap core JS-->

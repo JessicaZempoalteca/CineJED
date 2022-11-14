@@ -62,12 +62,12 @@
         $menu_item['submenu'] = array();
         $menu['about'] = $menu_item;
 
-        //
-        $menu_item['is_active'] = ($pagina == "contacto") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? './about.php' : './Portal/pages/contacto.php' ;
+      //
+        $menu_item['is_active'] = ($pagina == "contact") ? TRUE : FALSE;
+        $menu_item['href'] = ($folder != '') ? './contact.php' : './Portal/pages/contact.php' ;
         $menu_item['text'] = 'Contacto';
         $menu_item['submenu'] = array();
-        $menu['contacto'] = $menu_item;
+        $menu['contact'] = $menu_item;
         return $menu;
       }
 
@@ -152,13 +152,6 @@ function crear_menu($folder = '', $pagina = ''){
                   $menu_item['text'] = 'Conócenos';
                   $menu_item['submenu'] = array();
                   $menu['about'] = $menu_item;
-
-                  //
-                  $menu_item['is_active'] = ($pagina == "contacto") ? TRUE : FALSE;
-                  $menu_item['href'] = ($folder != '') ? './contacto.php' : './Portal/pages/contacto.php' ;
-                  $menu_item['text'] = 'Contacto';
-                  $menu_item['submenu'] = array();
-                  $menu['contacto'] = $menu_item;
                   return $menu;
                 }
           

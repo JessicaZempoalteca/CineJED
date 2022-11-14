@@ -29,7 +29,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href=""><img src="./portal/img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="./Portal/img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -45,11 +45,11 @@
                 <div data-setbg="<?php echo path_image('','cine.jpg')?>"></div>
                 <div class="masthead-subheading">Welcome To Our Cinema!</div>
                 <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="./Portal/pages/about.php">Tell Me More</a>
             </div>
         </header>
 
-        <!-- Estrenos-->
+               <!-- Estrenos-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="container">
@@ -574,7 +574,6 @@
             </div>
         </div>
 
-
         <!-- Footer-->
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
@@ -614,40 +613,40 @@
                         <div class="px-5 py-5 py-lg-0 my-5 my-lg-0 sc-bxivhb hgSmeg">
                             <ul class="font-weight-light small py-2">
                             <li class="nav-item">
-                            <a class="nav-link py-1 text-white" href="/nosotros">Sobre CineJED</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/landing/privacidad-cinefan/privacidad-cinefan">Términos y condiciones Cinefan</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-precios">Política de precios</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/politica-de-reembolsos">Política de reembolsos</a></li>
+                            <a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Sobre CineJED</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Términos y condiciones Cinefan</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Política de precios</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Política de reembolsos</a></li>
                             <li class="nav-item"><a class="nav-link py-1 text-white" href="http://cinemex.bumeran.com.mx/" target="_blank" rel="noopener noreferrer">Bolsa de trabajo corporativo</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/terminos">Términos y condiciones</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/privacidadvisitantes">Aviso de Privacidad</a></li>
-                            <li class="nav-item"><a class="nav-link py-1 text-white" href="/empleos/formulario">Bolsa de trabajo cines</a></li></ul>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Términos y condiciones</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Aviso de Privacidad</a></li>
+                            <li class="nav-item"><a class="nav-link py-1 text-white" href="./Portal/pages/about.php">Bolsa de trabajo cines</a></li></ul>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4">
                         <div class="d-flex justify-content-around justify-content-lg-between align-items-center pl-lg-5 pb-5">
                             <a class="sc-bdVaJa jeNtWj" href="https://itunes.apple.com/mx/app/cinemex/id418163740" target="_blank" rel="noopener noreferrer">
-                            <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-app-store.png" class="img-fluid" alt="App Store"></a>
+                            <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-app-store.png" class="img-fluid1" alt="App Store"></a>
                             <a class="sc-bdVaJa jeNtWj" href="https://play.google.com/store/apps/details?id=com.cinemex&amp;hl=es" target="_blank" rel="noopener noreferrer">
-                            <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-google-play.png" class="img-fluid" alt="Google Play"></a>
+                            <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-google-play.png" class="img-fluid1" alt="Google Play"></a>
                         </div>
                         <div class="pt-5 border-top border-secondary">
                             <div class="d-flex flex-wrap flex-md-nowrap justify-content-around justify-content-lg-between align-items-center pl-lg-5">
                                 <a href="https://www.fundaciongrupomexico.org/programas/Paginas/concienciaCinemex.aspx" target="_blank" rel="noopener noreferrer" class="m-2 mb-4">
-                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-conciencia-cinemex.png" class="img-fluid" alt="Conciencia Cinemex"></a>
+                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-conciencia-cinemex.png" class="img-fluid1" alt="Conciencia Cinemex"></a>
                                 <a href="http://www.canacine.org.mx/" target="_blank" rel="noopener noreferrer" class="m-2 mb-4">
-                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-canacine.png" class="img-fluid" alt="Canacine"></a>
+                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-canacine.png" class="img-fluid1" alt="Canacine"></a>
                                 <a href="http://www.alboa.com.mx/?utm_source=cinemex" target="_blank" rel="noopener noreferrer" class="m-2 mb-4">
-                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-alboa.png" class="img-fluid" alt="Alboa"></a>
+                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-alboa.png" class="img-fluid1" alt="Alboa"></a>
                                 <a href="https://gamersarena.com.mx/?utm_source=cinemex" target="_blank" rel="noopener noreferrer" class="m-2 mb-4">
-                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-arena.png" class="img-fluid" alt="Gamers Arena"></a>
+                                <img src="https://s3.amazonaws.com/statics3.cinemex.com/v2/dist/images/logo-arena.png" class="img-fluid1" alt="Gamers Arena"></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>  
-
+        </footer>  
+                   
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
