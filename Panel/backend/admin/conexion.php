@@ -15,7 +15,8 @@
         exit;
     }//end 
     
-    //Procesamo o relizamos una petición a la BD
+    //Procesa o relizamos una petición a la BD
     echo '<script>alert("Conexión éxitosa a la BD")</script>';
+    //variable de conexion y el proceso que se quiere realizar
     mysqli_query($conexion, 'SET NAMES "utf8"');
     
