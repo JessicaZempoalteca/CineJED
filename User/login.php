@@ -1,6 +1,6 @@
 <?php
-require('../../helpers/menu_portal.php');
-require('../../helpers/funciones_generales.php');
+require('../helpers/menu_portal.php');
+require('../helpers/funciones_generales.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,11 +63,11 @@ require('../../helpers/funciones_generales.php');
                             <form action="../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" required>
+                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="usuario" name="usuario" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Contraseña</label>
-                                    <input type="password" class="form-control" placeholder="contraseña" value="" required>
+                                    <input type="password" class="form-control" placeholder="contraseña" id="password" name="password" value="" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">
