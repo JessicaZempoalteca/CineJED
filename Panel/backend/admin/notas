@@ -17,7 +17,7 @@ detalles manda a archivo usuario detalles
 en la carpeta crud
 carpeta usuario
 archivo insertar.php
-    <?php
+    <
         
         variables para guardar la informacion del formulario
         comprobar si no estan vacias
