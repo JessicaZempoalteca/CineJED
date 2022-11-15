@@ -5,7 +5,7 @@
   if (!isset($_SESSION['idUsuario'])) {
     echo '<script>
               alert("No has iniciado sesión");
-              window.location = "../../User/login.php";
+              window.location = "../../User/pages/login.php";
           </script>';
   }
 ?>

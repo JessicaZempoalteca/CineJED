@@ -50,7 +50,7 @@
 
         //
         $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../User/login.php' : './User/login.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../User/login.php' : './User/pages/login.php' ;
         $menu_item['text'] = 'Ingresar';
         $menu_item['submenu'] = array();
         $menu['login'] = $menu_item;
@@ -123,7 +123,7 @@
 
         //
         $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != 'User') ? '.login.php' : './login.php' ;
+        $menu_item['href'] = ($folder != 'User') ? './login.php' : './login.php' ;
         $menu_item['text'] = 'Ingresar';
         $menu_item['submenu'] = array();
         $menu['login'] = $menu_item;

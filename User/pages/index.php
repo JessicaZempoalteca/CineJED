@@ -1,6 +1,6 @@
 <?php
-    require('../helpers/funciones_generales.php');
-    require('../helpers/menu_portal.php');
+    require('../../helpers/funciones_generales.php');
+    require('../../helpers/menu_portal.php');
 ?>
 
 <!DOCTYPE html>

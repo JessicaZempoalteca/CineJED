@@ -1,6 +1,6 @@
 <?php
-require('../helpers/menu_portal.php');
-require('../helpers/funciones_generales.php');
+require('../../helpers/menu_portal.php');
+require('../../helpers/funciones_generales.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +18,8 @@ require('../helpers/funciones_generales.php');
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="./resources/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="./resources/css/estilos.css">
+        <link href="../resources/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="./img/boletosLogo.png">
     </head>
     <body id="page-top">
@@ -27,7 +27,7 @@ require('../helpers/funciones_generales.php');
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="./img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -48,7 +48,7 @@ require('../helpers/funciones_generales.php');
 
         <div class="container">
         <center>
-            <img src="./img/registro/registro.png" alt="logo" style="width:700px;">
+            <img src="../img/registro/registro.png" alt="logo" style="width:700px;">
         </center>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
@@ -57,10 +57,10 @@ require('../helpers/funciones_generales.php');
                             <div class="d-flex">
                                 <div class="w-100">
                                     <h3 class="mb-4 text-center">REGISTRARSE
-                                    <img src="./img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
+                                    <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
-                            <form action="../Panel/backend/crud/usuario/insertar.php" method="POST" class="signin-form">
+                            <form action="../../Panel/backend/crud/usuario/insertar.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Nombre</label>
                                     <input type="text" class="form-control" placeholder="Usuario" value="" id="nombre" name="nombre" required>
@@ -89,7 +89,7 @@ require('../helpers/funciones_generales.php');
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="./img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="../img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
