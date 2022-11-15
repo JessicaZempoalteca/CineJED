@@ -27,7 +27,7 @@ require('../../helpers/funciones_generales.php');
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -57,7 +57,7 @@ require('../../helpers/funciones_generales.php');
                             <div class="d-flex">
                                 <div class="w-100">
                                     <h3 class="mb-4 text-center">INICIAR SESION
-                                    <img src="./img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
+                                    <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
                             <form action="../../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
@@ -77,7 +77,7 @@ require('../../helpers/funciones_generales.php');
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="./registro.php"  href="#signup">Registrase ahora</a><img src="./img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="./registro.php"  href="#signup">Registrase ahora</a><img src="../img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
