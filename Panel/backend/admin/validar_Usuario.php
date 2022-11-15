@@ -15,8 +15,8 @@
     }//end if empty
     else{
         //Query para verificar si existe el usuario
-        $query_text = 'SELECT * FROM usuarios INNER JOIN roles ON usuarios.id_rol = roles.id_rol  WHERE correo="'.$usuario.'" AND password_usuario = "'.$password.'";';
-        // echo $query_text;
+        $query_text = 'SELECT * FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol  WHERE correo="'.$usuario.'" AND password = "'.$password.'";';
+         echo $query_text;
 
         //Creamos la consulta con el query
         //procesamiento de conexion
@@ -49,9 +49,9 @@
 
             //Se crea el archivo de sesiones
             //vairable de sesion que se pueden manipular en cualquier parte del proyecto
-            $_SESSION['id_usuario'] = $datos['id_usuario'];
-            $_SESSION['nombre_usuario'] = $datos['nombre_usuario'];
-            $_SESSION['id_rol'] = $datos['id_rol'];
+            $_SESSION['idUsuario'] = $datos['idUsuario'];
+            //$_SESSION['nombre_usuario'] = $datos['nombre_usuario'];
+            $_SESSION['idRol'] = $datos['idRol'];
             $_SESSION['rol'] = $datos['rol'];
 
             print("<pre>".print_r($_SESSION, true)."</pre>");
@@ -63,6 +63,6 @@
             mysqli_close($conexion);
 
             //Se redirecciona a un lugar
-            echo '<script>window.location="../../pages/dashboard_prueba.php"</script>';
+            echo '<script>window.location="../../../Portal/pages/admin/index.html"</script>';
         }//end else
     }//end else empty

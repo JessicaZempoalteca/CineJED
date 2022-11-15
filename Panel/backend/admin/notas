@@ -3,3 +3,28 @@ Archivos:
     conexion
     validar usuario
 
+
+select leer datos
+usuarios.php read, delete, estatus
+usuario nuevos insert - formulario con campos de base de datos
+usuario detalles update
+
+usuarios
+#   usuario     rol     Acciones(botones de eliminar, detalles habilitar, deshabilitar)
+detalles manda a archivo usuario detalles
+
+
+en la carpeta crud
+carpeta usuario
+archivo insertar.php
+    <?php
+        
+        variables para guardar la informacion del formulario
+        comprobar si no estan vacias
+        preparar consulta de correo y pass
+
+    ?>
+
+
+mover archivos de imagen
+$_files['imagen']['tmp_name']
