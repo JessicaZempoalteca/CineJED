@@ -1,3 +1,6 @@
+<?php
+require('../../helpers/menu_portal.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,12 +29,8 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../../index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../portal/pages/peliculas.html">Películas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../portal/pages/about.html">Próximos estrenos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../portal/pages/team.html">Promociones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../../portal/pages/contact.html">Contactanos</a></li>
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <?php echo crear_menu('pages','contacto');?>
                     </ul>
                 </div>
             </div>
