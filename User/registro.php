@@ -56,18 +56,30 @@ require('../helpers/funciones_generales.php');
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
                                 <div class="w-100">
-                                    <h3 class="mb-4 text-center">INICIAR SESION
+                                    <h3 class="mb-4 text-center">REGISTRARSE
                                     <img src="./img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
-                            <form action="../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
+                            <form action="../Panel/backend/crud/usuario/insertar.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="usuario" name="usuario" required>
+                                    <label class="label" for="name">Nombre</label>
+                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="nombre" name="nombre" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="password">Contraseña</label>
-                                    <input type="password" class="form-control" placeholder="contraseña" id="password" name="password" value="" required>
+                                    <label class="label" for="password">apellido Paterno</label>
+                                    <input type="text" class="form-control" placeholder="contraseña" id="apellidoPaterno" name="apellidoPaterno" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">apellido Materno</label>
+                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="apellidoMaterno" name="apellidoMaterno" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">email</label>
+                                    <input type="email" class="form-control" placeholder="Usuario" value="" id="correo" name="correo" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label class="label" for="name">password</label>
+                                    <input type="password" class="form-control" placeholder="Usuario" value="" id="password" name="password" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">
@@ -77,7 +89,7 @@ require('../helpers/funciones_generales.php');
                             </form>
                             <p class="text-center">¿Quieres ser registrarte? <br>
                             <center><nav>
-                              <a href="./registro.php"  href="#signup">Registrase ahora</a><img src="./img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
+                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="./img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
                             </center></div>
                     </div>
                 </div>
