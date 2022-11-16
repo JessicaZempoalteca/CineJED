@@ -9,7 +9,7 @@ require('../../helpers/funciones_generales.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ingresar</title>
+        <title>Registro</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
         <!-- Font Awesome icons (free version)-->
@@ -20,7 +20,7 @@ require('../../helpers/funciones_generales.php');
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="../resources/css/estilos.css">
-        <link rel="shortcut icon" href="./img/boletosLogo.png">
+        <link rel="shortcut icon" href="../img/boletosLogo.png">
     </head>
     <body id="page-top">
 
