@@ -50,14 +50,14 @@
 
         //
         $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../../User/login.php' : './User/pages/login.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../User/pages/login.php' : './User/pages/login.php' ;
         $menu_item['text'] = 'Ingresar';
         $menu_item['submenu'] = array();
         $menu['login'] = $menu_item;
 
         //
         $menu_item['is_active'] = ($pagina == "about") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? './about.php' : './Portal/pages/about.php' ;
+        $menu_item['href'] = ($folder != '') ? './about.php' : '../Portal/pages/about.php' ;
         $menu_item['text'] = 'Conócenos';
         $menu_item['submenu'] = array();
         $menu['about'] = $menu_item;
@@ -79,7 +79,7 @@
     
         //Opcion Inicio
         $menu_item['is_active'] = ($pagina == "index") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../index.php' : './index.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../index.php' : './index.php' ;
         $menu_item['text'] = 'Inicio';
         $menu_item['submenu'] = array();
         $menu['inicio'] = $menu_item;
@@ -92,31 +92,31 @@
             //Submenu
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
-            $sub_menu_item['href'] = ($folder != '') ? '../Portal/pages/familiares.php' : './Portal/pages/familiares.php';
+            $sub_menu_item['href'] = ($folder != '') ? '../../Portal/pages/familiares.php' : './Portal/pages/familiares.php';
             $sub_menu_item['text'] = 'Familiares';
             $menu_item['submenu']['familiares'] = $sub_menu_item;
             //
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
-            $sub_menu_item['href'] = ($folder != '') ? '../Portal/pages/comedia.php' : './Portal/pages/comedia.php';
+            $sub_menu_item['href'] = ($folder != '') ? '../../Portal/pages/comedia.php' : './Portal/pages/comedia.php';
             $sub_menu_item['text'] = 'Comedia';
             $menu_item['submenu']['comedia'] = $sub_menu_item;
             //
             $sub_menu_item = array();
             $sub_menu_item['is_active'] = FALSE;
-            $sub_menu_item['href'] = ($folder != '') ? '../Portal/pages/accion.php' : './Portal/pages/accion.php';
+            $sub_menu_item['href'] = ($folder != '') ? '../../Portal/pages/accion.php' : './Portal/pages/accion.php';
             $sub_menu_item['text'] = 'Acción';
             $menu_item['submenu']['accion'] = $sub_menu_item;
             $menu['categorias'] = $menu_item;
 
             $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
-            $menu_item['href'] = ($folder != '') ? '../Portal/pages/estrenos.php' : '../Portal/pages/estrenos.php' ;
+            $menu_item['href'] = ($folder != '') ? '../../Portal/pages/estrenos.php' : '../Portal/pages/estrenos.php' ;
             $menu_item['text'] = 'Estrenos';
             $menu_item['submenu'] = array();
             $menu['estrenos'] = $menu_item;
 
             $menu_item['is_active'] = ($pagina == "preventa") ? TRUE : FALSE;
-            $menu_item['href'] = ($folder != '') ? '../Portal/pages/preventa.php' : './Portal/pages/preventa.php' ;
+            $menu_item['href'] = ($folder != '') ? '../../Portal/pages/preventa.php' : './Portal/pages/preventa.php' ;
             $menu_item['text'] = 'Preventa';
             $menu_item['submenu'] = array();
             $menu['preventa'] = $menu_item;
@@ -130,14 +130,14 @@
 
         //
         $menu_item['is_active'] = ($pagina == "about") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../Portal/pages/about.php' : './Portal/pages/about.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../Portal/pages/about.php' : '../Portal/pages/about.php' ;
         $menu_item['text'] = 'Conócenos';
         $menu_item['submenu'] = array();
         $menu['about'] = $menu_item;
 
       //
         $menu_item['is_active'] = ($pagina == "contacto") ? TRUE : FALSE;
-        $menu_item['href'] = ($folder != '') ? '../Portal/pages/contacto.php' : './Portal/pages/contacto.php' ;
+        $menu_item['href'] = ($folder != '') ? '../../Portal/pages/contacto.php' : './Portal/pages/contacto.php' ;
         $menu_item['text'] = 'Contacto';
         $menu_item['submenu'] = array();
         $menu['contacto'] = $menu_item;

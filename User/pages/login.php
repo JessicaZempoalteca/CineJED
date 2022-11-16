@@ -20,7 +20,7 @@ require('../../helpers/funciones_generales.php');
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="../resources/css/estilos.css">
-        <link rel="shortcut icon" href="./img/boletosLogo.png">
+        <link rel="shortcut icon" href="../img/boletosLogo.png">
     </head>
     <body id="page-top">
 
