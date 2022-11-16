@@ -59,6 +59,9 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../backend/admin/cerrar_sesion.php" class="nav-link">Cerrar sesión</a>
+      </li>
     </ul>
 
     <!-- Right navbar links -->

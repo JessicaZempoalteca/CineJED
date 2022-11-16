@@ -63,6 +63,6 @@
             mysqli_close($conexion);
 
             //Se redirecciona a un lugar
-            echo '<script>window.location="../../../Portal/pages/admin/index.html"</script>';
+            echo '<script>window.location="../../../Panel/pages/index.php"</script>';
         }//end else
     }//end else empty
