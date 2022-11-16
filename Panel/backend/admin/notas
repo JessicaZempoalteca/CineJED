@@ -28,3 +28,18 @@ archivo insertar.php
 
 mover archivos de imagen
 $_files['imagen']['tmp_name']
+
+
+
+
+
+
+
+
+TABLAS DINAMIAS
+tienen su buscador
+data table para mostrar todos los registros
+bloquear usuarios que estan deshabilitados
+
+en crud usuario
+debe estar en js para cada vista de usuario nuevo, etc.
