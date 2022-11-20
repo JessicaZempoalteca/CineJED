@@ -152,7 +152,7 @@
                         action es para el redireccionamiento del proceso del BACKEND
                         el metodo post es para enviar datos de manera segura
                         enctype envia y procesa informacion mediante los archivos por medio del metodo $_FILES-->
-                    <form id="form-usuario" action="../backend/crud/usuario/insertarUsuario.php" method="post" enctype="multipart/form-data">
+                    <form id="form-usuario" action="../backend/crud/administrador/insertarUsuario.php" method="post" enctype="multipart/form-data">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-12">
