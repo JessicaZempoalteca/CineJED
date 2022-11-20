@@ -24,23 +24,33 @@
   else {
     //Importamos la libreria de conexion
     include '../backend/admin/conexion.php';
+
     //Se realiza la petición sql 
-    $query_text = 'SELECT usuarios.idUsuario, usuarios.estatus_usuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, roles.rol FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol WHERE usuarios.idUsuario !="'.$_SESSION["idUsuario"].'";';
+    //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
+    $query_text = 'SELECT usuarios.idUsuario, usuarios.estatus_usuario, usuarios.nombre, usuarios.ApellidoPaterno, 
+    usuarios.apellidoMaterno, roles.rol FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol 
+    WHERE usuarios.idUsuario !="'.$_SESSION["idUsuario"].'";';
+
     // echo $query_text;
+
     //Se procesa con la consulta a la BD
     $query_res = mysqli_query($conexion, $query_text);
+
     //Arreglo temporal que almacenara la información
     $usuarios = array();
+
     //Se verifica si hay un resultado
     if(mysqli_num_rows($query_res) != 0){
       while($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)){
-        $usuarios[] = $datos;
+        $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
       }//end mientras sigan existiendo registros
     }//end if no hay resultados
     //Muestra el arreglo
     // print("<pre>".print_r($usuarios, true)."</pre>");
   }//end else 
 
+  //ARREGLO ASOCIATIVO
+  //es un arreglo que tiene como indice una cadena de texto de acuerdo a una llave de la tabla de la BD
 
 ?>
 <!DOCTYPE html>
@@ -51,6 +61,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard | Usuarios</title>
 
+    <!--RECURSOS PARA LOS ESTILOS DE LAS TABLAS-->
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -198,9 +209,12 @@
                                           //Declaramos la variable para iterar a los usuarios
                                           $html = '';
                                           // print("<pre>".print_r($usuarios, true)."</pre>");
-                                          //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0
+
+                                          //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
                                           if(isset($usuarios) && sizeof($usuarios) > 0){
-                                                                    $num = 0;
+                                            //contador
+                                              $num = 0;
+                                            //foreach rompe el arreglo de usuarios que va mostrando la informacion
                                             foreach ($usuarios as $usuario) {
                                               $html.= '
                                                 <tr>
