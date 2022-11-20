@@ -223,13 +223,13 @@
                                                     <td>'.$usuario["rol"].'</td>
                                                     <td>';
                                                       if ($usuario["estatus_usuario"] != 1) {
-                                                        $html.='<a href="../backend/crud/usuarios/update_estatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
+                                                        $html.='<a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
                                                       }//end if
                                                       else{
-                                                        $html.='<a href="../backend/crud/usuarios/update_estatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
+                                                        $html.='<a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
                                                       }//end else
                                                         
-                                                        $html.='<a href="../backend/crud/usuarios/delete_usuario.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-danger btn-sm">Eliminar</a>
+                                                        $html.='<a href="../backend/crud/administrador/deleteUsuario.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-danger btn-sm">Eliminar</a>
                                                         <a href="./usuario_detalles.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-warning btn-sm">Detalles</a>
                                                     </td>
                                                 </tr>
