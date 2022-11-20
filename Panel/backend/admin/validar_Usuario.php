@@ -6,7 +6,7 @@
     session_start();
 
     //Declaración de variables para alamacenar los datos
-    $usuario = $_POST['usuario'];
+    $usuario = $_POST['email'];
     $password = $_POST['password'];
 
     //Valida si mis variables no esán vacias
@@ -50,7 +50,9 @@
             //Se crea el archivo de sesiones
             //vairable de sesion que se pueden manipular en cualquier parte del proyecto
             $_SESSION['idUsuario'] = $datos['idUsuario'];
-            //$_SESSION['nombre_usuario'] = $datos['nombre_usuario'];
+            $_SESSION['nombreCompleto'] = $datos['nombre']. ' '.$datos['ApellidoPaterno'].' '.$datos['ApellidoMaterno'];
+            $_SESSION['correo'] = $datos['correo'];
+            $_SESSION['imagenPerfil'] = ($datos['imagenUsuario'] == NULL) ? '../img/icono-usuario.png' : '../'.$datos['imagenUsuario'];
             $_SESSION['idRol'] = $datos['idRol'];
             $_SESSION['rol'] = $datos['rol'];
 
@@ -63,6 +65,6 @@
             mysqli_close($conexion);
 
             //Se redirecciona a un lugar
-            echo '<script>window.location="../../../Panel/pages/index.php"</script>';
+            echo '<script>window.location="../../../Panel/pages/dashboard.php"</script>';
         }//end else
     }//end else empty

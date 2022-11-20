@@ -63,7 +63,7 @@ require('../../helpers/funciones_generales.php');
                             <form action="../../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="usuario" name="usuario" required>
+                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="email" name="email" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Contraseña</label>

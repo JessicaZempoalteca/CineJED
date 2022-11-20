@@ -6,10 +6,10 @@
   //Se utiliza las variables de sesion
   session_start();
   //Validamos si la posicion existe y ya tiene un valor determinado por la consulta
-  if(!isset($_SESSION['id_usuario'])){
+  if(!isset($_SESSION['idUsuario'])){
       echo '<script>
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
-              window.location = "../../usuario/login.php";
+              window.location = "../../User/pages/login.php";
               </script>';
   }//
 ?>
