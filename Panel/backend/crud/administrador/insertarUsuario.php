@@ -74,8 +74,7 @@
         $passwordEncripted = hash('sha256', $_POST['password']);
 
         //query text para insertar el usuario en la base de datos
-        $query_insert = 'INSERT INTO usuarios (idUsuario, estatus_usuario, nombre, apellidoPaterno, apellidoMaterno, correo, password, imagenUsuario, idRol) 
-        VALUES (NULL, 1, "'.$nombre.'", "'.$apellidoPaterno.'", "'.$apellidoMaterno.'", "'.$correo.'", "'.$passwordEncripted.'", "'.$nombreArchivo.'", "'.$rol.'");';
+        $query_insert = 'INSERT INTO usuarios VALUES (NULL, 1, "'.$nombre.'", "'.$apellidoPaterno.'", "'.$apellidoMaterno.'", "'.$correo.'", "'.$passwordEncripted.'", "'.$nombreArchivo.'", "'.$rol.'");';
         
         //se ejecuta el query text
         //ESTE PROCESO DA COMO RESULTADO TRUE O FALSE
