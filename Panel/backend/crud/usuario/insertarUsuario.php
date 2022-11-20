@@ -1,4 +1,5 @@
 <?php
+//se incluye la variable de conexion para la base de datos
     include '../../admin/conexion.php';
 
     $nombre = $_POST['nombre'];

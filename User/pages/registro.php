@@ -60,7 +60,7 @@ require('../../helpers/funciones_generales.php');
                                     <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
                             </div>
-                            <form action="../../Panel/backend/crud/usuario/insertar.php" method="POST" class="signin-form">
+                            <form action="../../Panel/backend/crud/usuario/insertarUsuario.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Nombre</label>
                                     <input type="text" class="form-control" placeholder="Usuario" value="" id="nombre" name="nombre" required>
