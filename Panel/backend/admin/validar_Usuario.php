@@ -52,7 +52,7 @@
             $_SESSION['idUsuario'] = $datos['idUsuario'];
             $_SESSION['nombreCompleto'] = $datos['nombre']. ' '.$datos['ApellidoPaterno'].' '.$datos['ApellidoMaterno'];
             $_SESSION['correo'] = $datos['correo'];
-            $_SESSION['imagenPerfil'] = ($datos['imagenUsuario'] == NULL) ? '../img/icono-usuario.png' : '../'.$datos['imagenUsuario'];
+            $_SESSION['imagenPerfil'] = ($datos['imagenUsuario'] == NULL) ? '../img/icono-usuario.png' : '../img/'.$datos['imagenUsuario'];
             $_SESSION['idRol'] = $datos['idRol'];
             $_SESSION['rol'] = $datos['rol'];
 
