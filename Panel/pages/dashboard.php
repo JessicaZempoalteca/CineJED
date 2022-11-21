@@ -101,7 +101,8 @@
               <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-            <a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"];?></a>
+            <b><a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"];?></a></b>
+            <a href="#" class="d-block"><?php echo $_SESSION["rol"]; ?></a>
             </div>
           </div>
 
@@ -126,7 +127,7 @@
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                  <li class="breadcrumb-item active">Dashboard v1</li>
+                  <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->

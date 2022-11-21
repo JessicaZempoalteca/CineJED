@@ -19,6 +19,14 @@
         $menu_item['text'] = 'Usuarios';
         $menu_item['submenu'] = array();
         $menu['usuario'] = $menu_item;
+
+        //Opción sucursales
+        $menu_item['is_active'] = ($pagina == "sucursales") ? TRUE : FALSE;
+        $menu_item['href'] = './sucursales.php';
+        $menu_item['icon'] = 'fa fa-building';
+        $menu_item['text'] = 'Sucursales';
+        $menu_item['submenu'] = array();
+        $menu['sucursales'] = $menu_item;
         
         //Opción Peliculas
         $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
