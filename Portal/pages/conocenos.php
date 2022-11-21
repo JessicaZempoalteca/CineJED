@@ -19,6 +19,12 @@ require('../../helper/menu_portal.php');
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/styles.css" rel="stylesheet" />
         <link rel="shortcut icon" href="../img/boletosLogo.png">
+        <!--FONT DE NAVBAR -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
     <body id="page-top">
 
@@ -34,6 +40,9 @@ require('../../helper/menu_portal.php');
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <?php echo crear_menu('','index');?>
                     </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="font-family: 'Noto Sans Mende Kikakui', sans-serif;">
+                <a href="../../User/pages/login.php"><span class="material-symbols-outlined" style="color: white;">login</span></a>
                 </div>
             </div>
         </nav>

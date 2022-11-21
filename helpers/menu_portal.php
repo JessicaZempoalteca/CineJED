@@ -15,7 +15,7 @@ function configurar_menu($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Peliculas';
+  $menu_item['text'] = 'Películas';
   $menu_item['submenu'] = array();
   
       //Submenu de generos
@@ -54,7 +54,7 @@ function configurar_menu($folder = '', $pagina = '')
 
   //OPCION ABOUT
   $menu_item['is_active'] = ($pagina == "about") ? TRUE : FALSE;
-  $menu_item['href'] = ($folder != '') ? './about.php' : '../Portal/pages/about.php';
+  $menu_item['href'] = ($folder != '') ? './about.php' : './Portal/pages/about.php';
   $menu_item['text'] = 'Conócenos';
   $menu_item['submenu'] = array();
   $menu['about'] = $menu_item;
@@ -65,13 +65,6 @@ function configurar_menu($folder = '', $pagina = '')
   $menu_item['text'] = 'Contacto';
   $menu_item['submenu'] = array();
   $menu['contacto'] = $menu_item;
-
-  //OPCION LOGIN
-  $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-  $menu_item['href'] = ($folder != '') ? '../../User/pages/login.php' : './User/pages/login.php';
-  $menu_item['text'] = 'Ingresar';
-  $menu_item['submenu'] = array();
-  $menu['login'] = $menu_item;
 
   //RETURN MENU
   return $menu;
@@ -86,7 +79,8 @@ function crear_menu($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <i class="bi bi-caret-down"></i></a>
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <span class="material-symbols-outlined">
+      arrow_drop_down</span></a>
                         <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {
@@ -118,7 +112,7 @@ function configurar_menuLogin($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Peliculas';
+  $menu_item['text'] = 'Películas';
   $menu_item['submenu'] = array();
   //Submenu
   $sub_menu_item = array();
@@ -166,13 +160,6 @@ function configurar_menuLogin($folder = '', $pagina = '')
   $menu_item['submenu'] = array();
   $menu['contacto'] = $menu_item;
 
-    //
-    $menu_item['is_active'] = ($pagina == "login") ? TRUE : FALSE;
-    $menu_item['href'] = ($folder != 'User') ? './login.php' : './login.php';
-    $menu_item['text'] = 'Ingresar';
-    $menu_item['submenu'] = array();
-    $menu['login'] = $menu_item;
-
   return $menu;
 }
 
@@ -185,7 +172,8 @@ function crear_menuLogin($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <i class="bi bi-caret-down"></i></a>
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . '<span class="material-symbols-outlined">
+      arrow_drop_down</span> </a>
                         <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {
@@ -217,7 +205,7 @@ function configurar_menu2($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Peliculas';
+  $menu_item['text'] = 'Películas';
   $menu_item['submenu'] = array();
   //Submenu
   $sub_menu_item = array();

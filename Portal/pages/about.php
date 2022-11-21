@@ -20,6 +20,12 @@ require('../../helpers/menu_portal.php');
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
+        <!--FONT DE NAVBAR -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
     <body id="page-top">
 
@@ -33,6 +39,9 @@ require('../../helpers/menu_portal.php');
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <?php echo crear_menu('pages','about');?>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarResponsive" style="font-family: 'Noto Sans Mende Kikakui', sans-serif;">
+                <a href="../../User/pages/login.php"><span class="material-symbols-outlined" style="color: white;">login</span></a>
                 </div>
             </div>
         </nav>
@@ -251,5 +260,7 @@ require('../../helpers/menu_portal.php');
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
 </html>
