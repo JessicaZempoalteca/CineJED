@@ -1,4 +1,13 @@
 <?php
+//se deben mostrar los datos de la tabla usuarios
+//se debe incluir la persona que inicia sesion pero no se debe poder modificar desde la tabla,
+//sino que desde el perfil
+//condicion
+                                //VARIABLE DE SESION
+//where usuarios.id_usuario != "'.$_SESSION['id_usuario'].'"
+
+//VALIDAR STATUS EN TODO
+  //Crea el menú
   require('../../helpers/menu_panel.php');
   //Importa la ruta dependiendo de la carpeta
   require('../../helpers/funciones_generales.php');
@@ -16,10 +25,12 @@
     //Importamos la libreria de conexion
     include '../backend/admin/conexion.php';
 
+    $idSucursal = $_GET['idSucursal'];
     //Se realiza la petición sql 
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT sucursal.idSucursal, sucursal.nombreSucursal, count(sucursal.idSucursal) as cantidad
-    from sucursal inner join sala ON sucursal.idSucursal = sala.idSucursal group by sucursal.idSucursal;';
+    $query_text = 'SELECT sala.tipoSala, sala.numAsientos, sala.asientosOcupados, sala.asientosLibres
+    FROM sala INNER JOIN sucursal ON sala.idSucursal = sucursal.idSucursal
+    WHERE sucursal.idSucursal = "'.$idSucursal.'"';
 
     // echo $query_text;
 
@@ -27,12 +38,12 @@
     $query_res = mysqli_query($conexion, $query_text);
 
     //Arreglo temporal que almacenara la información
-    $salas = array();
+    $usuarios = array();
 
     //Se verifica si hay un resultado
     if(mysqli_num_rows($query_res) != 0){
       while($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)){
-        $salas[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
+        $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
       }//end mientras sigan existiendo registros
     }//end if no hay resultados
     //Muestra el arreglo
@@ -159,12 +170,13 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Salas de cine</h1>
+                <h1 class="m-0 text-dark">Salas de la sucursal</h1>
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                  <li class="breadcrumb-item active">Salas de cine</li>
+                  <li class="breadcrumb-item"><a href="./salas.php">Salas</a></li>
+                  <li class="breadcrumb-item active">Salas de la sucursal</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->
@@ -180,17 +192,18 @@
                         <div class="card">
                             <div class="card-header">
                                 <center>
-                                    <h3 class="card-title">Lista de las salas de cada sucursal</h3>
+                                    <h3 class="card-title">Consulta disponibilidad de asientos</h3>
                                 </center>
                             </div>
                             <div class="card-body">
                                 <table id="table-usuarios" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Sucursal</th>
-                                            <th>Número de salas</th>
-                                            <th>Acciones</th>
+                                        <th>#</th>
+                                            <th>Tipo de sala</th>
+                                            <th># asientos</th>
+                                            <th># asientos ocupados</th>
+                                            <th># asientos vacios</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -200,19 +213,18 @@
                                           // print("<pre>".print_r($usuarios, true)."</pre>");
 
                                           //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
-                                          if(isset($salas) && sizeof($salas) > 0){
+                                          if(isset($usuarios) && sizeof($usuarios) > 0){
                                             //contador
                                               $num = 0;
                                             //foreach rompe el arreglo de usuarios que va mostrando la informacion
-                                            foreach ($salas as $salas) {
+                                            foreach ($usuarios as $usuario) {
                                               $html.= '
                                                 <tr>
                                                     <td>'.++$num.'</td>
-                                                    <td>'.$salas["nombreSucursal"].'</td>
-                                                    <td>'.$salas["cantidad"].'</td>
-                                                    <td>';
-                                                        $html.=' <a href="./salas_Detalles.php?idSucursal='.$salas["idSucursal"].'" class="btn btn-warning btn-sm">Ver salas</a>
-                                                    </td>
+                                                    <td>'.$usuario["tipoSala"].'</td>
+                                                    <td>'.$usuario["numAsientos"].'</td>
+                                                    <td>'.$usuario["asientosOcupados"].'</td>
+                                                    <td>'.$usuario["asientosLibres"].'</td>
                                                 </tr>
                                               ';
                                             }//end foreach
