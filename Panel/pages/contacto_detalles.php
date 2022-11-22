@@ -13,8 +13,9 @@ session_start();
   }
 
   //Capturamos el id que se pasa por el URL
-  $idUsuario = $GET['idUsuario'];
+  $idUsuario = $_GET['idUsuario'];
   $idContacto = $_GET["idContacto"];
+
   //Verificamos si la variable no esta vacia
   if(empty($idContacto) AND empty($idUsuario)){
       echo '<script>
@@ -26,9 +27,9 @@ session_start();
    include '../backend/admin/conexion.php';
    //Se prepara la consulta para realizar la peticion
    $query_select = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
-   usuarios.correo, usuarios.imagenUsuario, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, 
+   usuarios.correo, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, 
    contacto.fecha, sucursal.nombreSucursal
-   FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario ="'.$idUsuario.'"  AND contacto.idSucursal = sucursal.idSucursal';
+   FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario ="'.$idUsuario.'"  AND contacto.idSucursal = sucursal.idSucursal;';
 
    //Petición del sql a la BD
    $query_res = mysqli_query($conexion, $query_select);
@@ -43,7 +44,7 @@ session_start();
    }//
    //Se libera la conexion
    mysqli_close($conexion);
-    //print("<pre>".print_r($usuario,true)."</pre>");
+   //print("<pre>".print_r($usuario,true)."</pre>");
 } //end else 
 
 //ARREGLO ASOCIATIVO
@@ -190,7 +191,6 @@ session_start();
                                             <tr>
                                                 <th>Usuario</th>
                                                 <th>Fecha</th>
-                                                <th>Telefono</th>
                                                 <th>Correo</th>
                                                 <th>Servicio</th>
                                                 <th>Tipo de mensaje</th>
@@ -202,16 +202,14 @@ session_start();
                                             <?php
                                             //Declaramos la variable para iterar a los usuarios
                                             $html = '';
-                                            // print("<pre>".print_r($usuarios, true)."</pre>");
+                                             //print("<pre>".print_r($usuario, true)."</pre>");
 
                                             //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
-                                            if (isset($usuarios) && sizeof($usuarios) > 0) {
+                                            if (isset($usuario) && sizeof($usuario) > 0) {
                                                 $html .= '
                                                 <tr>
-                                                    <td>' . ++$num . '</td>
                                                     <td>' . $usuario["nombre"] . ' ' . $usuario["ApellidoPaterno"] . ' ' . $usuario["apellidoMaterno"] . '</td>
                                                     <td>' . $usuario["fecha"] . '</td>
-                                                    <td>' . $usuario["telefono"] . '</td>
                                                     <td>' . $usuario["correo"] . '</td>
                                                     <td>' . $usuario["servicio"] . '</td>
                                                     <td>' . $usuario["tipomensaje"] . '</td>

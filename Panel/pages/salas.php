@@ -18,8 +18,8 @@
 
     //Se realiza la petición sql 
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT sucursal.idSucursal, sucursal.nombreSucursal, count(sala.numAsientos) 
-    from sucursal inner join sala where sucursal.idSucursal=1 group by idSucursal;';
+    $query_text = 'SELECT sucursal.idSucursal, sucursal.nombreSucursal, count(sucursal.idSucursal) as cantidad
+    from sucursal inner join sala ON sucursal.idSucursal = sala.idSucursal group by sucursal.idSucursal;';
 
     // echo $query_text;
 
@@ -190,6 +190,7 @@
                                             <th>#</th>
                                             <th>Sucursal</th>
                                             <th>Número de salas</th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -208,7 +209,18 @@
                                                 <tr>
                                                     <td>'.++$num.'</td>
                                                     <td>'.$usuario["nombreSucursal"].'</td>
-                                                    <td>'.$usuario["salas"].'</td>
+                                                    <td>'.$usuario["cantidad"].'</td>
+                                                    <td>';
+                                                        if ($usuario["estatus_usuario"] != 1) {
+                                                        $html.='   <a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
+                                                      }//end if
+                                                      else{
+                                                        $html.='   <a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
+                                                      }//end else
+                                                        
+                                                        $html.='  <a href="../backend/crud/administrador/deleteUsuario.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-danger btn-sm">Eliminar</a> 
+                                                        <a href="./usuario_detalles.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-warning btn-sm">Detalles</a>
+                                                    </td>
                                                 </tr>
                                               ';
                                             }//end foreach
