@@ -4,40 +4,46 @@ require('../../helpers/menu_panel.php');
 require('../../helpers/funciones_generales.php');
 //Se utiliza las variables de sesion
 session_start();
-
-//Validamos si la posicion existe y ya tiene un valor determinado por la consulta
-if (!isset($_SESSION['idUsuario'])) {
-    echo '<script>
-              alert("Error al mostrar la informació de este módulo, contacta al administrador");
+  //Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+  if(!isset($_SESSION['idUsuario'])){
+      echo '<script>
+              alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
               window.location = "../../usuario/login.php";
               </script>';
-} //end  if
-else {
-    //Importamos la libreria de conexion
-    include '../backend/admin/conexion.php';
+  }
 
-    //Se realiza la petición sql 
-    //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
-    usuarios.correo, contacto.idContacto, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, contacto.fecha 
-    FROM usuarios INNER JOIN contacto ON usuarios.idUsuario = contacto.idUsuario;';
+  //Capturamos el id que se pasa por el URL
+  $idUsuario = $GET['idUsuario'];
+  $idContacto = $_GET["idContacto"];
+  //Verificamos si la variable no esta vacia
+  if(empty($idContacto) AND empty($idUsuario)){
+      echo '<script>
+              alert("Error, el usuario no se encontro");
+              //window.location = "./contacto.php";
+              </script>';
+  }else {
+   //Se incoorpora la conexion
+   include '../backend/admin/conexion.php';
+   //Se prepara la consulta para realizar la peticion
+   $query_select = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
+   usuarios.correo, usuarios.imagenUsuario, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, 
+   contacto.fecha, sucursal.nombreSucursal
+   FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario ="'.$idUsuario.'"  AND contacto.idSucursal = sucursal.idSucursal';
 
-    // echo $query_text;
+   //Petición del sql a la BD
+   $query_res = mysqli_query($conexion, $query_select);
 
-    //Se procesa con la consulta a la BD
-    $query_res = mysqli_query($conexion, $query_text);
-
-    //Arreglo temporal que almacenara la información
-    $usuarios = array();
-
-    //Se verifica si hay un resultado
-    if (mysqli_num_rows($query_res) != 0) {
-        while ($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)) {
-            $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
-        } //end mientras sigan existiendo registros
-    } //end if no hay resultados
-    //Muestra el arreglo
-    // print("<pre>".print_r($usuarios, true)."</pre>");
+   $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
+   //Verificar si realmente el usuario existe
+   if(mysqli_num_rows($query_res) <= 0){
+     echo '<script>
+           alert("El usuario no existe. Verifica la ID");
+           
+           </script>';
+   }//
+   //Se libera la conexion
+   mysqli_close($conexion);
+    //print("<pre>".print_r($usuario,true)."</pre>");
 } //end else 
 
 //ARREGLO ASOCIATIVO
@@ -178,15 +184,18 @@ else {
                                     </center>
                                 </div>
                                 <div class="card-body">
+                                    
                                     <table id="table-usuarios" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>#</th>
                                                 <th>Usuario</th>
                                                 <th>Fecha</th>
+                                                <th>Telefono</th>
+                                                <th>Correo</th>
                                                 <th>Servicio</th>
                                                 <th>Tipo de mensaje</th>
-                                                <th>Acciones</th>
+                                                <th>Mensaje</th>
+                                                <th>Sucursal</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -197,30 +206,19 @@ else {
 
                                             //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
                                             if (isset($usuarios) && sizeof($usuarios) > 0) {
-                                                //contador
-                                                $num = 0;
-                                                //foreach rompe el arreglo de usuarios que va mostrando la informacion
-                                                foreach ($usuarios as $usuario) {
-                                                    $html .= '
+                                                $html .= '
                                                 <tr>
                                                     <td>' . ++$num . '</td>
                                                     <td>' . $usuario["nombre"] . ' ' . $usuario["ApellidoPaterno"] . ' ' . $usuario["apellidoMaterno"] . '</td>
                                                     <td>' . $usuario["fecha"] . '</td>
+                                                    <td>' . $usuario["telefono"] . '</td>
+                                                    <td>' . $usuario["correo"] . '</td>
                                                     <td>' . $usuario["servicio"] . '</td>
                                                     <td>' . $usuario["tipomensaje"] . '</td>
-                                                    <td>';
-                                                    if ($usuario["estatus_contacto"] != 1) {
-                                                        $html .= '<button type="button" class="btn btn-success btn-sm" disabled>Resuelto</button>';
-                                                    } //end if
-                                                    else {
-                                                        $html .= '<a href="../backend/crud/contacto/updateEstatus.php?idContacto=' . $usuario["idContacto"] . '&estatus=1" class="btn btn-primary btn-sm">Mensaje automatico</a>';
-                                                    } //end else
-
-                                                    $html .= ' <a href="./contacto_detalles.php?idUsuario=' . $usuario["idUsuario"] . '&idContacto=' . $usuario["idContacto"] . '" class="btn btn-warning btn-sm">Detalles</a>
-                                                    </td>
+                                                    <td>' . $usuario["mensaje"] . '</td>
+                                                    <td>' . $usuario["nombreSucursal"] . '</td>
                                                 </tr>
-                                              ';
-                                                } //end foreach
+                                              ';    
                                             } //end if 
                                             echo $html;
                                             ?>

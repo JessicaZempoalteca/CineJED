@@ -1,13 +1,4 @@
 <?php
-//se deben mostrar los datos de la tabla usuarios
-//se debe incluir la persona que inicia sesion pero no se debe poder modificar desde la tabla,
-//sino que desde el perfil
-//condicion
-                                //VARIABLE DE SESION
-//where usuarios.id_usuario != "'.$_SESSION['id_usuario'].'"
-
-//VALIDAR STATUS EN TODO
-  //Crea el menú
   require('../../helpers/menu_panel.php');
   //Importa la ruta dependiendo de la carpeta
   require('../../helpers/funciones_generales.php');
@@ -27,9 +18,8 @@
 
     //Se realiza la petición sql 
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT usuarios.idUsuario, usuarios.estatus_usuario, usuarios.nombre, usuarios.ApellidoPaterno, 
-    usuarios.apellidoMaterno, roles.rol FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol 
-    WHERE usuarios.idUsuario !="'.$_SESSION["idUsuario"].'";';
+    $query_text = 'SELECT sucursal.idSucursal, sucursal.nombreSucursal, count(sala.numAsientos) 
+    from sucursal inner join sala where sucursal.idSucursal=1 group by idSucursal;';
 
     // echo $query_text;
 
@@ -155,7 +145,7 @@
 
           <!-- Sidebar Menu -->
           <nav class="mt-2">
-            <?php echo crear_menu_panel('usuarios');?>
+            <?php echo crear_menu_panel('salas');?>
           </nav>
           <!-- /.sidebar-menu -->
         </div>
@@ -169,12 +159,12 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0 text-dark">Usuarios</h1>
+                <h1 class="m-0 text-dark">Salas de cine</h1>
               </div><!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                  <li class="breadcrumb-item active">Usuarios</li>
+                  <li class="breadcrumb-item active">Salas de cine</li>
                 </ol>
               </div><!-- /.col -->
             </div><!-- /.row -->
@@ -187,11 +177,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <a href="./usuario_nuevo.php" class="btn btn-secondary btn-sm">Agregar nuevo</a><br><br>
                         <div class="card">
                             <div class="card-header">
                                 <center>
-                                    <h3 class="card-title">Lista de Usuarios</h3>
+                                    <h3 class="card-title">Lista las salas de cine</h3>
                                 </center>
                             </div>
                             <div class="card-body">
@@ -199,9 +188,8 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Usuario</th>
-                                            <th>Rol</th>
-                                            <th>Acciones</th>
+                                            <th>Sucursal</th>
+                                            <th>Número de salas</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -219,19 +207,8 @@
                                               $html.= '
                                                 <tr>
                                                     <td>'.++$num.'</td>
-                                                    <td>'.$usuario["nombre"].' '.$usuario["ApellidoPaterno"].' '.$usuario["apellidoMaterno"].'</td>
-                                                    <td>'.$usuario["rol"].'</td>
-                                                    <td>';
-                                                      if ($usuario["estatus_usuario"] != 1) {
-                                                        $html.='   <a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
-                                                      }//end if
-                                                      else{
-                                                        $html.='   <a href="../backend/crud/administrador/updateEstatus.php?idUsuario='.$usuario["idUsuario"].'&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
-                                                      }//end else
-                                                        
-                                                        $html.='  <a href="../backend/crud/administrador/deleteUsuario.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-danger btn-sm">Eliminar</a> 
-                                                        <a href="./usuario_detalles.php?idUsuario='.$usuario["idUsuario"].'" class="btn btn-warning btn-sm">Detalles</a>
-                                                    </td>
+                                                    <td>'.$usuario["nombreSucursal"].'</td>
+                                                    <td>'.$usuario["salas"].'</td>
                                                 </tr>
                                               ';
                                             }//end foreach

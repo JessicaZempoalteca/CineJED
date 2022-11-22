@@ -1,48 +1,17 @@
 <?php
+//Crea el menú
 require('../../helpers/menu_panel.php');
 //Importa la ruta dependiendo de la carpeta
 require('../../helpers/funciones_generales.php');
 //Se utiliza las variables de sesion
 session_start();
-
 //Validamos si la posicion existe y ya tiene un valor determinado por la consulta
 if (!isset($_SESSION['idUsuario'])) {
     echo '<script>
-              alert("Error al mostrar la informació de este módulo, contacta al administrador");
+              alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
               window.location = "../../usuario/login.php";
               </script>';
-} //end  if
-else {
-    //Importamos la libreria de conexion
-    include '../backend/admin/conexion.php';
-
-    //Se realiza la petición sql 
-    //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
-    usuarios.correo, contacto.idContacto, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, contacto.fecha 
-    FROM usuarios INNER JOIN contacto ON usuarios.idUsuario = contacto.idUsuario;';
-
-    // echo $query_text;
-
-    //Se procesa con la consulta a la BD
-    $query_res = mysqli_query($conexion, $query_text);
-
-    //Arreglo temporal que almacenara la información
-    $usuarios = array();
-
-    //Se verifica si hay un resultado
-    if (mysqli_num_rows($query_res) != 0) {
-        while ($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)) {
-            $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
-        } //end mientras sigan existiendo registros
-    } //end if no hay resultados
-    //Muestra el arreglo
-    // print("<pre>".print_r($usuarios, true)."</pre>");
-} //end else 
-
-//ARREGLO ASOCIATIVO
-//es un arreglo que tiene como indice una cadena de texto de acuerdo a una llave de la tabla de la BD
-
+} //
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,9 +19,8 @@ else {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | Comentarios</title>
+    <title>Dashboard | Nueva sucursal</title>
 
-    <!--RECURSOS PARA LOS ESTILOS DE LAS TABLAS-->
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -69,10 +37,6 @@ else {
     <link rel="stylesheet" href="<?php echo $root_specific_panel . 'css/adminlte.min.css'; ?>">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css'; ?>">
-    <!-- Data Table -->
-    <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' ?>">
-    <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css' ?>">
-    <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/datatables-buttons/css/buttons.bootstrap4.min.css' ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -139,7 +103,7 @@ else {
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <?php echo crear_menu_panel('contacto'); ?>
+                    <?php echo crear_menu_panel('sucursales'); ?>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -153,12 +117,13 @@ else {
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Quejas y sugerencias</h1>
+                            <h1 class="m-0 text-dark">Sucursal nueva</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                                <li class="breadcrumb-item active">Comentarios</li>
+                                <li class="breadcrumb-item"><a href="./sucursales.php">Sucursales</a></li>
+                                <li class="breadcrumb-item active">Nueva sucursal</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -170,69 +135,51 @@ else {
             <section class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="card">
+                        <!-- left column -->
+                        <div class="col-md-12">
+                            <!-- jquery validation -->
+                            <div class="card card-primary">
                                 <div class="card-header">
-                                    <center>
-                                        <h3 class="card-title">Lista de comentarios</h3>
-                                    </center>
+                                    <h3 class="card-title">Formulario de sucursal nueva</h3>
                                 </div>
-                                <div class="card-body">
-                                    <table id="table-usuarios" class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Usuario</th>
-                                                <th>Fecha</th>
-                                                <th>Servicio</th>
-                                                <th>Tipo de mensaje</th>
-                                                <th>Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            //Declaramos la variable para iterar a los usuarios
-                                            $html = '';
-                                            // print("<pre>".print_r($usuarios, true)."</pre>");
-
-                                            //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
-                                            if (isset($usuarios) && sizeof($usuarios) > 0) {
-                                                //contador
-                                                $num = 0;
-                                                //foreach rompe el arreglo de usuarios que va mostrando la informacion
-                                                foreach ($usuarios as $usuario) {
-                                                    $html .= '
-                                                <tr>
-                                                    <td>' . ++$num . '</td>
-                                                    <td>' . $usuario["nombre"] . ' ' . $usuario["ApellidoPaterno"] . ' ' . $usuario["apellidoMaterno"] . '</td>
-                                                    <td>' . $usuario["fecha"] . '</td>
-                                                    <td>' . $usuario["servicio"] . '</td>
-                                                    <td>' . $usuario["tipomensaje"] . '</td>
-                                                    <td>';
-                                                    if ($usuario["estatus_contacto"] != 1) {
-                                                        $html .= '<button type="button" class="btn btn-success btn-sm" disabled>Resuelto</button>';
-                                                    } //end if
-                                                    else {
-                                                        $html .= '<a href="../backend/crud/contacto/updateEstatus.php?idContacto=' . $usuario["idContacto"] . '&estatus=1" class="btn btn-primary btn-sm">Mensaje automatico</a>';
-                                                    } //end else
-
-                                                    $html .= ' <a href="./contacto_detalles.php?idUsuario=' . $usuario["idUsuario"] . '&idContacto=' . $usuario["idContacto"] . '" class="btn btn-warning btn-sm">Detalles</a>
-                                                    </td>
-                                                </tr>
-                                              ';
-                                                } //end foreach
-                                            } //end if 
-                                            echo $html;
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <!-- /.card-header -->
+                                <!-- form start -->
+                                <!--el id es para referenciar las validaciones
+                        action es para el redireccionamiento del proceso del BACKEND
+                        el metodo post es para enviar datos de manera segura
+                        enctype envia y procesa informacion mediante los archivos por medio del metodo $_FILES-->
+                                <form id="form-usuario" action="../backend/crud/sucursales/insertarSucursal.php" method="post" enctype="multipart/form-data">
+                                    <div class="card-body">
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Nombre de la sucursal</label>
+                                                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Registrar</button>
+                                        <a href="./sucursales.php" class="btn btn-danger">Cancelar</a>
+                                    </div>
+                                </form>
                             </div>
+                            <!-- /.card -->
                         </div>
+                        <!--/.col (left) -->
+                        <!-- right column -->
+                        <div class="col-md-6">
+
+                        </div>
+                        <!--/.col (right) -->
                     </div>
-                </div>
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
             </section>
-            <!-- /.content -->
+
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
@@ -275,12 +222,11 @@ else {
     <script src="<?php echo $root_specific_panel . 'js/demo.js'; ?>"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?php echo $root_specific_panel . 'js/pages/dashboard.js'; ?>"></script>
-    <!-- Data Table -->
-    <script src="<?php echo $root_specific_panel . 'plugins/datatables/jquery.dataTables.min.js'; ?>"></script>
-    <script src="<?php echo $root_specific_panel . 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js'; ?>"></script>
-    <script src="<?php echo $root_specific_panel . 'plugins/datatables-responsive/js/dataTables.responsive.min.js'; ?>"></script>
-    <script src="<?php echo $root_specific_panel . 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js'; ?>"></script>
-    <script src='../js/usuarios.js'></script>
+    <!-- Jquery -->
+    <script src="<?php echo $root_specific_panel . 'plugins/jquery-validation/jquery.validate.min.js'; ?>"></script>
+    <script src="<?php echo $root_specific_panel . 'plugins/jquery-validation/additional-methods.min.js'; ?>"></script>
+    <!-- Jquery Specific Validation -->
+    <script src="../js/usuario_nuevo.js"></script>
 </body>
 
 </html>
