@@ -165,6 +165,7 @@ session_start();
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="./contacto.php">Comentarios</a></li>
                                 <li class="breadcrumb-item active">Comentarios</li>
                             </ol>
                         </div><!-- /.col -->
@@ -181,7 +182,7 @@ session_start();
                             <div class="card">
                                 <div class="card-header">
                                     <center>
-                                        <h3 class="card-title">Lista de comentarios</h3>
+                                        <h3 class="card-title">Detalles del comentario</h3>
                                     </center>
                                 </div>
                                 <div class="card-body">
