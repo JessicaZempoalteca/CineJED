@@ -38,21 +38,21 @@ function configurar_menu($pagina = '')
     //Submenu
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
-    $sub_menu_item['href'] = './familiares.php';
+    $sub_menu_item['href'] = './peliculas_familiares.php';
     $sub_menu_item['icon'] = 'fa fa-child';
     $sub_menu_item['text'] = 'Familiares';
     $menu_item['submenu']['familiares'] = $sub_menu_item;
     //
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
-    $sub_menu_item['href'] = './comedia.php';
+    $sub_menu_item['href'] = './peliculas_comedia.php';
     $sub_menu_item['icon'] = 'fa fa-smile-o';
     $sub_menu_item['text'] = 'Comedia';
     $menu_item['submenu']['comedia'] = $sub_menu_item;
     //
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
-    $sub_menu_item['href'] = './accion.php';
+    $sub_menu_item['href'] = './peliculas_accion.php';
     $sub_menu_item['icon'] = 'fa fa-car';
     $sub_menu_item['text'] = 'Acción';
     $menu_item['submenu']['accion'] = $sub_menu_item;
