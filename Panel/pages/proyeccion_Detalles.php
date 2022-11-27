@@ -14,27 +14,62 @@ if (!isset($_SESSION['idUsuario'])) {
 } //
 
 //Capturamos el id que se pasa por el URL
-$idPelicula = $_GET["idPelicula"];
+$idProyeccion = $_GET["idProyeccion"];
+$idHorario = $_GET["idHorario"];
+$idSucursal = $_GET["idSucursal"];
+$idSala = $_GET["idSala"];
 //Verificamos si la variable no esta vacia
-if (empty($idPelicula)) {
+if (empty($idProyeccion)) {
   echo '<script>
                 alert("Error, el usuario no se encontro");
-                window.location = "./peliculas_Familiares.php";
+                window.location = "./proyeccion.php";
                 </script>';
 } //end empty
 else {
   //Se incoorpora la conexion
   include '../backend/admin/conexion.php';
   //Se prepara la consulta para realizar la peticion
-  $query_select = 'SELECT * FROM peliculas WHERE idPelicula = ' . $idPelicula;
+  $query_select = 'SELECT * FROM salaproyectapelicula INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN sala INNER JOIN sucursal
+                  ON salaproyectapelicula.idPelicula = peliculas.idPelicula AND salaproyectapelicula.idHorario = horariopeliculas.idHorario AND salaproyectapelicula.idSala = sala.idSala AND sala.idSucursal = sucursal.idSucursal
+                  WHERE idProyeccion = ' . $idProyeccion;
   //Petición del sql a la BD
   $query_res = mysqli_query($conexion, $query_select);
   $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
+
+  $horarios = array();
+  $query_horarios = 'SELECT horaProyeccion FROM horariopeliculas;';
+  $query_resHorarios = mysqli_query($conexion, $query_horarios);
+  if (mysqli_num_rows($query_resHorarios) != 0) {
+    while ($horariosPeliculas = mysqli_fetch_array($query_resHorarios, MYSQLI_ASSOC)) {
+      $horarios[] = $horariosPeliculas;
+    }
+  }
+
+  $sucursales = array();
+  $query_sucursales = 'SELECT nombreSucursal FROM sucursal;';
+  $query_resSucursales = mysqli_query($conexion, $query_sucursales);
+  if (mysqli_num_rows($query_resSucursales) != 0) {
+    while ($nomSucursales = mysqli_fetch_array($query_resSucursales, MYSQLI_ASSOC)) {
+      $sucursales[] = $nomSucursales;
+    }
+  }
+
+  $tipoSalas = array();
+  $query_tipoSalas = 'SELECT sala.idSala, sala.tipoSala, sucursal.nombreSucursal FROM sala INNER JOIN sucursal
+                      ON sala.idSucursal = sucursal.idSucursal;';
+  $query_restipoSalas = mysqli_query($conexion, $query_tipoSalas);
+  if (mysqli_num_rows($query_restipoSalas) != 0) {
+    while ($salas = mysqli_fetch_array($query_restipoSalas, MYSQLI_ASSOC)) {
+      $tipoSalas[] = $salas;
+    }
+  }
+
+  //print("<pre>".print_r($sucursales, true)."</pre>");
   //Verificar si realmente el usuario existe
   if (mysqli_num_rows($query_res) <= 0) {
     echo '<script>
                 alert("El usuario no existe. Verifica la ID");
-                window.location = "./peliculas_Familiares.php";
+                window.location = "./usuarios.php";
                 </script>';
   } //
   //Se libera la conexion
@@ -48,7 +83,7 @@ else {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard | Detalles de la película</title>
+  <title>Dashboard | Detalles de proyección</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -132,7 +167,7 @@ else {
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-          <?php echo crear_menu_panel('peliculas', 'familiares'); ?>
+          <?php echo crear_menu_panel('proyeccion'); ?>
         </nav>
         <!-- /.sidebar-menu -->
       </div>
@@ -146,13 +181,13 @@ else {
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Detalles de la película</h1>
+              <h1 class="m-0 text-dark">Detalles de la proyeccion</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="./usuarios.php">Películas familiares</a></li>
-                <li class="breadcrumb-item active">Detalles de la película</li>
+                <li class="breadcrumb-item"><a href="./proyeccion.php">Proyecciones</a></li>
+                <li class="breadcrumb-item active">Detalles de proyeccion</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -169,71 +204,81 @@ else {
               <!-- jquery validation -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Formulario de pelicula detalles</h3>
+                  <h3 class="card-title">Formulario de detalles</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form id="form-usuario" action="../backend/crud/peliculasFamiliares/updatePeliculaFamiliar.php" method="post" enctype="multipart/form-data">
+                <form id="form-usuario" action="../backend/crud/proyecciones/updateProyeccion.php" method="post" enctype="multipart/form-data">
                   <div class="card-body">
+                    <br>
+                    <input type="hidden" value="<?php echo $usuario['idProyeccion']; ?>" name="idProyeccion">
                     <div class="row">
-                      <div class="col-md-12">
-                        <center>
-                          <img src="<?php echo ($usuario['imagenPelicula'] == NULL) ? '../img/no-disponible.jpg' : '../img/' . $usuario['imagenPelicula']; ?>" class="img-rounded" alt="" id="img-preview" width="40%">
-                        </center>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Película proyectada</label>
+                          <input type="text" value="<?php echo $usuario['nombrePelicula']; ?>" name="nombrePelicula" class="form-control" id="nombrePelicula" placeholder="Nombre de película" disabled>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Horario</label>
+                          <select class="form-control" name="horaProyeccion">
+                            <option value="">Seleccionar un horario</option>
+                            <?php
+                            $html = '';
+                            if (isset($horarios) && sizeof($horarios) > 0) {
+                              foreach ($horarios as $horariosPeliculas) {
+                                $html .= '
+                                  <option> ' . $horariosPeliculas['horaProyeccion'] . ' </option>
+                                ';
+                              }
+                            }
+                            echo $html;
+                            ?>
+                          </select>
+                        </div>
                       </div>
                     </div>
-                    <input type="hidden" value="<?php echo $usuario['imagenPelicula']; ?>" name="foto_perfil_actual">
-                    <br>
-                    <input type="hidden" value="<?php echo $usuario['idPelicula']; ?>" name="idPelicula">
-                    <input type="hidden" value="<?php echo $usuario['genero']; ?>" name="genero">
+
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Nombre de la película</label>
-                          <input type="text" value="<?php echo $usuario['nombrePelicula']; ?>" name="nombre" class="form-control" id="nombre" placeholder="Nombre de la película">
-                        </div>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Descripción</label>
-                          <textarea type="text" name="descripcion" class="form-control" id="descripcion" placeholder="Descripción de la película" rows="3"><?php echo $usuario['descripcion']; ?></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Duración</label>
-                          <input type="text" value="<?php echo $usuario['duracion']; ?>" name="duracion" class="form-control" id="duracion" placeholder="Duración de la película">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Director</label>
-                          <input type="text" value="<?php echo $usuario['director']; ?>" name="director" class="form-control" id="director" placeholder="Protagonistas de la película">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Estatus</label>
-                          <select class="form-control" name="estatus">
-                            <option value="">Seleccionar un estado</option>
-                            <option value="2" <?php echo ($usuario['estatus_pelicula'] == 2) ? 'selected' : ''; ?>>Inactiva</option>
-                            <option value="1" <?php echo ($usuario['estatus_pelicula'] == 1) ? 'selected' : ''; ?>>Activa</option>
+                          <label for="exampleInputEmail1">Sucursal</label>
+                          <select class="form-control" name="sucursal">
+                            <option value="">Seleccionar un rol</option>
+                            <?php
+                            $html = '';
+                            if (isset($sucursales) && sizeof($sucursales) > 0) {
+                              foreach ($sucursales as $nSucursales) {
+                                $html .= '
+                                  <option> ' . $nSucursales['nombreSucursal'] . ' </option>
+                                ';
+                              }
+                            }
+                            echo $html;
+                            ?>
                           </select>
                         </div>
                       </div>
 
-                      <div class="col-md-4">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Año de estreno</label>
-                          <input type="text" value="<?php echo $usuario['anioEstreno']; ?>" name="anioEstreno" class="form-control" id="anioEstreno" placeholder="Año de estreno">
+                          <label for="exampleInputEmail1">Tipo de sala</label>
+                          <select class="form-control" name="tipoSala">
+                            <option value="">Seleccionar un rol</option>
+                            <?php
+                            $html = '';
+                            if (isset($tipoSalas) && sizeof($tipoSalas) > 0) {
+                              foreach ($tipoSalas as $tipoSala) {
+                                $html .= '
+                                  <option> ' . $tipoSala['tipoSala'] . ' ' . $tipoSala['nombreSucursal'] . '</option>
+                                ';
+                              }
+                            }
+                            echo $html;
+                            ?>
+                          </select>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-12">
-                        <label for="exampleInputEmail1">Foto de portada</label>
-                        <input type="file" name="foto_perfil" onchange="previsualizar_imagen('previsualizar_imagen','foto-input')" class="form-control" id="foto-input">
                       </div>
                     </div>
 
@@ -241,7 +286,7 @@ else {
                   <!-- /.card-body -->
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Editar</button>
-                    <a href="./dashboard.php" class="btn btn-danger">Cancelar</a>
+                    <a href="./usuarios.php" class="btn btn-danger">Cancelar</a>
                   </div>
                 </form>
               </div>

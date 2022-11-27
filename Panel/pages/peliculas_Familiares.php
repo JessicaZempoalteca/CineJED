@@ -27,7 +27,7 @@ else {
 
   //Se realiza la petición sql 
   //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-  $query_text = 'SELECT idPelicula, nombrePelicula, descripcion, duracion, protagonistas, estatus_pelicula, imagenPelicula
+  $query_text = 'SELECT idPelicula, nombrePelicula, anioEstreno, descripcion, duracion, director, estatus_pelicula, imagenPelicula
                    FROM peliculas
                    WHERE genero = "Familiar"';
 

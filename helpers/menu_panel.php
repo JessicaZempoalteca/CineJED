@@ -29,6 +29,14 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['boletos'] = $menu_item;
 
+    //Opción proyecciones
+    $menu_item['is_active'] = ($pagina == "proyeccion") ? TRUE : FALSE;
+    $menu_item['href'] = './proyeccion.php';
+    $menu_item['icon'] = 'fa fa-video-camera';
+    $menu_item['text'] = 'Proyecciones';
+    $menu_item['submenu'] = array();
+    $menu['proyeccion'] = $menu_item;
+
     //Opción peliculas
     $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
     $menu_item['icon'] = 'fa fa-film';

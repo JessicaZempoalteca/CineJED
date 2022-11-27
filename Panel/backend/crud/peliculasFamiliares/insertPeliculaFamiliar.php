@@ -15,13 +15,15 @@
     //VARIABLES PARA ALMACENAR LA INFORMACION DEL FORMULARIO
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $protagonistas = $_POST['protagonistas'];
+    $anioEstreno = $_POST['anioEstreno'];
+    $director = $_POST['director'];
     $duracion = $_POST['duracion'];
     $genero = $_POST['genero'];
     $estatus = $_POST['estatus'];
 
     //se validan si los datos no estan vacios
-    if(empty($nombre) || empty($descripcion) || empty($duracion) || empty($estatus) || empty($protagonistas) || empty($genero)){
+    if(empty($nombre) || empty($descripcion) || empty($duracion) || empty($estatus) || empty($genero)
+    || empty($director) || empty($anioEstreno)){
         //se cierra la conexion
         mysqli_close($conexion);
         //se redirecciona a la pagina de registro
@@ -71,7 +73,7 @@
 
         //query text para insertar el usuario en la base de datos
         $query_insert = 'INSERT INTO peliculas 
-                        VALUES (NULL, "'.$nombre.'", "'.$descripcion.'", "'.$duracion.'", "'.$genero.'", "'.$protagonistas.'", "'.$estatus.'", "'.$nombreArchivo.'");';
+                        VALUES (NULL, "'.$nombre.'", "'.$descripcion.'", "'.$duracion.'", "'.$anioEstreno.'", "'.$genero.'", "'.$director.'", "'.$estatus.'", "'.$nombreArchivo.'");';
         
         //se ejecuta el query text
         //ESTE PROCESO DA COMO RESULTADO TRUE O FALSE
@@ -92,7 +94,7 @@
             //se cierra la conexion
             mysqli_close($conexion);
             echo '<script>alert("Pelicula guardada correctamente")</script>';
-            echo '<script>window.location="../../../pages/dashboard.php"</script>';
+            //echo '<script>window.location="../../../pages/dashboard.php"</script>';
         }
     }
 ?>

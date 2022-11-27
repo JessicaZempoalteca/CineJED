@@ -18,17 +18,18 @@
     //Para almacenar la información del form registrar
     $idPelicula  = $_POST['idPelicula'];
     $nombre = $_POST['nombre'];
+    $anioEstreno = $_POST['anioEstreno'];
     $descripcion = $_POST['descripcion'];
     $duracion = $_POST['duracion'];
     $genero = $_POST['genero'];
-    $protagonistas = $_POST['protagonistas'];
+    $director = $_POST['director'];
     $estatus_pelicula = $_POST['estatus'];
     $foto_perfil_actual = $_POST['foto_perfil_actual'];
 
     //Validar si las variables no estan vacias
-    if( empty($nombre) || empty($descripcion) || empty($duracion) || empty($protagonistas)){
+    if( empty($nombre) || empty($descripcion) || empty($anioEstreno) || empty($duracion) || empty($director) ){
         //Se cierra la conexión
-		mysqli_close($conexion);
+		//mysqli_close($conexion);
         //Se redirecciona al formulario de insertar
 		echo '<script>alert("Error, hay información faltante.");</script>';
 		echo '<script> window.location="../../../pages/peliculas_Familiares_detalles.php"; </script>';
@@ -69,12 +70,11 @@
     //=====================================
     
     //Se genera el sql para insertar
-    $query_update = "UPDATE peliculas SET nombrePelicula='$nombre', descripcion='$descripcion', duracion='$duracion'
-                    ".$nombre_archivo." WHERE idPelicula ='$idPelicula ';";
+    $query_update = "UPDATE peliculas SET nombrePelicula='$nombre', anioEstreno='$anioEstreno', director='$director',descripcion='$descripcion', estatus_pelicula='$estatus_pelicula',
+                    duracion='$duracion'".$nombre_archivo." WHERE idPelicula ='$idPelicula';";
     //echo $query_update;
     //Se realiza la petición con la BD
     $query_res = mysqli_query($conexion, $query_update);
-
 
     echo $nombre_archivo;
     //Se valida el resultado booleano del query result
