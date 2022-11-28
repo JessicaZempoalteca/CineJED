@@ -18,7 +18,7 @@
     $sala = $_POST['tipoSala'];
 
     //se validan si los datos no estan vacios
-    if(empty($nombrePelicula) || empty($horario) || empty($sala)){
+    if(empty($nombrePe) || empty($horario) || empty($sala)){
         //se cierra la conexion
         mysqli_close($conexion);
         //se redirecciona a la pagina de registro
@@ -28,9 +28,7 @@
     
     //query text para buscar el correo que se ingresa en la base de datos
     $query_text = 'SELECT * FROM salaproyectapelicula 
-                    WHERE (idPelicula, (SELECT idPelicula FROM peliculas WHERE nombrePelicula="'.$nombrePe.'"))
-                    AND (idHorario, (SELECT idHorario FROM horariopeliculas WHERE horarioProyeccion="'.$horario.'"))
-                    AND (idSala, (SELECT idSala FROM salas WHERE tipoSala="'.$sala.'"));';
+                    WHERE (idPelicula = "'.$nombrePe.'" AND idSala = "'.$sala.'" AND horario = "'.$horario.'");';
     echo $query_text;
     $resultado = mysqli_query($conexion, $query_text);
 
@@ -43,10 +41,7 @@
     else{
         
         //query text para insertar el usuario en la base de datos
-        $query_insert = 'INSERT INTO salaproyectapelicula 
-                        VALUES (NULL, ("'.$nombrePe.'", SELECT idPelicula FROM peliculas WHERE nombrePelicula="'.$nombrePelicula.'"),
-                        ("'.$sala.'", SELECT idSala FROM salas WHERE tipoSala="'.$sala.'"),
-                        ("'.$horario.'", SELECT idHorario FROM horariopeliculas WHERE horarioProyeccion="'.$horario.'"));';
+        $query_insert = 'INSERT INTO salaproyectapelicula VALUES (NULL, "'.$nombrePe.'", "'.$sala.'", "'.$horario.'", 1);';
         echo $query_insert;
         //se ejecuta el query text
         //ESTE PROCESO DA COMO RESULTADO TRUE O FALSE

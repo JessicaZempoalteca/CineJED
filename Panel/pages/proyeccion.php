@@ -18,12 +18,11 @@
 
     //Se realiza la petición sql 
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-    $query_text = 'SELECT peliculas.idPelicula, horarioPeliculas.idHorario, sala.idSala, sucursal.idSucursal,
-                    salaproyectapelicula.idProyeccion, peliculas.nombrePelicula, horarioPeliculas.horaProyeccion,
+    $query_text = 'SELECT peliculas.idPelicula, sala.idSala, sucursal.idSucursal, salaproyectapelicula.horario,
+                    salaproyectapelicula.idProyeccion, peliculas.nombrePelicula,
                     sala.tipoSala, sucursal.nombreSucursal, salaproyectapelicula.estatus_Proyeccion 
-                    FROM salaproyectapelicula INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN sala INNER JOIN sucursal
-                    ON salaproyectapelicula.idPelicula = peliculas.idPelicula AND
-                    salaproyectapelicula.idHorario = horariopeliculas.idHorario AND salaproyectapelicula.idSala = sala.idSala AND
+                    FROM salaproyectapelicula INNER JOIN peliculas INNER JOIN sala INNER JOIN sucursal
+                    ON salaproyectapelicula.idPelicula = peliculas.idPelicula AND salaproyectapelicula.idSala = sala.idSala AND
                     sala.idSucursal = sucursal.idSucursal;';
 
     // echo $query_text;
@@ -217,7 +216,7 @@
                                                 <tr>
                                                     <td>'.++$num.'</td>
                                                     <td>'.$usuario["nombrePelicula"].'</td>
-                                                    <td>'.$usuario["horaProyeccion"].'</td>
+                                                    <td>'.$usuario["horario"].'</td>
                                                     <td>'.$usuario["tipoSala"].'</td>
                                                     <td>'.$usuario["nombreSucursal"].'</td>
                                                     <td>';
@@ -228,7 +227,7 @@
                                                         $html.='   <a href="../backend/crud/administrador/updateEstatus.php?idProyeccion='.$usuario["idProyeccion"].'&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
                                                       }//end else
                                                         $html.='  <a href="../backend/crud/administrador/deleteUsuario.php?idProyeccion='.$usuario["idProyeccion"].'" class="btn btn-danger btn-sm">Eliminar</a> 
-                                                        <a href="./proyeccion_detalles.php?idProyeccion='.$usuario["idProyeccion"].'&idHorario='.$usuario["idHorario"].'&idSucursal='.$usuario["idSucursal"].'&idSala='.$usuario["idSala"].'" class="btn btn-warning btn-sm">Detalles</a>
+                                                        <a href="./proyeccion_detalles.php?idProyeccion='.$usuario["idProyeccion"].'&idSucursal='.$usuario["idSucursal"].'&idSala='.$usuario["idSala"].'" class="btn btn-warning btn-sm">Detalles</a>
                                                     </td>
                                                 </tr>
                                               ';
