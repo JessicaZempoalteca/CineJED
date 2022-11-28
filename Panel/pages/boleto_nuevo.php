@@ -286,7 +286,7 @@
                         <!-- /.card-body -->
                         <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Registrar</button>
-                        <a href="./usuarios.php" class="btn btn-danger">Cancelar</a>
+                        <a href="./boletos.php" class="btn btn-danger">Cancelar</a>
                         </div>
                     </form>
                     </div>

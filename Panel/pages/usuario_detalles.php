@@ -185,7 +185,6 @@ else {
                     <input type="hidden" value="<?php echo $usuario['imagenUsuario']; ?>" name="foto_perfil_actual">
                     <br>
                     <input type="hidden" value="<?php echo $usuario['idUsuario']; ?>" name="idUsuario">
-                    <input type="hidden" value="<?php echo $usuario['genero']; ?>" name="genero">
                     <div class="row">
                       <div class="col-md-4">
                         <div class="form-group">

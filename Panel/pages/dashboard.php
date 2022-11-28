@@ -70,8 +70,14 @@
           </li>
           <!-- Perfil -->
           <li class="nav-item">
-            <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
-              <i class="fa fa-user"></i>
+            <?php 
+            $html = '';
+            $html.='  <a class="nav-link" href="./perfil.php?idUsuario='.$_SESSION["idUsuario"].'" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
+            <i class="fa fa-user"></i></a> ';
+            echo $html; 
+            ?>
+           <!--   <a class="nav-link" href="./perfil.php?idUsuario='.$_SESSION['idUsuario'].'" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
+              <i class="fa fa-user"></i>-->
             </a>
           </li>
           <!-- Logout -->
