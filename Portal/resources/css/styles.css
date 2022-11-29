@@ -3968,7 +3968,6 @@ ul{
 }
 
 a{
-  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -4115,12 +4114,8 @@ a:hover, a span:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.1rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-a span{
-  margin-top:400px;
 }
 
 .nav ul li{
