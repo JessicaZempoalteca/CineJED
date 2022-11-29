@@ -4,7 +4,7 @@
     $server = 'localhost'; //Servidor
     $bd =  'cinejed'; //Base de datos
     $user = 'root'; //Usuario de acceso a la BD
-    $password = ''; // Contraseña de acceso a la BD
+    $password = 'ema'; // Contraseña de acceso a la BD
 
     //Proceso de conexión a la BD
     $conexion = mysqli_connect($server, $user, $password, $bd);

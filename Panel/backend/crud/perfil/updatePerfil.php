@@ -22,13 +22,13 @@ $ApellidoPaterno = $_POST['ApellidoPaterno'];
 $apellidoMaterno = $_POST['apellidoMaterno'];
 $correo = $_POST['correo'];
 $password = $_POST['password'];
-$idRol = $_POST['rol'];
+//$idRol = $_POST['rol'];
 $foto_perfil_actual = $_POST['foto_perfil_actual'];
 
 //Validar si las variables no estan vacias
 if (
     empty($nombre) || empty($ApellidoPaterno) || empty($apellidoMaterno) ||
-    empty($correo) || empty($idRol)
+    empty($correo) 
 ) {
     //Se cierra la conexión
     mysqli_close($conexion);
@@ -44,7 +44,7 @@ if (
 $imagen = $_FILES['foto_perfil'];
 
 //Determinamos la variable que almacenara la información de la imagen
-$nombre_archivo = 'NULL';
+$nombre_archivo = '';
 
 //Verificamos que no este vacia la foto del perfil 
 if (!empty($imagen["name"])) {
@@ -73,23 +73,25 @@ if (!empty($imagen["name"])) {
 //Verifica si el password es nueva
 $passwordEncripted = hash('sha256', $password);
 $nueva_password = ($password == '' ? '' : ',password="' . $passwordEncripted . '"');
-
+//echo  'dddddd'.$_SESSION['idUsuario'];
 //Se genera el sql para insertar
 $query_update = "UPDATE usuarios SET nombre='$nombre', ApellidoPaterno='$ApellidoPaterno', apellidoMaterno='$apellidoMaterno', 
-                    correo='$correo'" . $nueva_password . $nombre_archivo . ", idRol='$idRol' WHERE idUsuario='$idUsuario';";
+                    correo='$correo'" . $nueva_password . $nombre_archivo . " WHERE idUsuario=".$_SESSION['idUsuario'].";";
 //echo $query_update;
 //Se realiza la petición con la BD
 $query_res = mysqli_query($conexion, $query_update);
 
 
-echo $nombre_archivo;
+//echo $nombre_archivo;
 //Se valida el resultado booleano del query result
 if (!$query_res) {
     if (!$imagen['name']) {
         //Elimina la imagen temporal que se va aactualizar
-        unlink("../../../img/" . $imagen['name']);
+        if(file_exists("../../../img/" . $imagen['name'])){
+            unlink("../../../img/" . $imagen['name']);
+        }
     }
-    echo '<script>alert("Error al actualizar el usuario. Falló nuestro servidor, intente nuevamente, por favor.");</script>';
+//        echo '<script>alert("Error al actualizar el usuario. Falló nuestro servidor, intente nuevamente, por favor.");</script>';
 } //end if falló la actualización
 else {
     if (!empty($imagen['name']) && !empty($foto_perfil_actual)) {
@@ -99,10 +101,16 @@ else {
         } //end if file_exist
     } //end if empty
     //Elimina la imagen anterior para actualizar la nueva
+
+    if($foto_perfil_actual != NULL){
+        $_SESSION['imagenPerfil'] = $foto_perfil_actual;
+    }
+
     $_SESSION['nombreCompleto'] = $nombre . ' ' . $ApellidoPaterno . ' ' . $apellidoMaterno;
     $_SESSION['correo'] = $correo;
-    $_SESSION['imagenPerfil'] = $foto_perfil_actual;
-    echo $_SESSION['imagenPerfil'];
+
+
+    //print("<pre>".print_r($_SESSION,true)."</pre>");
     echo '<script>alert("¡Usuario actualizado exitosamente!");</script>';
 } //end else falló la actualización
 

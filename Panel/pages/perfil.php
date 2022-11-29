@@ -14,19 +14,19 @@ if (!isset($_SESSION['idUsuario'])) {
 } //
 
 //Capturamos el id que se pasa por el URL
-$idUsuario = $_GET["idUsuario"];
+//$idUsuario = $_GET["idUsuario"];
 //Verificamos si la variable no esta vacia
-if (empty($idUsuario)) {
-  echo '<script>
-                alert("Error, el usuario no se encontro");
-                window.location = "./usuarios.php";
-                </script>';
-} //end empty
-else {
+//if (empty($idUsuario)) {
+ // echo '<script>
+   //             alert("Error, el usuario no se encontro");
+     //           window.location = "./usuarios.php";
+       //         </script>';
+//} //end empty
+//else {
   //Se incoorpora la conexion
   include '../backend/admin/conexion.php';
   //Se prepara la consulta para realizar la peticion
-  $query_select = 'SELECT * FROM usuarios WHERE idUsuario = ' . $idUsuario;
+  $query_select = 'SELECT * FROM usuarios WHERE idUsuario = ' . $_SESSION['idUsuario'];
   //Petición del sql a la BD
   $query_res = mysqli_query($conexion, $query_select);
   $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
@@ -40,7 +40,7 @@ else {
   //Se libera la conexion
   mysqli_close($conexion);
   // print("<pre>".print_r($usuario,true)."</pre>");
-} //end else
+//} //end else
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -126,7 +126,7 @@ else {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
+            <img src="<?php echo '../img/'.$_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
           </div>
           <div class="info">
             <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
