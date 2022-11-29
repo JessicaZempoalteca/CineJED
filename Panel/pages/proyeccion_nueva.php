@@ -15,7 +15,7 @@ if (!isset($_SESSION['idUsuario'])) {
     include '../backend/admin/conexion.php';
 
     $peliculas = array();
-    $query_peliculas = 'SELECT nombrePelicula FROM peliculas;';
+    $query_peliculas = 'SELECT idPelicula, nombrePelicula FROM peliculas;';
     $query_respeliculas = mysqli_query($conexion, $query_peliculas);
     if (mysqli_num_rows($query_respeliculas) != 0) {
       while ($peliculasPeliculas = mysqli_fetch_array($query_respeliculas, MYSQLI_ASSOC)) {
@@ -24,22 +24,13 @@ if (!isset($_SESSION['idUsuario'])) {
     }
     
     $horarios = array();
-  $query_horarios = 'SELECT horaProyeccion FROM horariopeliculas;';
+  $query_horarios = 'SELECT idHorario, horaProyeccion FROM horariopeliculas;';
   $query_resHorarios = mysqli_query($conexion, $query_horarios);
   if (mysqli_num_rows($query_resHorarios) != 0) {
     while ($horariosPeliculas = mysqli_fetch_array($query_resHorarios, MYSQLI_ASSOC)) {
       $horarios[] = $horariosPeliculas;
     }
   }
-  
-    $sucursales = array();
-    $query_sucursales = 'SELECT nombreSucursal FROM sucursal;';
-    $query_resSucursales = mysqli_query($conexion, $query_sucursales);
-    if (mysqli_num_rows($query_resSucursales) != 0) {
-      while ($nomSucursales = mysqli_fetch_array($query_resSucursales, MYSQLI_ASSOC)) {
-        $sucursales[] = $nomSucursales;
-      }
-    }
   
     $tipoSalas = array();
     $query_tipoSalas = 'SELECT sala.idSala, sala.tipoSala, sucursal.nombreSucursal FROM sala INNER JOIN sucursal
@@ -58,7 +49,7 @@ if (!isset($_SESSION['idUsuario'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | Nueva sucursal</title>
+    <title>Dashboard | Nueva proyección</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -197,14 +188,14 @@ if (!isset($_SESSION['idUsuario'])) {
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Película proyectada</label>
-                          <select class="form-control" name="nombrePelicula">
+                          <select class="form-control" name="pelicula">
                             <option value="">Seleccionar un horario</option>
                           <?php
                             $html = '';
                             if (isset($peliculas) && sizeof($peliculas) > 0) {
                               foreach ($peliculas as $nomPeliculas) {
                                 $html .= '
-                                  <option> ' . $nomPeliculas['nombrePelicula'] . ' </option>
+                                  <option value="'.$nomPeliculas['idPelicula'].'"> ' . $nomPeliculas['nombrePelicula'] . ' </option>
                                 ';
                               }
                             }
@@ -223,7 +214,7 @@ if (!isset($_SESSION['idUsuario'])) {
                             if (isset($horarios) && sizeof($horarios) > 0) {
                               foreach ($horarios as $horariosPeliculas) {
                                 $html .= '
-                                  <option>'.$horariosPeliculas['horaProyeccion'].'</option>
+                                  <option value="'.$horariosPeliculas['idHorario'].'">'.$horariosPeliculas['horaProyeccion'].'</option>
                                 ';
                               }
                             }
@@ -245,7 +236,7 @@ if (!isset($_SESSION['idUsuario'])) {
                             if (isset($tipoSalas) && sizeof($tipoSalas) > 0) {
                               foreach ($tipoSalas as $tipoSala) {
                                 $html .= '
-                                  <option> ' . $tipoSala['tipoSala'] . ' ' . $tipoSala['nombreSucursal'] . '</option>
+                                  <option value="'.$tipoSala['idSala'].'"> ' . $tipoSala['idSala'] . ' ' . $tipoSala['tipoSala'] . ' ' . $tipoSala['nombreSucursal'] . '</option>
                                 ';
                               }
                             }
@@ -261,9 +252,6 @@ if (!isset($_SESSION['idUsuario'])) {
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Editar</button>
                     <a href="./proyeccion.php" class="btn btn-danger">Cancelar</a>
-                    <?php 
-                    echo '<a href="../backend/crud/proyecciones/insertProyeccion.php?sala='.$tipoSala["idSala"].'" class="btn btn-primary">Cancelar</a>';
-                    ?>
                   </div>
                 </form>
                             </div>
