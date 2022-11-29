@@ -123,7 +123,7 @@ else {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image">
+            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
           </div>
           <div class="info">
             <a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
@@ -244,7 +244,7 @@ else {
                     <div class="row">
                       <div class="col-md-12">
                         <label for="exampleInputEmail1">Foto perfil</label>
-                        <input type="file" name="foto_perfil" onchange="previsualizar_imagen('previsualizar_imagen','foto-input')" class="form-control" id="foto-input">
+                        <input type="file" name="foto_perfil" id="foto_perfil" onchange="previsualizar_imagen('previsualizar_imagen','foto-input')" class="form-control" id="foto-input">
                       </div>
                     </div>
 
@@ -317,6 +317,7 @@ else {
   <script src="<?php echo $root_specific_panel . 'plugins/jquery-validation/additional-methods.min.js'; ?>"></script>
   <!-- Jquery Specific Validation -->
   <script src="../js/usuario_detalles.js"></script>
+  <script src="../js/perfil.js"></script>
 </body>
 
 </html>
