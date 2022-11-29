@@ -19,8 +19,8 @@
     //Se realiza la petición sql 
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
     $query_text = 'SELECT usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, boleto.asiento, boleto.fecha, boleto.precio, peliculas.nombrePelicula, horarioPeliculas.horaProyeccion, sala.tipoSala
-                    FROM boleto INNER JOIN salaproyectapelicula INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN usuarios INNER JOIN sala
-                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.pelicula=salaproyectapelicula.idProyeccion AND salaproyectapelicula.idPelicula=peliculas.idPelicula AND salaproyectapelicula.idSala=sala.idSala
+                    FROM boleto INNER JOIN salaproyectapeliculas INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN usuarios INNER JOIN sala
+                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.pelicula=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
                     group by idBoleto;';
 
     // echo $query_text;
@@ -87,7 +87,7 @@
 
       <!-- Preloader -->
       <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+        <img class="animation__shake" src="../img/carga.gif" alt="AdminLTELogo" height="60" width="60">
       </div>
 
       <!-- Navbar -->
