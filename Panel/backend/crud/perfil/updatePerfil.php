@@ -98,6 +98,9 @@
             }//end if file_exist
         }//end if empty
         //Elimina la imagen anterior para actualizar la nueva
+            $_SESSION['nombreCompleto'] = $nombre. ' '.$ApellidoPaterno.' '.$apellidoMaterno;
+            $_SESSION['correo'] = $correo;
+            $_SESSION['imagenPerfil'] = $foto_perfil_actual;
         echo '<script>alert("¡Usuario actualizado exitosamente!");</script>';
     }//end else falló la actualización
 
