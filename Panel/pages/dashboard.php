@@ -103,8 +103,8 @@ if (!isset($_SESSION['idUsuario'])) {
             <img src="<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <b><a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a></b>
-            <a href="#" class="d-block"><?php echo $_SESSION["rol"]; ?></a>
+            <b><a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a></b>
+            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["rol"]; ?></a>
           </div>
         </div>
 

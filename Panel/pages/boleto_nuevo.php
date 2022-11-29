@@ -96,7 +96,7 @@ if (!isset($_SESSION['idUsuario'])) {
         </li>
         <!-- Perfil -->
         <li class="nav-item">
-          <a class="nav-link" href="#" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
+          <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
             <i class="fa fa-user"></i>
           </a>
         </li>
@@ -127,7 +127,7 @@ if (!isset($_SESSION['idUsuario'])) {
             <img src="<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
+            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
           </div>
         </div>
 
