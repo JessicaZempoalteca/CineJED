@@ -94,7 +94,7 @@
             //se cierra la conexion
             mysqli_close($conexion);
             echo '<script>alert("Pelicula guardada correctamente")</script>';
-            //echo '<script>window.location="../../../pages/dashboard.php"</script>';
+            echo '<script>window.location="../../../pages/dashboard.php"</script>';
         }
     }
 ?>

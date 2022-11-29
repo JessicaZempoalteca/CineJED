@@ -183,7 +183,7 @@ else {
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-              <a href="./usuario_nuevo.php" class="btn btn-secondary btn-sm">Agregar nueva</a><br><br>
+              <a href="./pelicula_Familiar_nueva.php" class="btn btn-secondary btn-sm">Agregar nueva</a><br><br>
               <div class="card">
                 <div class="card-header">
                   <center>

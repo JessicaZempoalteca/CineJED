@@ -1,6 +1,47 @@
 <?php
 require('../../helpers/menu_portal.php');
 require('../../helpers/funciones_generales.php');
+
+
+//Declaración de variables par la conexion con la BD
+$server = 'localhost'; //Servidor
+$bd =  'cinejed'; //Base de datos
+$user = 'root'; //Usuario de acceso a la BD
+$password = ''; // Contraseña de acceso a la BD
+
+//Proceso de conexión a la BD
+$conexion = mysqli_connect($server, $user, $password, $bd);
+
+//Validamos la conexión con la BD
+if(!$conexion){
+    die('Error al conectarse con la Base de Datos,'. mysqli_connect_error());
+    exit;
+}//end 
+
+//Procesa o relizamos una petición a la BD
+//echo '<script>alert("Conexión éxitosa a la BD")</script>';
+//variable de conexion y el proceso que se quiere realizar
+mysqli_query($conexion, 'SET NAMES "utf8"');
+
+//Se realiza la petición sql 
+//specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
+$query_text = 'SELECT idPelicula, nombrePelicula, anioEstreno, descripcion, duracion, director, estatus_pelicula, imagenPelicula
+               FROM peliculas
+               WHERE genero = "Acción"';
+
+$query_res = mysqli_query($conexion, $query_text);
+
+  //Arreglo temporal que almacenara la información
+  $usuarios = array();
+
+  //Se verifica si hay un resultado
+  if (mysqli_num_rows($query_res) != 0) {
+    while ($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)) {
+      $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
+    } //end mientras sigan existiendo registros
+  } //end if no hay resultados
+  //Muestra el arreglo
+  // print("<pre>".print_r($usuarios, true)."</pre>");
 ?>
 <!DOCTYPE html>
 <html lang="en">
