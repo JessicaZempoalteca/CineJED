@@ -156,12 +156,12 @@ else {
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Usuarios</h1>
+              <h1 class="m-0 text-dark">Proyecciones</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                <li class="breadcrumb-item active">Usuarios</li>
+                <li class="breadcrumb-item active">Proyecciones de peliculas</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -174,11 +174,11 @@ else {
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-              <a href="./proyeccion_nueva.php" class="btn btn-secondary btn-sm">Agregar nuevo</a><br><br>
+              <a href="./proyeccion_nueva.php" class="btn btn-secondary btn-sm">Agregar nueva</a><br><br>
               <div class="card">
                 <div class="card-header">
                   <center>
-                    <h3 class="card-title">Lista de Usuarios</h3>
+                    <h3 class="card-title">Lista de proyecciones</h3>
                   </center>
                 </div>
                 <div class="card-body">
@@ -210,7 +210,7 @@ else {
                                                     <td>' . ++$num . '</td>
                                                     <td>' . $usuario["nombrePelicula"] . '</td>
                                                     <td>' . $usuario["horaProyeccion"] . '</td>
-                                                    <td>' . $usuario["tipoSala"] . '</td>
+                                                    <td>' . $usuario["idSala"] . ' ' . $usuario["tipoSala"] . '</td>
                                                     <td>' . $usuario["nombreSucursal"] . '</td>
                                                     <td>';
                           if ($usuario["estatus_Proyeccion"] != 1) {
