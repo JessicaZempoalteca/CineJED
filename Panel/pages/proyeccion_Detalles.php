@@ -16,7 +16,7 @@ if (!isset($_SESSION['idUsuario'])) {
 //Capturamos el id que se pasa por el URL
 $idProyeccion = $_GET["idProyeccion"];
 $idHorario = $_GET["idHorario"];
-$idSucursal = $_GET["idSucursal"];
+
 $idSala = $_GET["idSala"];
 //Verificamos si la variable no esta vacia
 if (empty($idProyeccion)) {
@@ -29,8 +29,8 @@ else {
   //Se incoorpora la conexion
   include '../backend/admin/conexion.php';
   //Se prepara la consulta para realizar la peticion
-  $query_select = 'SELECT * FROM salaproyectapelicula INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN sala INNER JOIN sucursal
-                  ON salaproyectapelicula.idPelicula = peliculas.idPelicula AND salaproyectapelicula.idHorario = horariopeliculas.idHorario AND salaproyectapelicula.idSala = sala.idSala AND sala.idSucursal = sucursal.idSucursal
+  $query_select = 'SELECT * FROM salaproyectapeliculas INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN sala INNER JOIN sucursal
+                  ON salaproyectapeliculas.idPelicula = peliculas.idPelicula AND salaproyectapeliculas.idHorario = horariopeliculas.idHorario AND salaproyectapeliculas.idSala = sala.idSala AND sala.idSucursal = sucursal.idSucursal
                   WHERE idProyeccion = ' . $idProyeccion;
   //Petición del sql a la BD
   $query_res = mysqli_query($conexion, $query_select);

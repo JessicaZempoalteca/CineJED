@@ -48,7 +48,7 @@ else {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard | Detalles del usuario</title>
+  <title>Dashboard | Mi perfil</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -123,7 +123,7 @@ else {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
+            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
@@ -132,7 +132,7 @@ else {
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-          <?php echo crear_menu_panel('usuarios'); ?>
+          <?php echo crear_menu_panel(''); ?>
         </nav>
         <!-- /.sidebar-menu -->
       </div>
@@ -146,13 +146,12 @@ else {
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Detalles del usuario</h1>
+              <h1 class="m-0 text-dark">Detalles de perfil</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                <li class="breadcrumb-item"><a href="./usuarios.php">Usuario</a></li>
-                <li class="breadcrumb-item active">Detalles de usuario</li>
+                <li class="breadcrumb-item active">Perfil</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -169,11 +168,11 @@ else {
               <!-- jquery validation -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Formulario de usuario detalles</h3>
+                  <h3 class="card-title">Formulario de perfil</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form id="form-usuario" action="../backend/crud/administrador/updateUsuario.php" method="post" enctype="multipart/form-data">
+                <form id="form-usuario" action="../backend/crud/perfil/updatePerfil.php" method="post" enctype="multipart/form-data">
                   <div class="card-body">
                     <div class="row">
                       <div class="col-md-12">

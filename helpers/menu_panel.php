@@ -16,7 +16,7 @@ function configurar_menu($pagina = '')
     //Opción Usuario
     $menu_item['is_active'] = ($pagina == "usuarios") ? TRUE : FALSE;
     $menu_item['href'] = './usuarios.php';
-    $menu_item['icon'] = 'fa fa-user';
+    $menu_item['icon'] = 'fa fa-users';
     $menu_item['text'] = 'Usuarios';
     $menu_item['submenu'] = array();
     $menu['usuario'] = $menu_item;
@@ -77,7 +77,7 @@ function configurar_menu($pagina = '')
     //Opción salas
     $menu_item['is_active'] = ($pagina == "salas") ? TRUE : FALSE;
     $menu_item['href'] = './salas.php';
-    $menu_item['icon'] = 'fa fa-users';
+    $menu_item['icon'] = 'fa fa-play-circle';
     $menu_item['text'] = 'Salas de cine';
     $menu_item['submenu'] = array();
     $menu['salas'] = $menu_item;

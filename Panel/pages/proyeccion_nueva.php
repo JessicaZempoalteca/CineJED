@@ -148,13 +148,13 @@ if (!isset($_SESSION['idUsuario'])) {
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Sucursal nueva</h1>
+                            <h1 class="m-0 text-dark">Proyección nueva</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="./dashboard.php">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="./sucursales.php">Sucursales</a></li>
-                                <li class="breadcrumb-item active">Nueva sucursal</li>
+                                <li class="breadcrumb-item"><a href="./sucursales.php">Proyecciones de peliculas</a></li>
+                                <li class="breadcrumb-item active">Nueva proyeccion</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -171,7 +171,7 @@ if (!isset($_SESSION['idUsuario'])) {
                             <!-- jquery validation -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Formulario de sucursal nueva</h3>
+                                    <h3 class="card-title">Formulario de nueva proyección</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
@@ -187,7 +187,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Película proyectada</label>
+                          <label for="exampleInputEmail1">Película que será proyectada</label>
                           <select class="form-control" name="pelicula">
                             <option value="">Seleccionar un horario</option>
                           <?php
@@ -228,7 +228,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Sucursal</label>
+                          <label for="exampleInputEmail1">Sala</label>
                           <select class="form-control" name="tipoSala">
                             <option value="">Seleccionar un rol</option>
                             <?php
@@ -250,7 +250,7 @@ if (!isset($_SESSION['idUsuario'])) {
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                     <a href="./proyeccion.php" class="btn btn-danger">Cancelar</a>
                   </div>
                 </form>

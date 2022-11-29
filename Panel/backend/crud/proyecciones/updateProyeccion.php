@@ -17,13 +17,12 @@
 
     //Para almacenar la información del form registrar
     $idProyeccion = $_POST['idProyeccion'];
-    //$nombrePelicula = $_POST['nombrePelicula'];
+    $nombrePelicula = $_POST['nombrePelicula'];
     $horaProyeccion = $_POST['horaProyeccion'];
-    $sucursal = $_POST['sucursal'];
     $tipoSala = $_POST['tipoSala'];
 
     //Validar si las variables no estan vacias
-    if( empty($horaProyeccion) || empty($sucursal) || empty($tipoSala)){
+    if( empty($idProyeccion) || empty($horaProyeccion) || empty($nombrePelicula) || empty($tipoSala) ){
         //Se cierra la conexión
 		mysqli_close($conexion);
         //Se redirecciona al formulario de insertar
@@ -32,7 +31,7 @@
     }//end if 
     
     //Se genera el sql para insertar
-    $query_update = "UPDATE salaproyectapelicula SET idSala='$tipoSala', idHorario='$horaProyeccion', idSucursal='$sucursal'
+    $query_update = "UPDATE salaproyectapeliculas SET idPelicula='$nombrePelicula', idSala='$tipoSala', idHorario='$horaProyeccion'
                      WHERE idProyeccion='$idProyeccion';";
     echo $query_update;
     //Se realiza la petición con la BD
@@ -42,7 +41,7 @@
     mysqli_close($conexion);
 
     //Se redireciona a usuarios todos
-    echo '<script> window.location = "../../../pages/usuarios.php";</script>';
+    echo '<script> window.location = "../../../pages/proyeccion.php";</script>';
     
 
 

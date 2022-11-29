@@ -20,7 +20,7 @@ else {
   //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
   $query_text = 'SELECT peliculas.idPelicula, sala.idSala, sucursal.idSucursal, salaproyectapeliculas.idHorario,
                     horariopeliculas.horaProyeccion ,salaproyectapeliculas.idProyeccion, peliculas.nombrePelicula,
-                    sala.tipoSala, sucursal.nombreSucursal, salaproyectapeliculas.estatus_Proyeccion 
+                    sala.tipoSala, sucursal.nombreSucursal, salaproyectapeliculas.estatus_proyeccion 
                     FROM salaproyectapeliculas INNER JOIN peliculas INNER JOIN sala INNER JOIN sucursal INNER JOIN horariopeliculas
                     ON salaproyectapeliculas.idPelicula = peliculas.idPelicula AND salaproyectapeliculas.idSala = sala.idSala AND
                     sala.idSucursal = sucursal.idSucursal AND horariopeliculas.idHorario=salaproyectapeliculas.idHorario;';
@@ -213,17 +213,12 @@ else {
                                                     <td>' . $usuario["idSala"] . ' ' . $usuario["tipoSala"] . '</td>
                                                     <td>' . $usuario["nombreSucursal"] . '</td>
                                                     <td>';
-                          if ($usuario["estatus_Proyeccion"] != 1) {
-                            $html .= '   <a href="../backend/crud/administrador/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
+                          if ($usuario["estatus_proyeccion"] != 1) {
+                            $html .= '   <a href="../backend/crud/proyecciones/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
                           } //end if
                           else {
-                            $html .= '   <a href="../backend/crud/administrador/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
+                            $html .= '   <a href="../backend/crud/proyecciones/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
                           } //end else
-                          $html .= '  <a href="../backend/crud/administrador/deleteUsuario.php?idProyeccion=' . $usuario["idProyeccion"] . '" class="btn btn-danger btn-sm">Eliminar</a> 
-                                                        <a href="./proyeccion_detalles.php?idProyeccion=' . $usuario["idProyeccion"] . '&idSucursal=' . $usuario["idSucursal"] . '&idSala=' . $usuario["idSala"] . '" class="btn btn-warning btn-sm">Detalles</a>
-                                                    </td>
-                                                </tr>
-                                              ';
                         } //end foreach
                       } //end if 
                       echo $html;
