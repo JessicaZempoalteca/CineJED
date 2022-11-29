@@ -19,7 +19,7 @@ $idUsuario = $_GET["idUsuario"];
 if (empty($idUsuario)) {
   echo '<script>
                 alert("Error, el usuario no se encontro");
-                window.location = "./usuarios.php";
+
                 </script>';
 } //end empty
 else {
@@ -126,10 +126,16 @@ else {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
+            <img src="../img/<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
           </div>
           <div class="info">
-            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
+          <?php
+          $html = '';
+          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
+                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+          ';
+          echo $html;
+          ?>
           </div>
         </div>
 

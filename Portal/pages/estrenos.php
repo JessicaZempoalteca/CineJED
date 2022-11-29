@@ -24,24 +24,26 @@ if(!$conexion){
 mysqli_query($conexion, 'SET NAMES "utf8"');
 
 //Se realiza la petición sql 
-//specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
-$query_text = 'SELECT idPelicula, nombrePelicula, anioEstreno, descripcion, duracion, director, estatus_pelicula, imagenPelicula
-               FROM peliculas
-               WHERE genero = "Acción"';
+//specific select ya que se muestra informacion especifica de la tabla peliculasEstrenos inner join roles
+$query_text = 'SELECT categoriaspeliculas.idcategoriapelicula, categoriaspeliculas.idPelicula, categoriaspeliculas.categoria, 
+                      peliculas.nombrePelicula, peliculas.anioEstreno, peliculas.descripcion, peliculas.duracion, 
+                      peliculas.director, peliculas.estatus_pelicula, peliculas.imagenPelicula
+               FROM peliculas INNER JOIN categoriaspeliculas
+               ON peliculas.idPelicula = categoriaspeliculas.idPelicula
+               WHERE categoriaspeliculas.idcategoriapelicula = 1';
 
 $query_res = mysqli_query($conexion, $query_text);
 
-  //Arreglo temporal que almacenara la información
-  $usuarios = array();
-
-  //Se verifica si hay un resultado
-  if (mysqli_num_rows($query_res) != 0) {
-    while ($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)) {
-      $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
-    } //end mientras sigan existiendo registros
-  } //end if no hay resultados
-  //Muestra el arreglo
-  // print("<pre>".print_r($usuarios, true)."</pre>");
+  $peliculasEstrenos = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
+  //Verificar si realmente el usuario existe
+  if (mysqli_num_rows($query_res) <= 0) {
+    echo '<script>
+                alert("El usuario no existe. Verifica la ID");
+                window.location = "./usuarios.php";
+                </script>';
+  } //
+  //Se libera la conexion
+  mysqli_close($conexion);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,12 +115,17 @@ $query_res = mysqli_query($conexion, $query_text);
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="../../Portal/img/Accion/adam.png" alt="..." />
+                                <img src="<?php echo ($peliculasEstrenos['imagenPelicula'] == NULL) ? '../../Portal/img/no-disponible.jpg' : '../../Portal/img/Accion/' . $peliculasEstrenos['imagenPelicula']; ?>" class="img-fluid">
                             </a>
                             <div class="portfolio-caption">
                                 <br>
-                                <div class="portfolio-caption-heading">Black Adam</div>
-                                <div class="portfolio-caption-subheading text-muted">2022</div>
+                                <?php
+                                    $html = '';
+                                    $html = '<div class="portfolio-caption-heading">'.$peliculasEstrenos['nombrePelicula'].'</div>
+                                    <div class="portfolio-caption-subheading text-muted">'.$peliculasEstrenos['anioEstreno'].'</div>
+                                    ';
+                                    echo $html;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -221,25 +228,25 @@ $query_res = mysqli_query($conexion, $query_text);
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8">
                                         <div class="modal-body">
-                                            <!-- Project details-->
-                                            <h2 class="text-uppercase">Black Adam</h2>
+                                            <?php
+                                    $html = '';
+                                    $html = '
+                                    <h2 class="text-uppercase">'.$peliculasEstrenos['nombrePelicula'].'</h2>
                                             <br>
-                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kOFTZWyaOgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                            <p>Los enemigos se unen cuando los cerdos le proponen una tregua a las aves para unirse contra un nuevo y terrible rival que los amenaza a todos.</p>
+                                            <iframe width="500" height="300" src="https://www.youtube.com/embed/kOFTZWyaOgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p>'.$peliculasEstrenos['descripcion'].'</p>
                                             <ul class="list-inline">
                                                 <li>
-                                                    <strong>Protagonistas:</strong>
-                                                    Jason Sudeikis,Rachel Bloom,Leslie Jones
+                                                    <strong>Director: ' .$peliculasEstrenos['director'].'</strong>
                                                 </li>
                                                 <li>
-                                                    <strong>Categoria:</strong>
-                                                    Acción
+                                                    <strong>Categoria: ' .$peliculasEstrenos['categoria'].'</strong>
                                                 </li>
                                             </ul>
-                                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                                <i class="fas fa-xmark me-1"></i>
-                                                Close Project
-                                            </button>
+                                    ';
+                                    echo $html;
+                                ?>
+                                            <a class="btn btn-primary btn-xl text-uppercase" href="../../Panel/pages/formularioPago.php">Tell Me More</a>
                                         </div>
                                     </div>
                                 </div>
