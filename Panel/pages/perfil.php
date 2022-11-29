@@ -177,7 +177,7 @@ else {
                     <div class="row">
                       <div class="col-md-12">
                         <center>
-                          <img src="<?php echo ($usuario['imagenUsuario'] == NULL) ? '../img/icono-usuario.png' : '../img/' . $usuario['imagenUsuario']; ?>" class="img-rounded" alt="" id="img-preview" width="10%">
+                          <img src="<?php echo ($usuario['imagenUsuario'] == NULL) ? '../img/icono-usuario.png' : '../img/' . $usuario['imagenUsuario']; ?>" class="img-rounded" alt="" width="10%">
                         </center>
                       </div>
                     </div>
@@ -244,7 +244,7 @@ else {
                     <div class="row">
                       <div class="col-md-12">
                         <label for="exampleInputEmail1">Foto perfil</label>
-                        <input type="file" name="foto_perfil" id="foto_perfil" onchange="previsualizar_imagen('previsualizar_imagen','foto-input')" class="form-control" id="foto-input">
+                        <input type="file" name="foto_perfil" id="foto_perfil" onchange="" class="form-control">
                       </div>
                     </div>
 

@@ -43,7 +43,7 @@
 	$imagen = $_FILES['foto_perfil'];
 
     //Determinamos la variable que almacenara la información de la imagen
-    $nombre_archivo = '';
+    $nombre_archivo = 'NULL';
 
     //Verificamos que no este vacia la foto del perfil 
     if(!empty($imagen["name"])){
@@ -58,7 +58,7 @@
             echo '<script>alert("Solo se permiten archivos con extension jpeg o png")</script>';
         	echo '<script> window.location="../../../pages/usuario_detalles.php"; </script>';
         }//end if extensión no permitida
-
+        echo $imagen['name'];
         //se sube el archivo al servidor
         if(move_uploaded_file($imagen["tmp_name"], "../../../img/".$imagen["name"])){
             //Genera el campo para que se incorpore al update
