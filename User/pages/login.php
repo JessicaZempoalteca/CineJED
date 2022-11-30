@@ -71,12 +71,12 @@ require('../../helpers/funciones_generales.php');
                             </div>
                             <form action="../../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="email" name="email" required>
+                                    <label class="label" for="name">Correo electrónico</label>
+                                    <input type="text" class="form-control" placeholder="Correo" value="" id="email" name="email" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="password">Contraseña</label>
-                                    <input type="password" class="form-control" placeholder="contraseña" id="password" name="password" value="" required>
+                                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" value="" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">
@@ -85,9 +85,9 @@ require('../../helpers/funciones_generales.php');
                                 </div>
                             </form>
                             <br>
-                            <p class="text-center">¿Quieres ser registrarte? <br>
+                            <p class="text-center">¿No tienes una cuenta? <br>
 
-                            <a class="btn btn-primary btn-sm " href="./registro.php">Registrar Ahora</a>
+                            <a class="btn btn-primary btn-sm " href="./registro.php">Registrarse Ahora</a>
                            
                         </div>
                         <div class="login-wrap p-4 p-md-5">
