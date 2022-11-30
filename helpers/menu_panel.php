@@ -5,7 +5,6 @@ function configurar_menu($pagina = '')
     $menu_item = array();
     $sub_menu_item = array();
 
-    //Opción Dashboard
     $menu_item['is_active'] = ($pagina == "dashboard") ? TRUE : FALSE;
     $menu_item['href'] = './dashboard.php';
     $menu_item['icon'] = 'fa fa-dashboard';
@@ -13,7 +12,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['inicio'] = $menu_item;
 
-    //Opción Usuario
     $menu_item['is_active'] = ($pagina == "usuarios") ? TRUE : FALSE;
     $menu_item['href'] = './usuarios.php';
     $menu_item['icon'] = 'fa fa-users';
@@ -21,7 +19,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['usuario'] = $menu_item;
 
-    //Opción boletos
     $menu_item['is_active'] = ($pagina == "boletos") ? TRUE : FALSE;
     $menu_item['href'] = './boletos.php';
     $menu_item['icon'] = 'fa fa-ticket';
@@ -29,7 +26,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['boletos'] = $menu_item;
 
-    //Opción proyecciones
     $menu_item['is_active'] = ($pagina == "proyeccion") ? TRUE : FALSE;
     $menu_item['href'] = './proyeccion.php';
     $menu_item['icon'] = 'fa fa-video-camera';
@@ -37,27 +33,26 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['proyeccion'] = $menu_item;
 
-    //Opción peliculas
     $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
     $menu_item['icon'] = 'fa fa-film';
     $menu_item['href'] = '#';
     $menu_item['text'] = 'Películas';
     $menu_item['submenu'] = array();
-    //Submenu
+
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
     $sub_menu_item['href'] = './peliculas_familiares.php';
     $sub_menu_item['icon'] = 'fa fa-child';
     $sub_menu_item['text'] = 'Familiares';
     $menu_item['submenu']['familiares'] = $sub_menu_item;
-    //
+    
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
     $sub_menu_item['href'] = './peliculas_comedia.php';
     $sub_menu_item['icon'] = 'fa fa-smile-o';
     $sub_menu_item['text'] = 'Comedia';
     $menu_item['submenu']['comedia'] = $sub_menu_item;
-    //
+    
     $sub_menu_item = array();
     $sub_menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
     $sub_menu_item['href'] = './peliculas_accion.php';
@@ -66,7 +61,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu']['accion'] = $sub_menu_item;
     $menu['peliculas'] = $menu_item;
 
-    //Opción sucursales
     $menu_item['is_active'] = ($pagina == "sucursales") ? TRUE : FALSE;
     $menu_item['href'] = './sucursales.php';
     $menu_item['icon'] = 'fa fa-building';
@@ -74,7 +68,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['sucursales'] = $menu_item;
 
-    //Opción salas
     $menu_item['is_active'] = ($pagina == "salas") ? TRUE : FALSE;
     $menu_item['href'] = './salas.php';
     $menu_item['icon'] = 'fa fa-play-circle';
@@ -82,7 +75,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['salas'] = $menu_item;
 
-    //Opción contacto
     $menu_item['is_active'] = ($pagina == "contacto") ? TRUE : FALSE;
     $menu_item['href'] = './contacto.php';
     $menu_item['icon'] = 'fa fa-comments-o';
@@ -90,7 +82,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['contacto'] = $menu_item;
 
-    //Opción promociones
     $menu_item['is_active'] = ($pagina == "promociones") ? TRUE : FALSE;
     $menu_item['href'] = './promociones.php';
     $menu_item['icon'] = 'fa fa-percent';
@@ -99,7 +90,7 @@ function configurar_menu($pagina = '')
     $menu['promociones'] = $menu_item;
 
     return $menu;
-} //end 
+}
 
 function crear_menu_panel($pagina = '')
 {
@@ -114,7 +105,7 @@ function crear_menu_panel($pagina = '')
                         <p>' . $item['text'] . '</p>
                         </a>
                     </li>';
-        } //end if href != # 
+        }
         else {
             if (sizeof($item['submenu']) > 0) {
                 $html .= '
@@ -128,7 +119,6 @@ function crear_menu_panel($pagina = '')
                             </a>
                             <ul class="nav nav-treeview">';
                 foreach ($item['submenu'] as $item_sub_menu) {
-                    // $html.='<li><a href="'.$item_sub_menu["href"].'">'.$item_sub_menu["text"].'</a></li>';
                     $html .= '
                                     <li class="nav-item">
                                         <a href="' . $item_sub_menu["href"] . '"  class="nav-link ' . ($item_sub_menu["is_active"] ? 'active' : '') . '">
@@ -137,13 +127,13 @@ function crear_menu_panel($pagina = '')
                                         </a>
                                     </li>
                                 ';
-                } //end foreach
+                }
                 $html .= '</ul>
                         </li>
                         ';
-            } //end else sizeof
-        } //end else href != #
-    } //end foreach
+            } 
+        } 
+    } 
     $html .= '</ul>';
     return $html;
-}//end 
+}

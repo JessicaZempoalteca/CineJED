@@ -1,23 +1,23 @@
 <?php
 require('../../helpers/menu_panel.php');
-//Importa la ruta dependiendo de la carpeta
+
 require('../../helpers/funciones_generales.php');
-//Se utiliza las variables de sesion
+
 session_start();
 
-//Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+
 if (!isset($_SESSION['idUsuario'])) {
   echo '<script>
               alert("Error al mostrar la informació de este módulo, contacta al administrador");
               window.location = "../../usuario/login.php";
               </script>';
-} //end  if
+} 
 else {
-  //Importamos la libreria de conexion
+  
   include '../backend/admin/conexion.php';
 
-  //Se realiza la petición sql 
-  //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
+  
+  
   $query_text = 'SELECT peliculas.idPelicula, sala.idSala, sucursal.idSucursal, salaproyectapeliculas.idHorario,
                     horariopeliculas.horaProyeccion ,salaproyectapeliculas.idProyeccion, peliculas.nombrePelicula,
                     sala.tipoSala, sucursal.nombreSucursal, salaproyectapeliculas.estatus_proyeccion 
@@ -25,26 +25,26 @@ else {
                     ON salaproyectapeliculas.idPelicula = peliculas.idPelicula AND salaproyectapeliculas.idSala = sala.idSala AND
                     sala.idSucursal = sucursal.idSucursal AND horariopeliculas.idHorario=salaproyectapeliculas.idHorario;';
 
-  // echo $query_text;
+  
 
-  //Se procesa con la consulta a la BD
+  
   $query_res = mysqli_query($conexion, $query_text);
 
-  //Arreglo temporal que almacenara la información
+  
   $usuarios = array();
 
-  //Se verifica si hay un resultado
+  
   if (mysqli_num_rows($query_res) != 0) {
     while ($datos = mysqli_fetch_array($query_res, MYSQLI_ASSOC)) {
-      $usuarios[] = $datos; //dentro del arreglo guarda otro arreglo que son los datos del usuario de acuerdo a la consulta que se hizo
-    } //end mientras sigan existiendo registros
-  } //end if no hay resultados
-  //Muestra el arreglo
-  // print("<pre>".print_r($usuarios, true)."</pre>");
-} //end else 
+      $usuarios[] = $datos; 
+    } 
+  } 
+  
+  
+} 
 
-//ARREGLO ASOCIATIVO
-//es un arreglo que tiene como indice una cadena de texto de acuerdo a una llave de la tabla de la BD
+
+
 
 ?>
 <!DOCTYPE html>
@@ -57,11 +57,11 @@ else {
 
   <!--RECURSOS PARA LOS ESTILOS DE LAS TABLAS-->
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https:
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https:
   <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https:
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'; ?>">
   <!-- iCheck -->
@@ -204,15 +204,15 @@ else {
                     </thead>
                     <tbody>
                       <?php
-                      //Declaramos la variable para iterar a los usuarios
+                      
                       $html = '';
-                      // print("<pre>".print_r($usuarios, true)."</pre>");
+                      
 
-                      //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
+                      
                       if (isset($usuarios) && sizeof($usuarios) > 0) {
-                        //contador
+                        
                         $num = 0;
-                        //foreach rompe el arreglo de usuarios que va mostrando la informacion
+                        
                         foreach ($usuarios as $usuario) {
                           $html .= '
                                                 <tr>
@@ -224,12 +224,12 @@ else {
                                                     <td>';
                           if ($usuario["estatus_proyeccion"] != 1) {
                             $html .= '   <a href="../backend/crud/proyecciones/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=2" class="btn btn-info btn-sm">Habilitar</a>';
-                          } //end if
+                          } 
                           else {
                             $html .= '   <a href="../backend/crud/proyecciones/updateEstatus.php?idProyeccion=' . $usuario["idProyeccion"] . '&estatus=1" class="btn btn-primary btn-sm">Deshabilitar</a>';
-                          } //end else
-                        } //end foreach
-                      } //end if 
+                          } 
+                        } 
+                      } 
                       echo $html;
                       ?>
                     </tbody>
@@ -244,7 +244,7 @@ else {
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      <strong>Copyright &copy; 2014-2021 <a href="https:
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 3.2.0

@@ -1,10 +1,10 @@
 <?php
 require('../../helpers/menu_panel.php');
-//Importa la ruta dependiendo de la carpeta
+
 require('../../helpers/funciones_generales.php');
-//Se utiliza las variables de sesion
+
 session_start();
-  //Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+  
   if(!isset($_SESSION['idUsuario'])){
       echo '<script>
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
@@ -12,43 +12,43 @@ session_start();
               </script>';
   }
 
-  //Capturamos el id que se pasa por el URL
+  
   $idUsuario = $_GET['idUsuario'];
   $idContacto = $_GET["idContacto"];
 
-  //Verificamos si la variable no esta vacia
+  
   if(empty($idContacto) AND empty($idUsuario)){
       echo '<script>
               alert("Error, el usuario no se encontro");
-              //window.location = "./contacto.php";
+              
               </script>';
   }else {
-   //Se incoorpora la conexion
+   
    include '../backend/admin/conexion.php';
-   //Se prepara la consulta para realizar la peticion
+   
    $query_select = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
    usuarios.correo, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, 
    contacto.fecha, sucursal.nombreSucursal
    FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario ="'.$idUsuario.'"  AND contacto.idSucursal = sucursal.idSucursal;';
 
-   //Petición del sql a la BD
+   
    $query_res = mysqli_query($conexion, $query_select);
 
    $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
-   //Verificar si realmente el usuario existe
+   
    if(mysqli_num_rows($query_res) <= 0){
      echo '<script>
            alert("El usuario no existe. Verifica la ID");
            
            </script>';
-   }//
-   //Se libera la conexion
+   }
+   
    mysqli_close($conexion);
-   //print("<pre>".print_r($usuario,true)."</pre>");
-} //end else 
+   
+} 
 
-//ARREGLO ASOCIATIVO
-//es un arreglo que tiene como indice una cadena de texto de acuerdo a una llave de la tabla de la BD
+
+
 
 ?>
 <!DOCTYPE html>
@@ -61,11 +61,11 @@ session_start();
 
     <!--RECURSOS PARA LOS ESTILOS DE LAS TABLAS-->
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https:
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https:
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https:
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="<?php echo $root_specific_panel . 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css'; ?>">
     <!-- iCheck -->
@@ -210,11 +210,11 @@ session_start();
                                         </thead>
                                         <tbody>
                                             <?php
-                                            //Declaramos la variable para iterar a los usuarios
+                                            
                                             $html = '';
-                                             //print("<pre>".print_r($usuario, true)."</pre>");
+                                             
 
-                                            //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
+                                            
                                             if (isset($usuario) && sizeof($usuario) > 0) {
                                                 $html .= '
                                                 <tr>
@@ -227,7 +227,7 @@ session_start();
                                                     <td>' . $usuario["nombreSucursal"] . '</td>
                                                 </tr>
                                               ';    
-                                            } //end if 
+                                            } 
                                             echo $html;
                                             ?>
                                         </tbody>
@@ -242,7 +242,7 @@ session_start();
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            <strong>Copyright &copy; 2014-2021 <a href="https:
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.2.0

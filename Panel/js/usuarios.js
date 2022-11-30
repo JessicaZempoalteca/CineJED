@@ -1,9 +1,9 @@
-//para usar los js en una datatable se debe poner la id de la tabla en la funcion que da diseño e interaccion a la tabla
+
 $('#table-usuarios').dataTable({
-    'processing': true, //buscar datos
+    'processing': true, 
     "responsive": true, 
-    // "scrollX": true,
-    "language": { //traduccion de la tabla
+    
+    "language": { 
         "lengthMenu": "Mostrar _MENU_ datos",
         "info": "Página _PAGE_ de _PAGES_",
         "infoEmpty": "Datos no disponibles por el momento",
@@ -16,5 +16,5 @@ $('#table-usuarios').dataTable({
         "next":       "Siguiente",
         "previous":   "Anterior"
         },
-    }//End language
+    }
 });

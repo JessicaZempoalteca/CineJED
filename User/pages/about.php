@@ -21,18 +21,18 @@ if (!isset($_SESSION['idUsuario'])) {
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Conócenos</title>
-        <!-- Favicon-->
+        
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-        <!-- Font Awesome icons (free version)-->
+        
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="estilos" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
-        <!--FONT DE NAVBAR -->
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ if (!isset($_SESSION['idUsuario'])) {
     </head>
     <body id="page-top">
 
-        <!-- Navigation-->
+        
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
                 <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
@@ -58,14 +58,14 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </nav>
 
-        <!-- Masthead-->
+        
         <header">
         </header>
         <br>
         <br>
         <br>
 
-        <!-- About-->
+        
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
@@ -146,7 +146,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </ul>
             </div>
         </section>
-        <!-- Team-->
+        
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
@@ -181,7 +181,7 @@ if (!isset($_SESSION['idUsuario'])) {
 
 
 
-        <!-- Footer-->
+        
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
@@ -254,14 +254,14 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </footer>
         
-        <!-- Bootstrap core JS-->
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        
         <script src="../resources/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        
+        
+        
+        
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

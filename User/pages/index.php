@@ -45,19 +45,19 @@ mysqli_close($conexion);
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Inicio</title>
-    <!-- Favicon-->
+    
     <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-    <!-- Font Awesome icons (free version)-->
+    
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    
     <link href="../resources/css/styles.css" rel="stylesheet" />
     <link href="../User/resources/css/estilos.css" rel="estilos" />
-    <!--Logo de pagina-->
+    
     <link rel="shortcut icon" href="./Portal/img/boletosLogo.png">
-    <!--FONT DE NAVBAR -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@ mysqli_close($conexion);
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
+    
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
         <div class="container nav">
             <a class="navbar-brand" href="./index.php"><img src="../img/cineLogo.png" alt="..." /></a>
@@ -83,7 +83,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
+    
     <header class="masthead">
         <div class="container">
             <div data-setbg="<?php echo path_image('', 'cine.jpg') ?>"></div>
@@ -93,7 +93,7 @@ mysqli_close($conexion);
         </div>
     </header>
 
-    <!-- Estrenos-->
+    
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="container">
@@ -105,7 +105,7 @@ mysqli_close($conexion);
             </div>
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
@@ -123,7 +123,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                             <div class="portfolio-hover">
@@ -141,7 +141,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                             <div class="portfolio-hover">
@@ -159,7 +159,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                             <div class="portfolio-hover">
@@ -179,8 +179,8 @@ mysqli_close($conexion);
         </div>
     </section>
 
-    <!-- Modulo de Estreno-->
-    <!-- Portfolio item 1 modal popup-->
+    
+    
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -189,7 +189,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <?php
                                 $html = '';
                                 $html = '
@@ -222,7 +222,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 2 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -231,7 +231,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Amenaza Explosiva</h2>
                                 <br>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/JGTc3T4Ff9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -265,7 +265,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 3 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -274,7 +274,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Bros</h2>
                                 <p class="item-intro text-muted">Más Que Amigos</p>
                                 <br>
@@ -310,7 +310,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 4 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -319,7 +319,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Lilo, Lilo, Cocodrilo</h2>
                                 <br>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/HB6Ia52H50Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -357,7 +357,7 @@ mysqli_close($conexion);
         </div>
     </div>
 
-    <!-- Preventa-->
+    
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="container">
@@ -370,7 +370,7 @@ mysqli_close($conexion);
             <div class="row">
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                             <div class="portfolio-hover">
@@ -388,7 +388,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                             <div class="portfolio-hover">
@@ -406,7 +406,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
                             <div class="portfolio-hover">
@@ -424,7 +424,7 @@ mysqli_close($conexion);
                 </div>
 
                 <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 4-->
+                    
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
                             <div class="portfolio-hover">
@@ -443,8 +443,8 @@ mysqli_close($conexion);
             </div>
         </div>
     </section>
-    <!-- Modulo de Preventa-->
-    <!-- Portfolio item 1 modal popup-->
+    
+    
     <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -453,7 +453,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Pantera Negra</h2>
                                 <p class="item-intro text-muted">Wakanda Por Siempre</p>
                                 <br>
@@ -489,7 +489,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 2 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -498,7 +498,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Red</h2>
                                 <p class="item-intro text-muted">One Piece Film</p>
                                 <br>
@@ -533,7 +533,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 3 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -542,7 +542,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Observada</h2>
                                 <br>
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Om78eEFxX70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -576,7 +576,7 @@ mysqli_close($conexion);
             </div>
         </div>
     </div>
-    <!-- Portfolio item 4 modal popup-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -585,7 +585,7 @@ mysqli_close($conexion);
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="modal-body">
-                                <!-- Project details-->
+                                
                                 <h2 class="text-uppercase">Avatar</h2>
                                 <p class="item-intro text-muted">El Camino Del Agua</p>
                                 <br>
@@ -617,7 +617,7 @@ mysqli_close($conexion);
         </div>
     </div>
 
-    <!-- Footer-->
+    
     <footer class="py-2 bg-dark text-write">
         <div class="container no-width">
             <div class="row no-gutters my-5">
@@ -692,14 +692,14 @@ mysqli_close($conexion);
         </div>
     </footer>
 
-    <!-- Bootstrap core JS-->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
+    
     <script src="../User/resources/js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    
+    
+    
+    
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

@@ -10,18 +10,18 @@ require('../../helpers/funciones_generales.php');
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Ingresar</title>
-        <!-- Favicon-->
+        
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-        <!-- Font Awesome icons (free version)-->
+        
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="estilos" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
-        <!--FONT DE NAVBAR -->
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ require('../../helpers/funciones_generales.php');
     </head>
     <body id="page-top">
 
-        <!-- Navigation-->
+        
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
                 <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
@@ -44,7 +44,7 @@ require('../../helpers/funciones_generales.php');
             </div>
         </nav>
 
-        <!-- Masthead-->
+        
         <header">
         </header>
         <br>
@@ -95,7 +95,7 @@ require('../../helpers/funciones_generales.php');
             </div>
         </div>
 
-        <!-- Footer-->
+        
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
@@ -169,14 +169,14 @@ require('../../helpers/funciones_generales.php');
         </footer>  
 
         
-        <!-- Bootstrap core JS-->
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        
         <script src="./resources/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        
+        
+        
+        
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

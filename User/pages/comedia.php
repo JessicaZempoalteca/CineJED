@@ -22,18 +22,18 @@ if (!isset($_SESSION['idUsuario'])) {
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Películas de comedia</title>
-    <!-- Favicon-->
+    
     <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-    <!-- Font Awesome icons (free version)-->
+    
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    
     <link href="../resources/css/styles.css" rel="stylesheet">
     <link rel="estilos" href="../resources/css/estilos.css">
     <link rel="shortcut icon" href="../img/boletosLogo.png">
-    <!--FONT DE NAVBAR -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@ if (!isset($_SESSION['idUsuario'])) {
 
 <body id="page-top">
 
-    <!-- Navigation-->
+    
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
         <div class="container nav">
             <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
@@ -61,14 +61,14 @@ if (!isset($_SESSION['idUsuario'])) {
         </div>
     </nav>
 
-    <!-- Masthead-->
+    
     <header">
         </header>
         <br>
         <br>
         <br>
 
-        <!--Peliculas Primero fila-->
+        
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="container">
@@ -80,7 +80,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Angry2-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
@@ -97,7 +97,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Baby-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
@@ -114,7 +114,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Brujas-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
@@ -131,7 +131,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4 mb-lg-0">
-                        <!--Buz-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
@@ -148,7 +148,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
-                        <!--Dc-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
@@ -165,7 +165,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6">
-                        <!--Era-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
@@ -184,8 +184,8 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </section>
 
-        <!-- Portfolio Modals-->
-        <!-- Angry-->
+        
+        
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -194,7 +194,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Adiós, idiotas</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/sOZrCSiVjyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -219,7 +219,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- Baby-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -228,7 +228,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase"></h2>
                                     <h2 class="text-uppercase">Chavalas</h2>
                                     <br>
@@ -255,7 +255,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- Brujas-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -264,7 +264,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">El cover</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/1iPcdvZZ7pY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -290,7 +290,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Buz-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -299,7 +299,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Donde caben dos</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/-bI3l7xN_Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -325,7 +325,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Dc-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -334,7 +334,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Un efecto óptico</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/itJCUJIeem4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -360,7 +360,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Era-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -369,7 +369,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Borrar el historial</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/iIrYd6fVpL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -396,12 +396,12 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </div>
 
-        <!--Peliculas Segunda fila-->
+        
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Angry2-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
                                 <div class="portfolio-hover">
@@ -418,7 +418,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Baby-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
                                 <div class="portfolio-hover">
@@ -435,7 +435,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4">
-                        <!-- Brujas-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
                                 <div class="portfolio-hover">
@@ -452,7 +452,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4 mb-lg-0">
-                        <!--Buz-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
                                 <div class="portfolio-hover">
@@ -469,7 +469,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6 mb-4 mb-sm-0">
-                        <!--Dc-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
                                 <div class="portfolio-hover">
@@ -486,7 +486,7 @@ if (!isset($_SESSION['idUsuario'])) {
                     </div>
 
                     <div class="col-lg-2 col-sm-6">
-                        <!--Era-->
+                        
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
                                 <div class="portfolio-hover">
@@ -506,8 +506,8 @@ if (!isset($_SESSION['idUsuario'])) {
         </section>
 
 
-        <!-- Portfolio Modals-->
-        <!-- Angry-->
+        
+        
         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -516,7 +516,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Mamá o papá</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/j6l3u0at97o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -542,7 +542,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- Baby-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -551,7 +551,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Palm Springs</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/CpBLtXduh_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -577,7 +577,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!-- Brujas-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -586,7 +586,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">El buen patrón</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/YVQDyL2p3IU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -612,7 +612,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Buz-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -621,7 +621,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">La familia perfecta</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/3E2fS0wgD4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -647,7 +647,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Dc-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -656,7 +656,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Poliamor para principiantes</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/r06WELJBZ3U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -682,7 +682,7 @@ if (!isset($_SESSION['idUsuario'])) {
                 </div>
             </div>
         </div>
-        <!--Era-->
+        
         <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -691,7 +691,7 @@ if (!isset($_SESSION['idUsuario'])) {
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <!-- Project details-->
+                                    
                                     <h2 class="text-uppercase">Otra ronda</h2>
                                     <br>
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/5pLZ_DB1RPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -718,7 +718,7 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </div>
 
-        <!-- Footer-->
+        
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
@@ -794,14 +794,14 @@ if (!isset($_SESSION['idUsuario'])) {
         </footer>
 
 
-        <!-- Bootstrap core JS-->
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        
         <script src="../resources/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        
+        
+        
+        
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 

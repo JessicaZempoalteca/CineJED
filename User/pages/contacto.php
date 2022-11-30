@@ -21,18 +21,18 @@ if (!isset($_SESSION['idUsuario'])) {
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Contacto</title>
-        <!-- Favicon-->
+        
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
-        <!-- Font Awesome icons (free version)-->
+        
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        
         <link href="../resources/css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
-        <!--FONT DE NAVBAR -->
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@ if (!isset($_SESSION['idUsuario'])) {
     <body id="page-top"><br>
     <br><br><br><br><br><br><br>
 
-        <!-- Navigation-->
+        
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
                 <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
@@ -90,7 +90,7 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
             <div class="form-group">
                 <label for="email">Mensaje</label>
-                    <!-- Message input-->
+                    
                     <textarea class="form-control" id="message" placeholder="Tu Mensaje " data-sb-validations="required"></textarea>
                     <div class="invalid-feedback" data-sb-feedback="message:required">Mensaje requerido</div>
                 </div>
@@ -105,19 +105,19 @@ if (!isset($_SESSION['idUsuario'])) {
         <a href="https://ProjectCINEJED.jessicazempoalt.repl.co">Regresar al inicio</a>
     </div>
 </div>
-<!-- Submit error message-->
-<!---->
-<!-- This is what your users will see when there is-->
-<!-- an error submitting the form-->
+
+
+
+
 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error en tu mensaje!</div></div>
-<!-- Submit Button-->
+
 <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar</button></div>
 </form>
 </div>
 </section>
 
 
-                <!-- Footer-->
+                
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
@@ -190,14 +190,14 @@ if (!isset($_SESSION['idUsuario'])) {
             </div>
         </footer> 
 
-        <!-- Bootstrap core JS-->
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        
         <script src="./Portal/resources/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        
+        
+        
+        
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>

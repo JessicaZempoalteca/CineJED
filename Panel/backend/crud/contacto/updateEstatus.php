@@ -1,11 +1,11 @@
 <?php
-//Incluir el archivo de conexión
+
 include '../../admin/conexion.php';
 
-//Instanciamos las variables de sesion
+
 session_start();
 
-//Verificamos si realmente ha iniciado sesión
+
 if (!isset($_SESSION['idUsuario'])) {
     echo '
                 <script>
@@ -13,21 +13,21 @@ if (!isset($_SESSION['idUsuario'])) {
                     window.location="../../../usuario/login.php";
                 </script>
             ';
-} //end if existe una sesión iniciada
+} 
 
-//Obtenemos el id desde el URL por el método GET
-$idUsuario = $_GET["idUsuario"]; //se obtiene el id
+
+$idUsuario = $_GET["idUsuario"]; 
 $estatus = $_GET["estatus"];
 
-//Verificamos si la variable no esta vacia
+
 if (empty($idUsuario) || empty($estatus)) {
     echo '<script>
                 alert("Error al obtener los datos");
                 window.location = "../../../pages/usuarios.php";
                 </script>';
-} //end empty
+} 
 else {
-    //Otenemos la información del formulario a buscar
+    
     /*$query_text = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
         usuarios.correo, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje 
         FROM usuarios INNER JOIN contacto ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario = "'.$idUsuario.'"';
@@ -37,7 +37,7 @@ else {
         $usuario = mysqli_fetch_array($query_res_select, MYSQLI_ASSOC);
 
         if(sizeof($usuario) > 0){
-            //enviar correo electronico
+            
             $header = "From: noreply@cinejed.com" . "\r\n";
             $header .= "Reply-To: noreply@cinejed.com" . "\r\n";
             $header .= "X-Mailer: PHP/" . phpversion();
@@ -61,9 +61,9 @@ else {
         }*/
     $query_update = "UPDATE contacto SET estatus_contacto = 2 WHERE idUsuario=$idUsuario;";
     $query_res_update = mysqli_query($conexion, $query_update);
-    //Se cierra la conexión
+    
     mysqli_close($conexion);
 
-    //Se redirecciona a la pagina de todo los usuarios
+    
     echo '<script> window.location = "../../../pages/contacto.php";</script>';
-}//end else empty
+}

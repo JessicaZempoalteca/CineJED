@@ -73,28 +73,28 @@ $(function () {
         $(element).removeClass('is-invalid');
         }
     });
-});//end validation
+});
 
 function previsualizar_imagen(img = '', btnImg = '') {
-    //Cargamos la información de los elementos
+    
     const  loadImage = document.getElementById("#"+btnImg);
     const  previewImage = document.getElementById("#"+img);
 
-    // Se va a seleccionar el archivo a mostrar
+    
     const archivos = loadImage.files;
 
-    // Si no hay archivos salimos de la función y quitamos la imagen
+    
     if (!archivos || !archivos.length) {
         previewImage.src = "";
         return;
     }
-    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+    
     const primerArchivo = archivos[0];
 
-    // Lo convertimos a un objeto de tipo objectURL
+    
     const objectURL = URL.createObjectURL(primerArchivo);
 
-    // Y a la fuente de la imagen le ponemos el objectURL
+    
     previewImage.src = objectURL;
 
-}//end previsualizar_imagen
+}

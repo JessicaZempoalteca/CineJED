@@ -3,19 +3,19 @@ require('../../helpers/menu_portal.php');
 require('../../helpers/funciones_generales.php');
 
 
-//Declaración de variables par la conexion con la BD
+
 session_start();
-//Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+
 if (!isset($_SESSION['idUsuario'])) {
   echo '<script>
               alert("ERROR: Inicia sesión para seguir con la compra de tus boletos.");
               window.location = "../../User/pages/login.php";
               </script>';
-} //
+} 
 
-//Capturamos el id que se pasa por el URL
+
 $idPelicula = $_GET["idPelicula"];
-//Verificamos si la variable no esta vacia
+
 if (empty($idPelicula)) {
   include '../backend/admin/conexion.php';
 
@@ -46,7 +46,7 @@ if (empty($idPelicula)) {
     }
   }
 } else {
-  //Se incoorpora la conexion
+  
   include '../backend/admin/conexion.php';
   $usuarios = array();
   $query_usuarios = 'SELECT CONCAT(nombre, " ", ApellidoPaterno, " ", apellidoMaterno) as nombreCompleto FROM usuarios WHERE idUsuario!="' . $_SESSION['idUsuario'] . '";';
@@ -74,7 +74,7 @@ if (empty($idPelicula)) {
       $horarios[] = $horariosPel;
     }
   }
-} //
+} 
 
 ?>
 <!DOCTYPE html>
