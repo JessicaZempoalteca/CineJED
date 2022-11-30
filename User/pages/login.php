@@ -53,18 +53,18 @@ require('../../helpers/funciones_generales.php');
         <br>
         <br>
         <br>
-        <br><br><br><br><br>
+        <br><br><br><br>
+        
 
         <div class="container">
-        <center>
-            <img src="../img/registro/registro.png" alt="logo" style="width:700px;">
-        </center>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="wrap d-md-flex">
-                        <div class="login-wrap p-4 p-md-5">
+                        <div class="login-wrap p-4 p-md-7">
                             <div class="d-flex">
                                 <div class="w-100">
+                                    <br>
+                                    <br>
                                     <h3 class="mb-4 text-center">INICIAR SESION
                                     <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
@@ -84,10 +84,15 @@ require('../../helpers/funciones_generales.php');
                                     </button>
                                 </div>
                             </form>
+                            <br>
                             <p class="text-center">¿Quieres ser registrarte? <br>
-                            <center><nav>
-                              <a href="./registro.php"  href="#signup">Registrase ahora</a><img src="../img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
-                            </center></div>
+
+                            <a class="btn btn-primary btn-sm " href="./registro.php">Registrar Ahora</a>
+                           
+                        </div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <img src="../img/registro/pop.jpg" alt="logo" style="width:600px;">
+                        </div>
                     </div>
                 </div>
             </div>
