@@ -20,7 +20,7 @@
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
     $query_text = 'SELECT usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, boleto.asiento, boleto.fecha, boleto.precio, peliculas.nombrePelicula, horarioPeliculas.horaProyeccion, sala.tipoSala
                     FROM boleto INNER JOIN salaproyectapeliculas INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN usuarios INNER JOIN sala
-                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.pelicula=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
+                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.idProyeccion=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
                     group by idBoleto;';
 
     // echo $query_text;
@@ -141,10 +141,16 @@
           <!-- Sidebar user panel (optional) -->
           <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image">
+            <img src="../img/<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"];?></a>
+            <?php
+          $html = '';
+          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
+                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+          ';
+          echo $html;
+          ?>
             </div>
           </div>
 

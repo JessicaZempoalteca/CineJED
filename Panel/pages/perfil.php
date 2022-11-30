@@ -16,6 +16,7 @@ if (!isset($_SESSION['idUsuario'])) {
 //Capturamos el id que se pasa por el URL
 //$idUsuario = $_GET["idUsuario"];
 //Verificamos si la variable no esta vacia
+<<<<<<< HEAD
 //if (empty($idUsuario)) {
  // echo '<script>
    //             alert("Error, el usuario no se encontro");
@@ -23,6 +24,15 @@ if (!isset($_SESSION['idUsuario'])) {
        //         </script>';
 //} //end empty
 //else {
+=======
+if (empty($idUsuario)) {
+  echo '<script>
+                alert("Error, el usuario no se encontro");
+
+                </script>';
+} //end empty
+else {
+>>>>>>> c2eb6e29b8c8a38806b10eb8650c2d818a3baa0c
   //Se incoorpora la conexion
   include '../backend/admin/conexion.php';
   //Se prepara la consulta para realizar la peticion
@@ -126,10 +136,20 @@ if (!isset($_SESSION['idUsuario'])) {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
+<<<<<<< HEAD
             <img src="<?php echo '../img/'.$_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
+=======
+            <img src="../img/<?php echo $_SESSION["imagenPerfil"];?>" class="img-circle elevation-2" alt="User Image" id="img-preview">
+>>>>>>> c2eb6e29b8c8a38806b10eb8650c2d818a3baa0c
           </div>
           <div class="info">
-            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
+          <?php
+          $html = '';
+          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
+                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+          ';
+          echo $html;
+          ?>
           </div>
         </div>
 

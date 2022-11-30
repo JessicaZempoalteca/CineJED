@@ -25,7 +25,7 @@ if (!isset($_SESSION['idUsuario'])) {
   }
 
   $peliculas = array();
-  $query_peliculas = 'SELECT peliculas.nombrePelicula FROM salaproyectapelicula INNER JOIN peliculas ON salaproyectapelicula.idPelicula=peliculas.idPelicula;';
+  $query_peliculas = 'SELECT peliculas.nombrePelicula, salaproyectapeliculas.idProyeccion FROM salaproyectapeliculas INNER JOIN peliculas ON salaproyectapeliculas.idPelicula=peliculas.idPelicula;';
   $query_respeliculas = mysqli_query($conexion, $query_peliculas);
   if (mysqli_num_rows($query_respeliculas) != 0) {
     while ($peliculasPro = mysqli_fetch_array($query_respeliculas, MYSQLI_ASSOC)) {
@@ -34,7 +34,7 @@ if (!isset($_SESSION['idUsuario'])) {
   }
 
   $horarios = array();
-  $query_horarios = 'SELECT horariopeliculas.horaProyeccion FROM salaproyectapelicula INNER JOIN horariopeliculas INNER JOIN peliculas ON salaproyectapelicula.idHorario=horariopeliculas.idHorario AND salaproyectapelicula.idPelicula=peliculas.idPelicula;';
+  $query_horarios = 'SELECT horariopeliculas.horaProyeccion FROM salaproyectapeliculas INNER JOIN horariopeliculas INNER JOIN peliculas ON salaproyectapeliculas.idHorario=horariopeliculas.idHorario AND salaproyectapeliculas.idPelicula=peliculas.idPelicula;';
   $query_reshorarios = mysqli_query($conexion, $query_horarios);
   if (mysqli_num_rows($query_reshorarios) != 0) {
     while ($horariosPel = mysqli_fetch_array($query_reshorarios, MYSQLI_ASSOC)) {
@@ -96,9 +96,12 @@ if (!isset($_SESSION['idUsuario'])) {
         </li>
         <!-- Perfil -->
         <li class="nav-item">
-          <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
-            <i class="fa fa-user"></i>
-          </a>
+        <?php
+          $html = '';
+          $html .= '  <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
+            <i class="fa fa-user"></i></a> ';
+          echo $html;
+          ?>
         </li>
         <!-- Logout -->
         <li class="nav-item">
@@ -124,10 +127,16 @@ if (!isset($_SESSION['idUsuario'])) {
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
+            <img src="../img/<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="./perfil.php" class="d-block"><?php echo $_SESSION["nombreCompleto"]; ?></a>
+          <?php
+          $html = '';
+          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
+                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+          ';
+          echo $html;
+          ?>
           </div>
         </div>
 
@@ -178,21 +187,20 @@ if (!isset($_SESSION['idUsuario'])) {
                         action es para el redireccionamiento del proceso del BACKEND
                         el metodo post es para enviar datos de manera segura
                         enctype envia y procesa informacion mediante los archivos por medio del metodo $_FILES-->
-                <form id="form-usuario" action="../backend/crud/administrador/insertarUsuario.php" method="post" enctype="multipart/form-data">
+                <form id="form-usuario" action="../backend/crud/boletos/insertBoleto.php" method="post" enctype="multipart/form-data">
                   <div class="card-body">
                     <br>
                     <div class="row">
-                      <div class="col-md-4">
+                    <div class="col-md-4">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">Nombre(s)</label>
-                          <select class="form-control" name="sucursal">
-                            <option value="">Seleccionar un rol</option>
+                          <label for="exampleInputEmail1">Peliculas disponibles</label>
+                          <select class="form-control" name="pelicula">
                             <?php
                             $html = '';
-                            if (isset($usuarios) && sizeof($usuarios) > 0) {
-                              foreach ($usuarios as $usuariosD) {
+                            if (isset($peliculas) && sizeof($peliculas) > 0) {
+                              foreach ($peliculas as $peliculas) {
                                 $html .= '
-                                  <option> ' . $usuariosD['nombreCompleto'] . ' </option>
+                                  <option value='.$peliculas['idProyeccion'].'> ' . $peliculas['nombrePelicula'] . ' </option>
                                 ';
                               }
                             }
@@ -204,47 +212,27 @@ if (!isset($_SESSION['idUsuario'])) {
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">numero de asientos</label>
-                          <input type="number" name="apellidoPaterno" class="form-control" id="apellidoPaterno" placeholder="Asientos">
+                          <input type="number" name="numAsientos" class="form-control" id="numAsientos" placeholder="Numero de asientos">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">fecha</label>
-                          <input type="date" name="apellidoMaterno" class="form-control" id="apellidoMaterno" placeholder="fecha">
+                          <input type="date" name="fechaBoleto" class="form-control" id="fecha" placeholder="fechaBoleto">
                         </div>
                       </div>
                     </div>
 
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Peliculas disponibles</label>
-                          <select class="form-control" name="rol">
-                            <?php
-                            $html = '';
-                            if (isset($peliculas) && sizeof($peliculas) > 0) {
-                              foreach ($peliculas as $peliculas) {
-                                $html .= '
-                                  <option> ' . $peliculas['nombrePelicula'] . ' </option>
-                                ';
-                              }
-                            }
-                            echo $html;
-                            ?>
-                          </select>
-                        </div>
-                      </div>
-
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">horario</label>
-                          <select class="form-control" name="rol">
+                          <select class="form-control" name="horario">
                             <?php
                             $html = '';
                             if (isset($horarios) && sizeof($horarios) > 0) {
                               foreach ($horarios as $horarios) {
                                 $html .= '
-                                  <option> ' . $horarios['horaProyeccion'] . ' </option>
+                                  <option value='.$horarios['idHorario'].'> ' . $horarios['horaProyeccion'] . ' </option>
                                 ';
                               }
                             }
@@ -254,28 +242,6 @@ if (!isset($_SESSION['idUsuario'])) {
                         </div>
                       </div>
 
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Contraseña</label>
-                          <input type="password" name="password" class="form-control" id="password" placeholder="***********">
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Repetir Contraseña</label>
-                          <input type="password" name="repassword" class="form-control" id="repassword" placeholder="***********">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-md-12">
-                        <label for="exampleInputEmail1">Foto perfil</label>
-                        <input type="file" name="foto_perfil" onchange="previsualizar_imagen('previsualizar_imagen','foto-input')" class="form-control" id="foto-input">
-                      </div>
                     </div>
 
                   </div>
