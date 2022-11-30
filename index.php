@@ -75,7 +75,7 @@ mysqli_close($conexion);
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
         <div class="container nav">
-            <a class="navbar-brand" href="#page-top"><img src="./Portal/img/cineLogo.png" alt="..." /></a>
+            <a class="navbar-brand" href="./index.php"><img src="./Portal/img/cineLogo.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
@@ -261,8 +261,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -306,8 +306,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -352,8 +352,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -485,8 +485,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -529,8 +529,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -572,8 +572,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
@@ -612,8 +612,8 @@ mysqli_close($conexion);
                                     </li>
                                 </ul>
                                 <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
+                                    
+                                    Comprar boletos
                                 </button>
                             </div>
                         </div>
