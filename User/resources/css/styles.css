@@ -3972,7 +3972,7 @@ a{
   color: white;
 }
 
-a:hover {
+a:hover, a span:hover {
   color: #cca000;
 }
 
@@ -11567,7 +11567,7 @@ header.masthead .masthead-heading {
 #imagenP1{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/blac.jpg);
+  background-image: url(../../img/adam.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -11594,7 +11594,7 @@ header.masthead .masthead-heading {
 #imagenP4{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/wakanda.jpg);
+  background-image: url(../../img/lilo.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -11603,7 +11603,7 @@ header.masthead .masthead-heading {
 #imagenP5{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/red.jpg);
+  background-image: url(../../img/batman.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -11612,7 +11612,7 @@ header.masthead .masthead-heading {
 #imagenP6{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/observada.jpg);
+  background-image: url(../../img/red.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -11621,7 +11621,7 @@ header.masthead .masthead-heading {
 #imagenP7{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/avatar.jpg);
+  background-image: url(../../img/observada.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -11630,7 +11630,7 @@ header.masthead .masthead-heading {
 #imagenP8{
   width: 280px;
   height: 410px;
-  background-image: url(../../img/bros.jpg);
+  background-image: url(../../img/avatar.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

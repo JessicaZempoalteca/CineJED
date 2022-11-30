@@ -1,6 +1,17 @@
 <?php
 require('../../helpers/menu_portal.php');
 require('../../helpers/funciones_generales.php');
+session_start();
+//Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+if (!isset($_SESSION['idUsuario'])) {
+  echo '<script>
+              alert("ERROR: Inicia sesión para acceder");
+              window.location = "../../User/pages/login.php";
+              </script>';
+} else {
+
+    include '../../Panel/backend/admin/conexion.php';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +20,7 @@ require('../../helpers/funciones_generales.php');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Ingresar</title>
+        <title>Contacto</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./assets/Vector-Cinema-Projector-PNG-File.png" />
         <!-- Font Awesome icons (free version)-->
@@ -19,7 +30,7 @@ require('../../helpers/funciones_generales.php');
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
-        <link rel="estilos" href="../resources/css/estilos.css">
+        <link rel="stylesheet" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
         <!--FONT DE NAVBAR -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +39,8 @@ require('../../helpers/funciones_generales.php');
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     </head>
-    <body id="page-top">
+    <body id="page-top"><br>
+    <br><br><br><br><br><br><br>
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
@@ -39,63 +51,73 @@ require('../../helpers/funciones_generales.php');
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <?php echo crear_menuLogin('User','login');?>
-                </div>
+                <?php echo crear_menu2('pages', 'contacto'); ?>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="font-family: 'Noto Sans Mende Kikakui', sans-serif;">
+                <a href="../../Panel/backend/admin/cerrar_sesion.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                </a>
+            </div>
             </div>
         </nav>
 
-        <!-- Masthead-->
-        <header">
-        </header>
-        <br>
-        <br>
-        <br>
-        <br><br><br><br>
-        
+        <center><img src="../img/boletosLogo.png" alt="boletos" style="width:80px;"> <h2>Contactanos</h2></center>
+       <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="row align-items-stretch mb-5">
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10">
-                    <div class="wrap d-md-flex">
-                        <div class="login-wrap p-4 p-md-7">
-                            <div class="d-flex">
-                                <div class="w-100">
-                                    <br>
-                                    <br>
-                                    <h3 class="mb-4 text-center">INICIAR SESION
-                                    <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
-                                </div>
-                            </div>
-                            <form action="../../Panel/backend/admin/validar_Usuario.php" method="POST" class="signin-form">
-                                <div class="form-group mb-3">
-                                    <label class="label" for="name">Correo electrónico</label>
-                                    <input type="text" class="form-control" placeholder="Correo" value="" id="email" name="email" required>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="password">Contraseña</label>
-                                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" value="" required>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3">
-                                        Ingresar
-                                    </button>
-                                </div>
-                            </form>
-                            <br>
-                            <p class="text-center">¿No tienes una cuenta? <br>
-
-                            <a class="btn btn-primary btn-sm " href="./registro.php">Registrarse Ahora</a>
-                           
-                        </div>
-                        <div class="login-wrap p-4 p-md-5">
-                            <img src="../img/registro/pop.jpg" alt="logo" style="width:600px;">
-                        </div>
-                    </div>
+            <div class="form-group">
+                <label for="first-name">Nombre</label>
+                <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="name:required">Nombre es requerido.</div>
+            </div>
+            <div class="form-group">
+                <label for="country">Ciudad</label>
+                <input type="text" class="form-control" placeholder="Ciudad" id="Ciudad">
+            </div>
+            <div class="form-group">
+                <label for="number">Numero Telefonico</label>
+                <input class="form-control" id="phone" type="tel" placeholder="Numero Telefonico" data-sb-validations="required" />
+                <div class="invalid-feedback" data-sb-feedback="phone:required">Numero Telefonico es requerido</div>
+            </div>
+            <div class="form-group">
+                <label for="age">Edad</label>
+                <input type="text" class="form-control" placeholder="Edad" id="Edad">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
+                <div class="invalid-feedback" data-sb-feedback="email:required">Email es reqeurido.</div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">Email no es valido.</div>
+            </div>
+            <div class="form-group">
+                <label for="email">Mensaje</label>
+                    <!-- Message input-->
+                    <textarea class="form-control" id="message" placeholder="Tu Mensaje " data-sb-validations="required"></textarea>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Mensaje requerido</div>
                 </div>
             </div>
-        </div>
+</body>
+</html>
+<div class="d-none" id="submitSuccessMessage">
+    <div class="text-center text-white mb-3">
+        <div class="fw-bolder">Mensaje enviado</div>
+        Gracias por tu opinion
+        <br />
+        <a href="https://ProjectCINEJED.jessicazempoalt.repl.co">Regresar al inicio</a>
+    </div>
+</div>
+<!-- Submit error message-->
+<!---->
+<!-- This is what your users will see when there is-->
+<!-- an error submitting the form-->
+<div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error en tu mensaje!</div></div>
+<!-- Submit Button-->
+<div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar</button></div>
+</form>
+</div>
+</section>
 
-        <!-- Footer-->
+
+                <!-- Footer-->
         <footer class="py-2 bg-dark text-write">
             <div class="container no-width">
                 <div class="row no-gutters my-5">
@@ -166,17 +188,18 @@ require('../../helpers/funciones_generales.php');
                     </div>
                 </div>
             </div>
-        </footer>  
+        </footer> 
 
-        
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="./resources/js/scripts.js"></script>
+        <script src="./Portal/resources/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
 </html>

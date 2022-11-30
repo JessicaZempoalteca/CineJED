@@ -21,7 +21,7 @@
     $query_text = 'SELECT usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, boleto.asiento, boleto.fecha, boleto.precio, peliculas.nombrePelicula, horarioPeliculas.horaProyeccion, sala.tipoSala
                     FROM boleto INNER JOIN salaproyectapeliculas INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN usuarios INNER JOIN sala
                     ON boleto.idUsuario=usuarios.idUsuario AND boleto.idProyeccion=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
-                    group by idBoleto;';
+                    ;';
 
     // echo $query_text;
 
