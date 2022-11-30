@@ -19,7 +19,7 @@ require('../../helpers/funciones_generales.php');
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="estilos" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
     </head>
     <body id="page-top">
@@ -27,7 +27,7 @@ require('../../helpers/funciones_generales.php');
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
-                <a class="navbar-brand" href="#page-top"><img src="../img/cineLogo.png" alt="..." /></a>
+                <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -60,27 +60,27 @@ require('../../helpers/funciones_generales.php');
                             <form action="../../Panel/backend/crud/usuario/insertarUsuario.php" method="POST" class="signin-form">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Nombre</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="nombre" name="nombre" required>
+                                    <input type="text" class="form-control" placeholder="Nombre" value="" id="nombre" name="nombre" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="password">apellido Paterno</label>
-                                    <input type="text" class="form-control" placeholder="contraseña" id="apellidoPaterno" name="apellidoPaterno" required>
+                                    <label class="label" for="password">Apellido Paterno</label>
+                                    <input type="text" class="form-control" placeholder="Apellido Paterno" id="apellidoPaterno" name="apellidoPaterno" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">apellido Materno</label>
-                                    <input type="text" class="form-control" placeholder="Usuario" value="" id="apellidoMaterno" name="apellidoMaterno" required>
+                                    <label class="label" for="name">Apellido Materno</label>
+                                    <input type="text" class="form-control" placeholder="Apellido Materno" value="" id="apellidoMaterno" name="apellidoMaterno" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">email</label>
-                                    <input type="email" class="form-control" placeholder="Usuario" value="" id="correo" name="correo" required>
+                                    <label class="label" for="name">Email</label>
+                                    <input type="email" class="form-control" placeholder="Email" value="" id="correo" name="correo" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="name">password</label>
-                                    <input type="password" class="form-control" placeholder="Usuario" value="" id="password" name="password" required>
+                                    <label class="label" for="name">Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" value="" id="password" name="password" required>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="form-control btn btn-primary rounded submit px-3">
-                                        Ingresar
+                                        Registrarse
                                     </button>
                                 </div>
                             </form>

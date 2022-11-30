@@ -19,7 +19,7 @@ require('../../helpers/funciones_generales.php');
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="estilos" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
         <!--FONT DE NAVBAR -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
