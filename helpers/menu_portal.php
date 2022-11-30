@@ -111,7 +111,7 @@ function configurar_menuLogin($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Películas';
+  $menu_item['text'] = 'Películas&nbsp';
   $menu_item['submenu'] = array();
   //Submenu
   $sub_menu_item = array();
@@ -171,7 +171,7 @@ function crear_menuLogin($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . '<i class="fa fa-caret-down" aria-hidden="true"></i> </a>
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . '<i class="fa fa-caret-down" aria-hidden="true"></i></a>
                         <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {
@@ -203,7 +203,7 @@ function configurar_menu2($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Películas';
+  $menu_item['text'] = 'Películas &nbsp';
   $menu_item['submenu'] = array();
   //Submenu
   $sub_menu_item = array();
@@ -288,7 +288,7 @@ function configurar_menuUser($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Películas';
+  $menu_item['text'] = 'Películas&nbsp';
   $menu_item['submenu'] = array();
 
   //Submenu de generos
