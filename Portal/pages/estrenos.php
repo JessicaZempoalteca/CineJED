@@ -246,7 +246,7 @@ mysqli_close($conexion);
                                                 </li>
                                             </ul>
                                     
-                                            <a class="btn btn-primary btn-xl text-uppercase" href="../../Panel/pages/formularioPago.php?idPelicula=' . $peliculasEstrenos['idPelicula'] . '">Tell Me More</a>
+                                            <a class="btn btn-primary btn-xl text-uppercase" href="../../Panel/pages/formularioPago.php?idPelicula=' . $peliculasEstrenos['idPelicula'] . '">Comprar boletos</a>
                                             ';
                                     echo $html;
                                     ?>
@@ -283,8 +283,8 @@ mysqli_close($conexion);
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        
+                                        Comprar boletos
                                     </button>
                                 </div>
                             </div>
@@ -318,8 +318,8 @@ mysqli_close($conexion);
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        
+                                        Comprar boletos
                                     </button>
                                 </div>
                             </div>
@@ -353,8 +353,8 @@ mysqli_close($conexion);
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        
+                                        Comprar boletos
                                     </button>
                                 </div>
                             </div>
@@ -388,8 +388,8 @@ mysqli_close($conexion);
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        
+                                        Comprar boletos
                                     </button>
                                 </div>
                             </div>
@@ -423,8 +423,8 @@ mysqli_close($conexion);
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        
+                                        Comprar boletos
                                     </button>
                                 </div>
                             </div>
