@@ -25,7 +25,7 @@ if (!isset($_SESSION['idUsuario'])) {
   }
 
   $peliculas = array();
-  $query_peliculas = 'SELECT peliculas.nombrePelicula FROM salaproyectapeliculas INNER JOIN peliculas ON salaproyectapeliculas.idPelicula=peliculas.idPelicula;';
+  $query_peliculas = 'SELECT peliculas.nombrePelicula, salaproyectapeliculas.idProyeccion FROM salaproyectapeliculas INNER JOIN peliculas ON salaproyectapeliculas.idPelicula=peliculas.idPelicula;';
   $query_respeliculas = mysqli_query($conexion, $query_peliculas);
   if (mysqli_num_rows($query_respeliculas) != 0) {
     while ($peliculasPro = mysqli_fetch_array($query_respeliculas, MYSQLI_ASSOC)) {
@@ -187,20 +187,20 @@ if (!isset($_SESSION['idUsuario'])) {
                         action es para el redireccionamiento del proceso del BACKEND
                         el metodo post es para enviar datos de manera segura
                         enctype envia y procesa informacion mediante los archivos por medio del metodo $_FILES-->
-                <form id="form-usuario" action="../backend/crud/administrador/insertarUsuario.php" method="post" enctype="multipart/form-data">
+                <form id="form-usuario" action="../backend/crud/boletos/insertBoleto.php" method="post" enctype="multipart/form-data">
                   <div class="card-body">
                     <br>
                     <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Peliculas disponibles</label>
-                          <select class="form-control" name="rol">
+                          <select class="form-control" name="pelicula">
                             <?php
                             $html = '';
                             if (isset($peliculas) && sizeof($peliculas) > 0) {
                               foreach ($peliculas as $peliculas) {
                                 $html .= '
-                                  <option> ' . $peliculas['nombrePelicula'] . ' </option>
+                                  <option value='.$peliculas['idProyeccion'].'> ' . $peliculas['nombrePelicula'] . ' </option>
                                 ';
                               }
                             }
@@ -212,13 +212,13 @@ if (!isset($_SESSION['idUsuario'])) {
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">numero de asientos</label>
-                          <input type="number" name="apellidoPaterno" class="form-control" id="apellidoPaterno" placeholder="Asientos">
+                          <input type="number" name="numAsientos" class="form-control" id="numAsientos" placeholder="Numero de asientos">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">fecha</label>
-                          <input type="date" name="apellidoMaterno" class="form-control" id="apellidoMaterno" placeholder="fecha">
+                          <input type="date" name="fechaBoleto" class="form-control" id="fecha" placeholder="fechaBoleto">
                         </div>
                       </div>
                     </div>
@@ -226,13 +226,13 @@ if (!isset($_SESSION['idUsuario'])) {
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">horario</label>
-                          <select class="form-control" name="rol">
+                          <select class="form-control" name="horario">
                             <?php
                             $html = '';
                             if (isset($horarios) && sizeof($horarios) > 0) {
                               foreach ($horarios as $horarios) {
                                 $html .= '
-                                  <option> ' . $horarios['horaProyeccion'] . ' </option>
+                                  <option value='.$horarios['idHorario'].'> ' . $horarios['horaProyeccion'] . ' </option>
                                 ';
                               }
                             }

@@ -20,7 +20,7 @@
     //specific select ya que se muestra informacion especifica de la tabla usuarios inner join roles
     $query_text = 'SELECT usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, boleto.asiento, boleto.fecha, boleto.precio, peliculas.nombrePelicula, horarioPeliculas.horaProyeccion, sala.tipoSala
                     FROM boleto INNER JOIN salaproyectapeliculas INNER JOIN peliculas INNER JOIN horariopeliculas INNER JOIN usuarios INNER JOIN sala
-                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.pelicula=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
+                    ON boleto.idUsuario=usuarios.idUsuario AND boleto.idProyeccion=salaproyectapeliculas.idProyeccion AND salaproyectapeliculas.idPelicula=peliculas.idPelicula AND salaproyectapeliculas.idSala=sala.idSala
                     group by idBoleto;';
 
     // echo $query_text;

@@ -243,10 +243,11 @@ $query_res = mysqli_query($conexion, $query_text);
                                                     <strong>Categoria: ' .$peliculasEstrenos['categoria'].'</strong>
                                                 </li>
                                             </ul>
-                                    ';
+                                    
+                                            <a class="btn btn-primary btn-xl text-uppercase" href="../../Panel/pages/formularioPago.php?idPelicula=' .$peliculasEstrenos['idPelicula'].'">Tell Me More</a>
+                                            ';
                                     echo $html;
                                 ?>
-                                            <a class="btn btn-primary btn-xl text-uppercase" href="../../Panel/pages/formularioPago.php">Tell Me More</a>
                                         </div>
                                     </div>
                                 </div>
