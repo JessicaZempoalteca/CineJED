@@ -14,7 +14,7 @@ if (!isset($_SESSION['idUsuario'])) {
 } //
 
 //Capturamos el id que se pasa por el URL
-$idUsuario = $_GET["idUsuario"];
+$idUsuario = $_SESSION["idUsuario"];
 //Verificamos si la variable no esta vacia
 if (empty($idUsuario)) {
   echo '<script>

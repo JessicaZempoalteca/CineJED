@@ -90,14 +90,6 @@ function configurar_menu($pagina = '')
     $menu_item['submenu'] = array();
     $menu['contacto'] = $menu_item;
 
-    //Opción promociones
-    $menu_item['is_active'] = ($pagina == "promociones") ? TRUE : FALSE;
-    $menu_item['href'] = './promociones.php';
-    $menu_item['icon'] = 'fa fa-percent';
-    $menu_item['text'] = 'Promociones';
-    $menu_item['submenu'] = array();
-    $menu['promociones'] = $menu_item;
-
     return $menu;
 } //end 
 
