@@ -30,7 +30,7 @@ require('../../helpers/menu_portal.php');
     <body id="page-top">
 
         <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: #010101;">
             <div class="container nav">
                 <a class="navbar-brand" href="../../index.php"><img src="../img/cineLogo.png" alt="..." /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

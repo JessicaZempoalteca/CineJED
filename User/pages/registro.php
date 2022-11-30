@@ -44,18 +44,15 @@ require('../../helpers/funciones_generales.php');
         <br>
         <br>
         <br>
-        <br><br><br><br><br>
+        <br><br><br><br>
 
         <div class="container">
-        <center>
-            <img src="../img/registro/registro.png" alt="logo" style="width:700px;">
-        </center>
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <div class="wrap d-md-flex">
                         <div class="login-wrap p-4 p-md-5">
                             <div class="d-flex">
-                                <div class="w-100">
+                                <div class="w-100"> 
                                     <h3 class="mb-4 text-center">REGISTRARSE
                                     <img src="../img/registro/pelis.png" alt="logo" style="width:70px;"></h3>
                                 </div>
@@ -87,10 +84,10 @@ require('../../helpers/funciones_generales.php');
                                     </button>
                                 </div>
                             </form>
-                            <p class="text-center">¿Quieres ser registrarte? <br>
-                            <center><nav>
-                              <a href="../../user/registro/index.php"  href="#signup">Registrase ahora</a><img src="../img/registro/regis.png" alt="logo" style="width:50px;"></p></nav>
-                            </center></div>
+                        </div>
+                        <div class="login-wrap p-5 p-md-1">
+                            <img src="../img/direc.jpg" alt="logo" style="width:600px;">
+                        </div>
                     </div>
                 </div>
             </div>
