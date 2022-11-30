@@ -131,16 +131,21 @@ else {
         <br>
 
         <!-- Main content -->
+      
       <section class="content">
         <div class="container-fluid">
           <div class="row">
             <!-- left column -->
-            <div class="col-md-2"></div>
+            <div class="col-md-4">
+            <div class="login-wrap p-4 p-md-8">
+              <img src="../img/cineee.png" alt="logo" style="width:400px;">
+            </div>
+            </div>
             <div class="col-md-8">
               <!-- jquery validation -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Formulario de usuario nuevo</h3>
+                  <h3 class="card-title">Pago de boletos</h3>
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
@@ -174,13 +179,13 @@ else {
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">numero de asientos</label>
+                          <label for="exampleInputEmail1">Número de asientos</label>
                           <input type="number" name="numAsientos" class="form-control" id="numAsientos" placeholder="Asientos">
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">fecha</label>
+                          <label for="exampleInputEmail1">Fecha</label>
                           <input type="date" name="fechaBoleto" class="form-control" id="fechaBoleto" placeholder="fecha" >
                         </div>
                       </div>
@@ -188,7 +193,8 @@ else {
 
                       <div class="col-md-4">
                         <div class="form-group">
-                          <label for="exampleInputEmail1">horario</label>
+                          <br>
+                          <label for="exampleInputEmail1">Horario</label>
                           <select class="form-control" name="horario">
                             <option value="">Selecciona un horario disponible</option>
                             <?php
@@ -226,7 +232,8 @@ else {
             <!--/.col (right) -->
           </div>
           <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.container-fluid -->
       </section>
 
 
