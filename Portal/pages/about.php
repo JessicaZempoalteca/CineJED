@@ -18,7 +18,7 @@ require('../../helpers/menu_portal.php');
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../resources/css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="../resources/css/estilos.css">
+        <link rel="estilos" href="../resources/css/estilos.css">
         <link rel="shortcut icon" href="../img/boletosLogo.png">
         <!--FONT DE NAVBAR -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,7 +142,7 @@ require('../../helpers/menu_portal.php');
                     <h3 class="section-subheading text-muted">Ninguno de nosotros es tan bueno como todos nosotros juntos.</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../../Portal/img/team/Jess.jpeg" alt="..." />
                             <h4>Jessica Melina Zempoalteca Flores</h4>
@@ -151,22 +151,13 @@ require('../../helpers/menu_portal.php');
                             <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com" target="_blank" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../../Portal/img/team/Ema.jpeg" alt="..." />
                             <h4>Emanuel González Lira</h4>
                             <p class="text-muted">Diseñador</p>
                             <a class="btn btn-dark btn-social mx-2" href="https://twitter.com" target="_blank" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com" target="_blank" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="../../Portal/img/team/Dani.jpeg" alt="..." />
-                            <h4>Daniel Flores Hernández</h4>
-                            <p class="text-muted">Analista</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://twitter.com" target="_blank" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com" target="_blank" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                         </div>
                     </div>
                 </div>
