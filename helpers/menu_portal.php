@@ -15,28 +15,28 @@ function configurar_menu($folder = '', $pagina = '')
   //Opcion Generos
   $menu_item['is_active'] = ($pagina == "peliculas") ? TRUE : FALSE;
   $menu_item['href'] = '#';
-  $menu_item['text'] = 'Películas';
+  $menu_item['text'] = 'Películas&nbsp';
   $menu_item['submenu'] = array();
-  
-      //Submenu de generos
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './Portal/pages/familiares.php';
-      $sub_menu_item['text'] = 'Familiares';
-      $menu_item['submenu']['familiares'] = $sub_menu_item;
-      //
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './comedia.php' : './Portal/pages/comedia.php';
-      $sub_menu_item['text'] = 'Comedia';
-      $menu_item['submenu']['comedia'] = $sub_menu_item;
-      //
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './accion.php' : './Portal/pages/accion.php';
-      $sub_menu_item['text'] = 'Acción';
-      $menu_item['submenu']['accion'] = $sub_menu_item;
-      $menu['categorias'] = $menu_item;
+
+  //Submenu de generos
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './Portal/pages/familiares.php';
+  $sub_menu_item['text'] = 'Familiares';
+  $menu_item['submenu']['familiares'] = $sub_menu_item;
+  //
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './comedia.php' : './Portal/pages/comedia.php';
+  $sub_menu_item['text'] = 'Comedia';
+  $menu_item['submenu']['comedia'] = $sub_menu_item;
+  //
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './accion.php' : './Portal/pages/accion.php';
+  $sub_menu_item['text'] = 'Acción';
+  $menu_item['submenu']['accion'] = $sub_menu_item;
+  $menu['categorias'] = $menu_item;
 
   //OPCION ESTRENOS
   $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
@@ -79,9 +79,8 @@ function crear_menu($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <span class="material-symbols-outlined">
-      arrow_drop_down</span></a>
-                        <ul class="dropdown">';
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {
           $html .= '<li><a href="' . $item_sub_menu["href"] . '">' . $item_sub_menu["text"] . '</a></li>';
@@ -172,8 +171,7 @@ function crear_menuLogin($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . '<span class="material-symbols-outlined">
-      arrow_drop_down</span> </a>
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . '<i class="fa fa-caret-down" aria-hidden="true"></i> </a>
                         <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {
@@ -292,26 +290,26 @@ function configurar_menuUser($folder = '', $pagina = '')
   $menu_item['href'] = '#';
   $menu_item['text'] = 'Películas';
   $menu_item['submenu'] = array();
-  
-      //Submenu de generos
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './Portal/pages/familiares.php';
-      $sub_menu_item['text'] = 'Familiares';
-      $menu_item['submenu']['familiares'] = $sub_menu_item;
-      //
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './comedia.php' : './Portal/pages/comedia.php';
-      $sub_menu_item['text'] = 'Comedia';
-      $menu_item['submenu']['comedia'] = $sub_menu_item;
-      //
-      $sub_menu_item = array();
-      $sub_menu_item['is_active'] = FALSE;
-      $sub_menu_item['href'] = ($folder != '') ? './accion.php' : './Portal/pages/accion.php';
-      $sub_menu_item['text'] = 'Acción';
-      $menu_item['submenu']['accion'] = $sub_menu_item;
-      $menu['categorias'] = $menu_item;
+
+  //Submenu de generos
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './familiares.php' : './Portal/pages/familiares.php';
+  $sub_menu_item['text'] = 'Familiares';
+  $menu_item['submenu']['familiares'] = $sub_menu_item;
+  //
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './comedia.php' : './Portal/pages/comedia.php';
+  $sub_menu_item['text'] = 'Comedia';
+  $menu_item['submenu']['comedia'] = $sub_menu_item;
+  //
+  $sub_menu_item = array();
+  $sub_menu_item['is_active'] = FALSE;
+  $sub_menu_item['href'] = ($folder != '') ? './accion.php' : './Portal/pages/accion.php';
+  $sub_menu_item['text'] = 'Acción';
+  $menu_item['submenu']['accion'] = $sub_menu_item;
+  $menu['categorias'] = $menu_item;
 
   //OPCION ESTRENOS
   $menu_item['is_active'] = ($pagina == "estrenos") ? TRUE : FALSE;
@@ -354,8 +352,7 @@ function crear_menuUser($folder = '', $pagina = '')
     if ($item['href'] != '#') {
       $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="' . $item["href"] . '">' . $item["text"] . '</a></li>';
     } else {
-      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <span class="material-symbols-outlined">
-      arrow_drop_down</span></a>
+      $html .= '<li class="' . ($item["is_active"] ? 'active' : '') . '"><a href="#">' . $item["text"] . ' <i class="fa fa-caret-down" aria-hidden="true"></i></a>
                         <ul class="dropdown">';
       if (sizeof($item['submenu']) > 0) {
         foreach ($item['submenu'] as $item_sub_menu) {

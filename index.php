@@ -1,8 +1,47 @@
 <?php
 require('./helpers/funciones_generales.php');
 require('./helpers/menu_portal.php');
-?>
+$server = 'localhost'; //Servidor
+$bd =  'cinejed'; //Base de datos
+$user = 'root'; //Usuario de acceso a la BD
+$password = ''; // Contraseña de acceso a la BD
 
+//Proceso de conexión a la BD
+$conexion = mysqli_connect($server, $user, $password, $bd);
+
+//Validamos la conexión con la BD
+if (!$conexion) {
+    die('Error al conectarse con la Base de Datos,' . mysqli_connect_error());
+    exit;
+} //end 
+
+//Procesa o relizamos una petición a la BD
+//echo '<script>alert("Conexión éxitosa a la BD")</script>';
+//variable de conexion y el proceso que se quiere realizar
+mysqli_query($conexion, 'SET NAMES "utf8"');
+
+//Se realiza la petición sql 
+//specific select ya que se muestra informacion especifica de la tabla peliculasEstrenos inner join roles
+$query_text = 'SELECT categoriaspeliculas.idcategoriapelicula, categoriaspeliculas.idPelicula, categoriaspeliculas.categoria, 
+                      peliculas.nombrePelicula, peliculas.anioEstreno, peliculas.descripcion, peliculas.duracion, 
+                      peliculas.director, peliculas.estatus_pelicula, peliculas.imagenPelicula, peliculas.genero
+               FROM peliculas INNER JOIN categoriaspeliculas
+               ON peliculas.idPelicula = categoriaspeliculas.idPelicula
+               WHERE categoriaspeliculas.idcategoriapelicula = 1';
+
+$query_res = mysqli_query($conexion, $query_text);
+
+$peliculasEstrenos = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
+//Verificar si realmente el usuario existe
+if (mysqli_num_rows($query_res) <= 0) {
+    echo '<script>
+                alert("El usuario no existe. Verifica la ID");
+                window.location = "./usuarios.php";
+                </script>';
+} //
+//Se libera la conexion
+mysqli_close($conexion);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +84,8 @@ require('./helpers/menu_portal.php');
                 <?php echo crear_menu('', 'index'); ?>
             </div>
             <div class="collapse navbar-collapse" id="navbarResponsive" style="font-family: 'Noto Sans Mende Kikakui', sans-serif;">
-                <a href="./User/pages/login.php"><span class="material-symbols-outlined" style="color: white;">login</span></a>
+                <a href="./User/pages/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -156,32 +196,31 @@ require('./helpers/menu_portal.php');
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <!-- Project details-->
-                                <h2 class="text-uppercase">Black Adam</h2>
-                                <br>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/a1mcS4tKGNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <p>Casi 5,000 años después de obtener los poderes supremos de los antiguos dioses –y de ser encarcelado igual de rápido–, Black Adam (Dwayne Johnson) se libera de su tumba terrenal, listo para desatar su peculiar forma de justicia en el mundo moderno.</p>
+                                <?php
+                                $html = '';
+                                $html = '
+                                        <h2 class="text-uppercase">' . $peliculasEstrenos['nombrePelicula'] . '</h2>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a1mcS4tKGNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <br>
+                                <p>' . $peliculasEstrenos['descripcion'] . '</p>
                                 <ul class="list-inline">
                                     <li>
-                                        <strong>Clasificación: </strong>
-                                        A
-                                    </li>
-                                    <li>
                                         <strong>Género: </strong>
-                                        Acción
+                                        ' . $peliculasEstrenos['genero'] . '
                                     </li>
                                     <li>
                                         <strong>Director: </strong>
-                                        Jaume Collet-Serra
+                                        ' . $peliculasEstrenos['director'] . '
                                     </li>
                                     <li>
                                         <strong>Duración: </strong>
-                                        2h 05m
+                                        ' . $peliculasEstrenos['duracion'] . '
                                     </li>
                                 </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-xmark me-1"></i>
-                                    Close Project
-                                </button>
+                                <a class="btn btn-primary btn-xl text-uppercase" href="./Panel/pages/formularioPago.php?idPelicula=' . $peliculasEstrenos['idPelicula'] . '">Comprar boletos</a>
+                                    ';
+                                echo $html;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -344,12 +383,12 @@ require('./helpers/menu_portal.php');
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <div class="imagenPelicula">
-                                <div id="imagenP4" class="imagenPelicula" data-setbg="<?php echo path_image('', 'wakanda.jpg') ?>"></div>
+                                <div id="imagenP5" class="imagenPelicula" data-setbg="<?php echo path_image('', 'batman.jpg') ?>"></div>
                             </div>
                         </a>
                         <div class="portfolio-caption">
                             <br>
-                            <div class="portfolio-caption-heading">Wakanda Por Siempre</div>
+                            <div class="portfolio-caption-heading">The Batman</div>
                         </div>
                     </div>
                 </div>
@@ -362,7 +401,7 @@ require('./helpers/menu_portal.php');
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <div class="imagenPelicula">
-                                <div id="imagenP5" class="imagenPelicula" data-setbg="<?php echo path_image('', 'red.jpg') ?>"></div>
+                                <div id="imagenP6" class="imagenPelicula" data-setbg="<?php echo path_image('', 'red.jpg') ?>"></div>
                             </div>
                         </a>
                         <div class="portfolio-caption">
@@ -380,7 +419,7 @@ require('./helpers/menu_portal.php');
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <div class="imagenPelicula">
-                                <div id="imagenP6" class="imagenPelicula" data-setbg="<?php echo path_image('', 'observada.jpg') ?>"></div>
+                                <div id="imagenP7" class="imagenPelicula" data-setbg="<?php echo path_image('', 'observada.jpg') ?>"></div>
                             </div>
                         </a>
                         <div class="portfolio-caption">
@@ -398,7 +437,7 @@ require('./helpers/menu_portal.php');
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
                             <div class="imagenPelicula">
-                                <div id="imagenP7" class="imagenPelicula" data-setbg="<?php echo path_image('', 'avatar.jpg') ?>"></div>
+                                <div id="imagenP8" class="imagenPelicula"></div>
                             </div>
                         </a>
                         <div class="portfolio-caption">

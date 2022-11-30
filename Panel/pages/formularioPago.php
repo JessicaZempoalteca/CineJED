@@ -9,7 +9,7 @@ session_start();
 if (!isset($_SESSION['idUsuario'])) {
   echo '<script>
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
-              window.location = "../../usuario/login.php";
+              window.location = "../../User/pages/login.php";
               </script>';
 } //
 
