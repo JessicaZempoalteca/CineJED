@@ -12,6 +12,12 @@
               window.location = "../../usuario/login.php";
               </script>';
   }
+  if(($_SESSION['idRol']!=2)){
+    echo '<script>
+                alert("Error, no tiene los permisos para acceder");
+                window.location = "../../User/pages/login.php";
+                </script>';
+  } 
 ?>
 <!DOCTYPE html>
 <html lang="en">

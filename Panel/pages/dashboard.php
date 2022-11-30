@@ -6,9 +6,15 @@ require('../../helpers/funciones_generales.php');
 
 session_start();
 
-if (!isset($_SESSION['idUsuario'])) {
+if (!isset($_SESSION['idUsuario']) ) {
   echo '<script>
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
+              window.location = "../../User/pages/login.php";
+              </script>';
+}
+if(($_SESSION['idRol']!=2)){
+  echo '<script>
+              alert("Error, no tiene los permisos para acceder");
               window.location = "../../User/pages/login.php";
               </script>';
 } 

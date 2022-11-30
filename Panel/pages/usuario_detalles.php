@@ -22,7 +22,7 @@ if (empty($idUsuario)) {
                 window.location = "./usuarios.php";
                 </script>';
 } 
-else {
+else if($_SESSION['idRol']!=2){
   
   include '../backend/admin/conexion.php';
   

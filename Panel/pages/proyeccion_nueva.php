@@ -11,7 +11,7 @@ if (!isset($_SESSION['idUsuario'])) {
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
               window.location = "../../usuario/login.php";
               </script>';
-}else{
+}else if($_SESSION['idRol']!=2){
     include '../backend/admin/conexion.php';
 
     $peliculas = array();

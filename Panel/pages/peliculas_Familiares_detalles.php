@@ -22,7 +22,7 @@ if (empty($idPelicula)) {
                 window.location = "./peliculas_Familiares.php";
                 </script>';
 } 
-else {
+else if($_SESSION['idRol']!=2){
   
   include '../backend/admin/conexion.php';
   

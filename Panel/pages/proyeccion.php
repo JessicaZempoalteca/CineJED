@@ -12,7 +12,7 @@ if (!isset($_SESSION['idUsuario'])) {
               window.location = "../../usuario/login.php";
               </script>';
 } 
-else {
+else if($_SESSION['idRol']!=2){
   
   include '../backend/admin/conexion.php';
 
