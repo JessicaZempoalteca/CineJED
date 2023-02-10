@@ -88,7 +88,6 @@ require('../../helpers/funciones_generales.php');
                             <p class="text-center">¿Quieres ser registrarte? <br>
 
                             <a class="btn btn-primary btn-sm " href="./registro.php">Registrar Ahora</a>
-                           
                         </div>
                         <div class="login-wrap p-4 p-md-5">
                             <img src="../img/registro/pop.jpg" alt="logo" style="width:600px;">
