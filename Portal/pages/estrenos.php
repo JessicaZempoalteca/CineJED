@@ -35,13 +35,7 @@ $query_text = 'SELECT categoriaspeliculas.idcategoriapelicula, categoriaspelicul
 $query_res = mysqli_query($conexion, $query_text);
 
   $peliculasEstrenos = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
-  //Verificar si realmente el usuario existe
-  if (mysqli_num_rows($query_res) <= 0) {
-    echo '<script>
-                alert("El usuario no existe. Verifica la ID");
-                window.location = "./usuarios.php";
-                </script>';
-  } //
+
   //Se libera la conexion
   mysqli_close($conexion);
 ?>

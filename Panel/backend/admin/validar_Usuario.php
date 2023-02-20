@@ -15,7 +15,7 @@
     }//end if empty
     else{
         //Query para verificar si existe el usuario
-        $query_text = 'SELECT * FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol  WHERE correo="'.$usuario.'" AND password = "'.hash('sha256', $_POST['password']).'";';
+        $query_text = 'SELECT * FROM usuarios INNER JOIN roles ON usuarios.idRol = roles.idUsuarioRol  WHERE correo="'.$usuario.'" AND password = "'.$password.'";';
         //echo $query_text;
 
         //Creamos la consulta con el query
