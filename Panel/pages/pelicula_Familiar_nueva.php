@@ -66,7 +66,7 @@ if (!isset($_SESSION['idUsuario'])) {
         </li>
         <!-- Perfil -->
         <li class="nav-item">
-        <?php
+          <?php
           $html = '';
           $html .= '  <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
             <i class="fa fa-user"></i></a> ';
@@ -100,13 +100,13 @@ if (!isset($_SESSION['idUsuario'])) {
             <img src="../img/<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-          <?php
-          $html = '';
-          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
-                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+            <?php
+            $html = '';
+            $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '">' . $_SESSION["nombreCompleto"] . '</a></b>
+                        <a href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" class="d-block">' . $_SESSION["rol"] . '</a>
           ';
-          echo $html;
-          ?>
+            echo $html;
+            ?>
           </div>
         </div>
 

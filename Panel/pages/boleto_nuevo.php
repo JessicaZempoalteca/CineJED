@@ -96,7 +96,7 @@ if (!isset($_SESSION['idUsuario'])) {
         </li>
         <!-- Perfil -->
         <li class="nav-item">
-        <?php
+          <?php
           $html = '';
           $html .= '  <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
             <i class="fa fa-user"></i></a> ';
@@ -130,13 +130,13 @@ if (!isset($_SESSION['idUsuario'])) {
             <img src="../img/<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-          <?php
-          $html = '';
-          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
-                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+            <?php
+            $html = '';
+            $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '">' . $_SESSION["nombreCompleto"] . '</a></b>
+                        <a href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" class="d-block">' . $_SESSION["rol"] . '</a>
           ';
-          echo $html;
-          ?>
+            echo $html;
+            ?>
           </div>
         </div>
 
@@ -191,7 +191,7 @@ if (!isset($_SESSION['idUsuario'])) {
                   <div class="card-body">
                     <br>
                     <div class="row">
-                    <div class="col-md-4">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Peliculas disponibles</label>
                           <select class="form-control" name="pelicula">
@@ -200,7 +200,7 @@ if (!isset($_SESSION['idUsuario'])) {
                             if (isset($peliculas) && sizeof($peliculas) > 0) {
                               foreach ($peliculas as $peliculas) {
                                 $html .= '
-                                  <option value='.$peliculas['idProyeccion'].'> ' . $peliculas['nombrePelicula'] . ' </option>
+                                  <option value=' . $peliculas['idProyeccion'] . '> ' . $peliculas['nombrePelicula'] . ' </option>
                                 ';
                               }
                             }
@@ -223,63 +223,63 @@ if (!isset($_SESSION['idUsuario'])) {
                       </div>
                     </div>
 
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">horario</label>
-                          <select class="form-control" name="horario">
-                            <?php
-                            $html = '';
-                            if (isset($horarios) && sizeof($horarios) > 0) {
-                              foreach ($horarios as $horarios) {
-                                $html .= '
-                                  <option value='.$horarios['idHorario'].'> ' . $horarios['horaProyeccion'] . ' </option>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">horario</label>
+                        <select class="form-control" name="horario">
+                          <?php
+                          $html = '';
+                          if (isset($horarios) && sizeof($horarios) > 0) {
+                            foreach ($horarios as $horarios) {
+                              $html .= '
+                                  <option value=' . $horarios['idHorario'] . '> ' . $horarios['horaProyeccion'] . ' </option>
                                 ';
-                              }
                             }
-                            echo $html;
-                            ?>
-                          </select>
-                        </div>
+                          }
+                          echo $html;
+                          ?>
+                        </select>
                       </div>
-
                     </div>
 
                   </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
-                    <a href="./boletos.php" class="btn btn-danger">Cancelar</a>
-                  </div>
-                </form>
+
               </div>
-              <!-- /.card -->
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <a href="./boletos.php" class="btn btn-danger">Cancelar</a>
+              </div>
+              </form>
             </div>
-            <!--/.col (left) -->
-            <!-- right column -->
-            <div class="col-md-6">
-
-            </div>
-            <!--/.col (right) -->
+            <!-- /.card -->
           </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
-      </section>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
 
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+    </div><!-- /.container-fluid -->
+    </section>
+
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
     </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-      </div>
-    </footer>
+  </footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
   </div>
   <!-- ./wrapper -->
 
