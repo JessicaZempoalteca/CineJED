@@ -4,47 +4,47 @@ require('../../helpers/menu_panel.php');
 require('../../helpers/funciones_generales.php');
 //Se utiliza las variables de sesion
 session_start();
-  //Validamos si la posicion existe y ya tiene un valor determinado por la consulta
-  if(!isset($_SESSION['idUsuario'])){
-      echo '<script>
+//Validamos si la posicion existe y ya tiene un valor determinado por la consulta
+if (!isset($_SESSION['idUsuario'])) {
+    echo '<script>
               alert("Error, no ha iniciado sesión y no se puede redirigir a la página deseada.");
               window.location = "../../usuario/login.php";
               </script>';
-  }
+}
 
-  //Capturamos el id que se pasa por el URL
-  $idUsuario = $_GET['idUsuario'];
-  $idContacto = $_GET["idContacto"];
+//Capturamos el id que se pasa por el URL
+$idUsuario = $_GET['idUsuario'];
+$idContacto = $_GET["idContacto"];
 
-  //Verificamos si la variable no esta vacia
-  if(empty($idContacto) AND empty($idUsuario)){
-      echo '<script>
+//Verificamos si la variable no esta vacia
+if (empty($idContacto) and empty($idUsuario)) {
+    echo '<script>
               alert("Error, el usuario no se encontro");
               //window.location = "./contacto.php";
               </script>';
-  }else {
-   //Se incoorpora la conexion
-   include '../backend/admin/conexion.php';
-   //Se prepara la consulta para realizar la peticion
-   $query_select = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
+} else {
+    //Se incoorpora la conexion
+    include '../backend/admin/conexion.php';
+    //Se prepara la consulta para realizar la peticion
+    $query_select = 'SELECT usuarios.idUsuario, usuarios.nombre, usuarios.ApellidoPaterno, usuarios.apellidoMaterno, 
    usuarios.correo, contacto.servicio, contacto.tipomensaje, contacto.estatus_contacto, contacto.mensaje, 
    contacto.fecha, sucursal.nombreSucursal
-   FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "'.$idUsuario.'" AND contacto.idUsuario ="'.$idUsuario.'"  AND contacto.idSucursal = sucursal.idSucursal;';
+   FROM usuarios INNER JOIN contacto INNER JOIN sucursal ON usuarios.idUsuario = "' . $idUsuario . '" AND contacto.idUsuario ="' . $idUsuario . '"  AND contacto.idSucursal = sucursal.idSucursal;';
 
-   //Petición del sql a la BD
-   $query_res = mysqli_query($conexion, $query_select);
+    //Petición del sql a la BD
+    $query_res = mysqli_query($conexion, $query_select);
 
-   $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
-   //Verificar si realmente el usuario existe
-   if(mysqli_num_rows($query_res) <= 0){
-     echo '<script>
+    $usuario = mysqli_fetch_array($query_res, MYSQLI_ASSOC);
+    //Verificar si realmente el usuario existe
+    if (mysqli_num_rows($query_res) <= 0) {
+        echo '<script>
            alert("El usuario no existe. Verifica la ID");
            
            </script>';
-   }//
-   //Se libera la conexion
-   mysqli_close($conexion);
-   //print("<pre>".print_r($usuario,true)."</pre>");
+    } //
+    //Se libera la conexion
+    mysqli_close($conexion);
+    //print("<pre>".print_r($usuario,true)."</pre>");
 } //end else 
 
 //ARREGLO ASOCIATIVO
@@ -109,12 +109,12 @@ session_start();
                 </li>
                 <!-- Perfil -->
                 <li class="nav-item">
-                <?php
-          $html = '';
-          $html .= '  <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
+                    <?php
+                    $html = '';
+                    $html .= '  <a class="nav-link" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" role="button" data-toggle="tooltip" data-placement="top" title="Mi perfil">
             <i class="fa fa-user"></i></a> ';
-          echo $html;
-          ?>
+                    echo $html;
+                    ?>
                 </li>
                 <!-- Logout -->
                 <li class="nav-item">
@@ -143,13 +143,13 @@ session_start();
                         <img src="../img/<?php echo $_SESSION["imagenPerfil"]; ?>" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                    <?php
-          $html = '';
-          $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'">'. $_SESSION["nombreCompleto"].'</a></b>
-                        <a href="./perfil.php?idUsuario='. $_SESSION["idUsuario"].'" class="d-block">'.$_SESSION["rol"].'</a>
+                        <?php
+                        $html = '';
+                        $html .= ' <b><a class="d-block" href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '">' . $_SESSION["nombreCompleto"] . '</a></b>
+                        <a href="./perfil.php?idUsuario=' . $_SESSION["idUsuario"] . '" class="d-block">' . $_SESSION["rol"] . '</a>
           ';
-          echo $html;
-          ?>
+                        echo $html;
+                        ?>
                     </div>
                 </div>
 
@@ -195,7 +195,7 @@ session_start();
                                     </center>
                                 </div>
                                 <div class="card-body">
-                                    
+
                                     <table id="table-usuarios" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
@@ -212,7 +212,7 @@ session_start();
                                             <?php
                                             //Declaramos la variable para iterar a los usuarios
                                             $html = '';
-                                             //print("<pre>".print_r($usuario, true)."</pre>");
+                                            //print("<pre>".print_r($usuario, true)."</pre>");
 
                                             //Verificamos que la variable ya este creada y que el tamaño debe de ser mayor a 0 - los registrps
                                             if (isset($usuario) && sizeof($usuario) > 0) {
@@ -226,7 +226,7 @@ session_start();
                                                     <td>' . $usuario["mensaje"] . '</td>
                                                     <td>' . $usuario["nombreSucursal"] . '</td>
                                                 </tr>
-                                              ';    
+                                              ';
                                             } //end if 
                                             echo $html;
                                             ?>
